@@ -2,6 +2,7 @@
 <html lang="id" data-theme="dark">
 <head>
 <meta charset="UTF-8">
+<meta name="google-site-verification" content="rmnC9sYtZY4tnzxJabknx8jpQdHl7SUaP0Ddg_h8JXY" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Storegame Joker — Jasa Sosmed & Layanan Premium</title>
 <meta name="description" content="Storegame Joker — toko digital terpercaya sejak 2020. Top up game, aplikasi premium, sosmed boost, e-wallet. Harga terbaik, proses cepat, garansi penuh. 5.000+ pelanggan puas.">
@@ -199,7 +200,7 @@
  <span class="stat-label">Pelanggan Puas</span>
  </div>
  <div>
- <span class="stat-num">100+</span>
+ <span class="stat-num" id="heroLayananCount">100+</span>
  <span class="stat-label">Jenis Layanan</span>
  </div>
  <div>
@@ -233,28 +234,9 @@
  </div>
 </section>
 
-<div class="trust-bar">
- <div class="trust-item"><span>🔒</span> Transaksi Aman</div>
- <div class="trust-item"><span>⏱️</span> Proses &lt; 1 Jam</div>
- <div class="trust-item"><span>🛡️</span> Garansi Tertulis</div>
- <div class="trust-item"><span>📞</span> CS 24 Jam</div>
- <div class="trust-item"><span>⭐</span> Rating 4.9/5</div>
-</div>
 
-<div class="live-bar">
- <div class="live-item">
- <div class="live-dot"></div>
- <span><span class="live-num" id="liveOnline">7</span> orang sedang order sekarang</span>
- </div>
- <div class="live-item">
- <div class="live-dot green"></div>
- <span>✅ <span class="live-num" id="liveSold">24</span> terjual hari ini</span>
- </div>
- <div class="live-item">
- <div class="live-dot orange"></div>
- <span>⚡ Terakhir order <span class="live-num" id="liveAgo">3</span> menit lalu</span>
- </div>
-</div>
+
+
 
 <div class="new-section reveal">
  <div class="section-title">SEDANG <span style="background:linear-gradient(135deg,var(--red),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">PROMO</span></div>
@@ -323,7 +305,7 @@
  <div class="cat-tab-icon">💎</div>
  <div class="cat-tab-info">
  <span class="cat-tab-name">Aplikasi Premium</span>
- <span class="cat-tab-count">85 layanan</span>
+ <span class="cat-tab-count" id="catCountPremium">85 layanan</span>
  </div>
  </div>
  <div class="cat-tab" onclick="switchCat('ewallet',this)">
@@ -386,6 +368,7 @@
  <div class="item-card"><span class="item-badge badge-hot">HOT</span><div class="item-top"><div class="item-emoji">🇰🇷</div><div class="item-name">Drakor ID</div></div><div class="item-desc">Sharing 1 bulan, 6 bulan & 1 tahun. Drama Korea 1080P, sub Indo otomatis, all device. Bergaransi.</div><button class="item-view-btn" onclick="openModal('drakorid')">Lihat Semua Paket & Harga</button></div>
  <div class="item-card"><div class="item-top"><div class="item-emoji">🏰</div><div class="item-name">Disney+ Hotstar</div></div><div class="item-desc">Sharing 10U & 6U. 1 & 2 bulan tersedia. Marvel, Star Wars, Disney.</div><button class="item-view-btn" onclick="openModal('disney')">Lihat Semua Paket & Harga</button></div>
  <div class="item-card"><span class="item-badge badge-hot">HOT</span><div class="item-top"><div class="item-emoji">🤖</div><div class="item-name">ChatGPT Plus</div></div><div class="item-desc">Sharing 5 user, invite, private plus & business. GPT-4o, GPT-4.5, prioritas. Bergaransi.</div><button class="item-view-btn" onclick="openModal('chatgpt')">Lihat Semua Paket & Harga</button></div>
+ <div class="item-card"><span class="item-badge badge-new">NEW</span><div class="item-top"><div class="item-emoji">🎨</div><div class="item-name">Leonardo AI — Essential</div></div><div class="item-desc">8.500 Fast Tokens, 25.500 Token Bank, 10 Personal AI Models, Presets Premium. Buat gambar AI profesional berkualitas tinggi!</div><button class="item-view-btn" onclick="openModal('leonardo')">Lihat Semua Paket & Harga</button></div>
  <div class="item-card"><span class="item-badge badge-hot">HOT</span><div class="item-top"><div class="item-emoji">🎥</div><div class="item-name">Viu Premium</div></div><div class="item-desc">Private 1bln–lifetime. Bebas iklan, offline, 1080P. Bergaransi.</div><button class="item-view-btn" onclick="openModal('viu')">Lihat Semua Paket & Harga</button></div>
  <div class="item-card"><span class="item-badge badge-hot">HOT</span><div class="item-top"><div class="item-emoji">📦</div><div class="item-name">Prime Video Premium</div></div><div class="item-desc">Sharing 3U Rp13k, 4U Rp10k & Private Rp15k. Resolusi tinggi, tanpa iklan. Bergaransi.</div><button class="item-view-btn" onclick="openModal('amazon')">Lihat Semua Paket & Harga</button></div>
  <div class="item-card"><span class="item-badge badge-hot">HOT</span><div class="item-top"><div class="item-emoji">🎬</div><div class="item-name">iQIYI Premium & Standar</div></div><div class="item-desc">Sharing & private. Plan Standar & Premium. Resolusi tinggi, tanpa iklan. Bergaransi.</div><button class="item-view-btn" onclick="openModal('iqiyi')">Lihat Semua Paket & Harga</button></div>
@@ -598,50 +581,7 @@
  </div>
 </section>
 
-<section id="pricing">
- <div class="section-title">PILIH PAKET<br>TERBAIK KAMU</div>
- <p class="section-desc">Harga transparan, tidak ada biaya tersembunyi. Semua paket sudah termasuk garansi.</p>
- <div class="pricing-grid">
- <div class="pricing-card reveal">
- <div class="pricing-plan">Starter</div>
- <div class="pricing-price"><sup>Rp</sup>15.000</div>
- <div class="pricing-period">per bulan / per layanan</div>
- <ul class="pricing-features">
- <li>1 akun premium pilihan</li>
- <li>Garansi 30 hari</li>
- <li>Proses &lt; 24 jam</li>
- <li>Support via WA</li>
- </ul>
- <button class="btn-plan" onclick="window.open('https://wa.me/62882009466583','_blank')">Pesan Sekarang</button>
- </div>
- <div class="pricing-card featured reveal">
- <div class="pricing-plan">Bundle</div>
- <div class="pricing-price"><sup>Rp</sup>45.000</div>
- <div class="pricing-period">per bulan / 3 layanan</div>
- <ul class="pricing-features">
- <li>3 akun premium bebas pilih</li>
- <li>Garansi penuh 30 hari</li>
- <li>Proses &lt; 1 jam</li>
- <li>Support prioritas 24/7</li>
- <li>Hemat hingga 20%</li>
- </ul>
- <button class="btn-plan featured-btn" onclick="window.open('https://wa.me/62882009466583','_blank')">🔥 Ambil Bundle</button>
- </div>
- <div class="pricing-card reveal">
- <div class="pricing-plan">Reseller</div>
- <div class="pricing-price"><sup>Rp</sup>150.000</div>
- <div class="pricing-period">modal awal / akses harga grosir</div>
- <ul class="pricing-features">
- <li>Harga grosir semua layanan</li>
- <li>Materi promosi siap pakai</li>
- <li>Komisi 10–25%</li>
- <li>Training & support penuh</li>
- <li>Bebas atur harga jual</li>
- </ul>
- <button class="btn-plan" onclick="window.open('https://wa.me/62882009466583','_blank')">Jadi Reseller</button>
- </div>
- </div>
-</section>
+
 
 <section id="testimoni">
  <div class="testi-rating-summary reveal">
@@ -836,6 +776,7 @@
  <p class="section-desc" style="text-align:center;margin:12px auto 0">Semua metode tersedia 24 jam — transfer, dompet digital, maupun QRIS.</p>
  </div>
  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;max-width:760px;margin:0 auto" class="pay-grid">
+ <div class="pay-method-card" style="--pc:#003d82">🏦 <span>Bank</span><small>BCA, BRI, BNI, Mandiri</small></div>
  <div class="pay-method-card" style="--pc:#00aef0">📱 <span>GoPay</span><small>Instan & otomatis</small></div>
  <div class="pay-method-card" style="--pc:#4c3494">💜 <span>OVO</span><small>Instan & otomatis</small></div>
  <div class="pay-method-card" style="--pc:#108ee9">💙 <span>DANA</span><small>Instan & otomatis</small></div>
@@ -865,14 +806,6 @@
  </div>
 </section>
 
-<div class="cta-banner reveal">
- <h2>SIAP MULAI?<br>CHAT KAMI SEKARANG</h2>
- <p>Respon cepat, harga terbaik, dan garansi kepuasan. Lebih dari 5.000 pelanggan sudah mempercayai kami.</p>
- <div class="cta-actions">
- <a href="https://wa.me/62882009466583" class="btn-primary" target="_blank">💬 Chat WhatsApp Sekarang</a>
- <a href="#services" class="btn-secondary">📋 Lihat Semua Layanan</a>
- </div>
-</div>
 
 <footer>
  <div class="footer-top">
@@ -1224,6 +1157,9 @@ variants: [
 {name:'1 Bulan — Invite',badge:'',bdgClass:'',price:'Rp15.000',per:'/bulan',desc:'Tanya stock sebelum order. Diinvite ke akun ChatGPT Plus. Dapatkan GPT-4o, GPT-4.5, prioritas, dll. Support di semua device. Bergaransi.'},
 {name:'1 Bulan — Private Plus',badge:'hemat',bdgClass:'vbadge-hemat',price:'Rp15.000',per:'/bulan',desc:'Tanya stock sebelum order. Private Plus — GPT-4o, GPT-4.5, prioritas & fitur lengkap. Support di semua device. Bergaransi.'},
 {name:'1 Bulan — Business',badge:'best',bdgClass:'vbadge-best',price:'Rp15.000',per:'/bulan',desc:'Tanya stock sebelum order. Business — bisa invite 4 anggota & limit lebih tinggi. GPT-4o, GPT-4.5, prioritas, dll. Support di semua device. Bergaransi.'},
+]},
+'leonardo': { emoji:'🎨', name:'Leonardo AI — Essential', sub:'8.500 Fast Tokens · 25.500 Token Bank · 10 AI Models · Garansi 24 Jam', variants:[
+{name:'Essential — 30 Hari',badge:'best',bdgClass:'vbadge-best',price:'Rp15.000',per:'/bulan',desc:'Akun aktif & siap pakai. 8.500 Fast Tokens/bulan, 25.500 Token Bank, Creations Private, Presets Premium, Quality Enhanced, Personal Collections Unlimited, 10 Personal AI Models, max 2 Simultaneous Generations, bisa Top-Up Token. Garansi 24 jam.'},
 ]},
 'viu': { emoji:'🎥', name:'Viu Premium', sub:'Episode terbaru · Offline · 1080P · Bergaransi', variants:[
 {name:'1 Bulan Private',badge:'',bdgClass:'',price:'Rp2.000',per:'/bulan',desc:'Tanya stock sebelum order. Akses episode terbaru lebih cepat, bebas iklan & download offline, konten eksklusif & resolusi 1080P. Bergaransi.'},
@@ -2495,6 +2431,19 @@ const delay = 8000 + Math.random() * 7000;
 setTimeout(() => { updateLiveCounters(); scheduleLiveUpdate(); }, delay);
 }
 scheduleLiveUpdate();
+// Auto-hitung jumlah layanan dari item cards
+function updateLayananCount() {
+  const premiumPanel = document.getElementById('cat-premium');
+  if (!premiumPanel) return;
+  const count = premiumPanel.querySelectorAll('.item-card').length;
+  const countEl = document.getElementById('catCountPremium');
+  if (countEl) countEl.textContent = count + ' layanan';
+  const heroEl = document.getElementById('heroLayananCount');
+  if (heroEl) heroEl.textContent = count + '+';
+  // update also the CTA section count if exists
+  const ctaCountEl = document.querySelector('.testi-sum-num');
+}
+updateLayananCount();
 const orderNotifs = [
 { name: 'Aldi R., Jakarta', item: 'YouTube Premium 1 Bulan' },
 { name: 'Sinta N., Surabaya', item: 'Spotify Premium' },
