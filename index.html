@@ -2145,6 +2145,18 @@ btn.classList.add('active');
 const p = PRODUCTS[key];
 renderVariants(key, p.tabs[idx].variants);
 }
+function toggleMobileNav() {
+const nav = document.getElementById('mobileNav');
+const btn = document.getElementById('hamburger');
+nav.classList.toggle('open');
+btn.classList.toggle('active');
+}
+function closeMobileNav() {
+const nav = document.getElementById('mobileNav');
+const btn = document.getElementById('hamburger');
+nav.classList.remove('open');
+btn.classList.remove('active');
+}
 function closeModal() {
 document.getElementById('modalOverlay').classList.remove('open');
 document.body.style.overflow = '';
