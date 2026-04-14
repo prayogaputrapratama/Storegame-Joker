@@ -116,6 +116,54 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>[data-theme="dark"]{--bg:#060608;--surface:#0e0e14;--card:#13131c;--border:#1e1e2e;--border2:#2a2a40;--text:#f0f0f8;--muted:#7070a0;--muted2:#4a4a6a;--shadow:rgba(0,0,0,0.5);--nav-bg:rgba(6,6,8,0.9);--modal-bg:rgba(0,0,0,0.8)}[data-theme="light"]{--bg:#f5f5fa;--surface:#eeeef6;--card:#ffffff;--border:#dcdce8;--border2:#c8c8dc;--text:#0e0e1e;--muted:#6060a0;--muted2:#9090b0;--shadow:rgba(0,0,0,0.12);--nav-bg:rgba(245,245,250,0.92);--modal-bg:rgba(0,0,0,0.5)}:root{--orange:#f5a623;--orange2:#ffbe00;--blue:#4f8eff;--green:#22c77a;--red:#ef4444}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;overflow-x:hidden;transition:background 0.3s,color 0.3s}::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--orange);border-radius:4px}.cursor-glow{position:fixed;width:320px;height:320px;background:radial-gradient(circle,rgba(245,166,35,0.07) 0%,transparent 70%);border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);transition:0.12s ease;z-index:0}[data-theme="light"] .cursor-glow{display:none}nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:0 5%;height:64px;display:flex;align-items:center;justify-content:space-between;background:var(--nav-bg);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:background 0.3s}.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:2px;background:linear-gradient(135deg,var(--orange),var(--orange2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;white-space:nowrap;flex-shrink:0}.nav-links{display:flex;gap:32px;list-style:none}.nav-links a{color:var(--muted);text-decoration:none;font-size:13px;font-weight:500;transition:color 0.2s}.nav-links a:hover{color:var(--text)}.nav-right{display:flex;align-items:center;gap:12px}.theme-toggle{background:var(--card);border:1px solid var(--border2);color:var(--text);font-size:16px;width:38px;height:38px;border-radius:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;flex-shrink:0}.theme-toggle:hover{border-color:var(--orange);transform:scale(1.05)}.cart-btn{background:var(--card);border:1px solid var(--border2);color:var(--text);font-size:13px;font-weight:700;padding:8px 16px;border-radius:10px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:all 0.2s;position:relative;font-family:'Plus Jakarta Sans',sans-serif}.cart-btn:hover{border-color:var(--orange);color:var(--orange)}.cart-count{background:var(--orange);color:white;font-size:10px;font-weight:800;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;position:absolute;top:-6px;right:-6px;display:none}.cart-count.has-items{display:flex;animation:bounceIn 0.3s ease}.nav-cta{background:linear-gradient(135deg,var(--orange),#e8940f);color:white;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;padding:9px 20px;border-radius:8px;border:none;cursor:pointer;transition:all 0.2s;text-decoration:none}.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(245,166,35,0.4)}.promo-banner{background:linear-gradient(135deg,#ff6b1a 0%,var(--orange) 40%,var(--orange2) 100%);color:white;text-align:center;padding:10px 20px;font-size:13px;font-weight:700;letter-spacing:0.5px;position:fixed;top:64px;left:0;right:0;z-index:498;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}@media(max-width:768px){.promo-banner{top:56px;font-size:11px;padding:8px 36px 8px 12px}}.promo-banner a{color:white;text-decoration:underline;font-weight:800;transition:opacity 0.2s}.promo-banner a:hover{opacity:0.8}.promo-tag{background:rgba(0,0,0,0.2);border-radius:20px;padding:2px 10px;font-size:11px;letter-spacing:1px}.promo-close{position:absolute;right:16px;cursor:pointer;font-size:16px;opacity:0.7;background:none;border:none;color:white}.promo-close:hover{opacity:1}.hero{min-height:100vh;padding:40px 5% 80px;display:flex;align-items:center;position:relative;overflow:hidden}.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 55% at 72% 40%,rgba(245,166,35,0.1) 0%,transparent 70%),radial-gradient(ellipse 40% 40% at 20% 80%,rgba(79,142,255,0.06) 0%,transparent 60%)}.hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 0%,transparent 80%);opacity:0.3}.hero-content{position:relative;z-index:1;max-width:680px}.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,166,35,0.12);border:1px solid rgba(245,166,35,0.3);color:var(--orange2);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:28px;animation:fadeUp 0.6s ease both}.hero-badge::before{content:'●';font-size:8px;animation:pulse 2s infinite}.hero-promo-pill{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,rgba(245,166,35,0.15),rgba(255,100,0,0.1));border:1px solid rgba(245,166,35,0.35);border-radius:12px;padding:10px 18px;margin-bottom:24px;animation:fadeUp 0.6s 0.05s ease both}.hero-promo-pill .pill-tag{background:var(--orange);color:white;font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:6px}.hero-promo-pill span{font-size:13px;font-weight:600;color:var(--text)}.hero-promo-pill strong{color:var(--orange2)}h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,8vw,6.5rem);line-height:0.95;letter-spacing:2px;margin-bottom:8px;animation:fadeUp 0.6s 0.1s ease both}h1 span{background:linear-gradient(135deg,var(--orange),var(--orange2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.hero-sub{font-size:17px;color:var(--muted);line-height:1.7;margin:20px 0 36px;font-weight:400;max-width:520px;animation:fadeUp 0.6s 0.2s ease both}.hero-btns{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp 0.6s 0.3s ease both}.btn-primary{background:linear-gradient(135deg,var(--orange),#e06000);color:white;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;padding:14px 28px;border-radius:12px;border:none;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.25s cubic-bezier(.4,0,.2,1);box-shadow:0 4px 24px rgba(245,166,35,0.35)}.btn-primary:hover{transform:translateY(-3px);box-shadow:0 8px 36px rgba(245,166,35,0.5)}.btn-secondary{background:transparent;border:1px solid var(--border2);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:14px;padding:14px 28px;border-radius:12px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.25s}.btn-secondary:hover{border-color:var(--orange);color:var(--orange);transform:translateY(-2px)}.hero-stats{display:flex;gap:40px;margin-top:56px;animation:fadeUp 0.6s 0.4s ease both}.stat-num{font-family:'Bebas Neue',sans-serif;font-size:36px;letter-spacing:1px;color:var(--text);display:block}.stat-label{font-size:12px;color:var(--muted);font-weight:500}.hero-float{position:absolute;right:5%;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px;animation:fadeUp 0.8s 0.5s ease both;z-index:1}@media(max-width:900px){.hero-float{display:none}}.float-card{background:var(--card);border:1px solid var(--border2);border-radius:14px;padding:14px 18px;display:flex;align-items:center;gap:12px;backdrop-filter:blur(10px);width:220px;animation:floatY 3s ease-in-out infinite;box-shadow:0 4px 20px var(--shadow)}.float-card:nth-child(2){animation-delay:1s;margin-left:30px}.float-card:nth-child(3){animation-delay:2s}.float-icon{font-size:26px}.float-name{font-size:13px;font-weight:700;color:var(--text)}.float-price{font-size:11px;color:var(--green);font-weight:600}.trust-bar{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:18px 5%;display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap}.trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);font-weight:500}.trust-item span{font-size:16px}section{padding:80px 5%;position:relative;z-index:1}.section-eyebrow{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--orange);margin-bottom:12px}.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,4vw,3.2rem);letter-spacing:1px;line-height:1;margin-bottom:16px}.section-desc{color:var(--muted);font-size:15px;line-height:1.7;max-width:480px}#services{background:var(--surface)}.services-header{max-width:600px;margin-bottom:48px}.cat-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px}.cat-tab{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:12px 20px;cursor:pointer;transition:all 0.25s cubic-bezier(.4,0,.2,1);font-family:'Plus Jakarta Sans',sans-serif}.cat-tab:hover{border-color:var(--orange);transform:translateY(-2px);box-shadow:0 4px 12px var(--shadow)}.cat-tab.active{border-color:var(--orange);background:rgba(245,166,35,0.09);box-shadow:0 0 20px rgba(245,166,35,0.18)}.cat-tab-icon{font-size:22px}.cat-tab-name{font-size:13px;font-weight:700;color:var(--text);display:block}.cat-tab-count{font-size:11px;color:var(--muted)}.cat-tab.active .cat-tab-name{color:var(--orange)}.cat-panel{display:none;animation:fadeUp 0.3s ease both}.cat-panel.active{display:block}.items-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}.item-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;display:flex;flex-direction:column;transition:all 0.25s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden}.item-card:hover{transform:translateY(-4px);border-color:var(--border2);box-shadow:0 8px 28px var(--shadow)}.item-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:16px 16px 0 0;background:linear-gradient(90deg,var(--orange),var(--orange2));opacity:0;transition:opacity 0.25s}.item-card:hover::before{opacity:1}.item-badge{position:absolute;top:14px;right:14px;font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:20px}.badge-hot{background:var(--orange);color:white}.badge-new{background:var(--blue);color:white}.badge-sale{background:var(--green);color:#000}.item-top{display:flex;align-items:center;gap:12px;margin-bottom:12px}.item-emoji{font-size:28px}.item-name{font-size:15px;font-weight:700;color:var(--text);line-height:1.3}.item-desc{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:16px;flex:1}.item-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-top:auto}.item-price{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:0.5px;color:var(--orange2)}.item-price span{font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;color:var(--muted);font-weight:500}.item-order{background:rgba(245,166,35,0.1);border:1px solid rgba(245,166,35,0.25);color:var(--orange);font-size:12px;font-weight:700;padding:6px 14px;border-radius:8px;cursor:pointer;transition:all 0.2s;font-family:'Plus Jakarta Sans',sans-serif;text-decoration:none;display:inline-block}.item-order:hover{background:var(--orange);color:white}.item-view-btn{width:100%;background:rgba(245,166,35,0.08);border:1px solid rgba(245,166,35,0.2);color:var(--orange);font-size:13px;font-weight:700;padding:10px;border-radius:10px;cursor:pointer;transition:all 0.2s;font-family:'Plus Jakarta Sans',sans-serif;margin-top:14px;display:flex;align-items:center;justify-content:center;gap:6px}.item-view-btn:hover{background:var(--orange);color:white}.cat-search-wrap{position:relative;margin-bottom:24px}.cat-search{width:100%;padding:13px 18px 13px 44px;background:var(--card);border:1px solid var(--border);border-radius:12px;color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;outline:none;transition:border-color 0.2s}.cat-search:focus{border-color:var(--orange)}.cat-search::placeholder{color:var(--muted)}.search-icon{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:16px;pointer-events:none}.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;margin-top:48px;position:relative}.steps::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--border2),transparent)}.step{text-align:center;padding:0 24px;position:relative}.step-num{width:56px;height:56px;background:linear-gradient(135deg,var(--orange),#e06000);border-radius:16px;font-family:'Bebas Neue',sans-serif;font-size:26px;color:white;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;position:relative;z-index:1;box-shadow:0 0 20px rgba(245,166,35,0.35)}.step-title{font-weight:700;font-size:15px;margin-bottom:8px}.step-desc{font-size:13px;color:var(--muted);line-height:1.6}#pricing{background:var(--surface)}.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:48px}.pricing-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:32px;position:relative;overflow:hidden;transition:transform 0.25s,border-color 0.25s,box-shadow 0.25s}.pricing-card:hover{transform:translateY(-4px);border-color:var(--border2);box-shadow:0 8px 30px var(--shadow)}.pricing-card.featured{border-color:var(--orange);background:linear-gradient(135deg,rgba(245,166,35,0.06),var(--card))}.pricing-card.featured::before{content:'🔥 TERLARIS';position:absolute;top:0;right:0;background:var(--orange);color:white;font-size:10px;font-weight:800;letter-spacing:1px;padding:6px 14px;border-radius:0 20px 0 12px}.pricing-plan{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}.pricing-price{font-family:'Bebas Neue',sans-serif;font-size:48px;letter-spacing:1px;color:var(--text);line-height:1;margin-bottom:4px}.pricing-price sup{font-size:22px;vertical-align:top;margin-top:10px;display:inline-block}.pricing-period{font-size:13px;color:var(--muted);margin-bottom:24px}.pricing-features{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px}.pricing-features li{font-size:13px;color:var(--muted);display:flex;align-items:flex-start;gap:10px}.pricing-features li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0}.btn-plan{width:100%;padding:13px;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;cursor:pointer;border:1px solid var(--border2);background:transparent;color:var(--text);transition:all 0.2s}.btn-plan:hover{border-color:var(--orange);color:var(--orange)}.btn-plan.featured-btn{background:linear-gradient(135deg,var(--orange),#e06000);border:none;color:white;box-shadow:0 4px 24px rgba(245,166,35,0.35)}.btn-plan.featured-btn:hover{box-shadow:0 6px 36px rgba(245,166,35,0.5);transform:translateY(-1px)}.testi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:48px}.testi-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;transition:border-color 0.2s,transform 0.2s,box-shadow 0.2s}.testi-card:hover{border-color:var(--border2);transform:translateY(-2px);box-shadow:0 6px 20px var(--shadow)}.testi-stars{color:#fbbf24;font-size:14px;margin-bottom:12px;letter-spacing:2px}.testi-text{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:16px;font-style:italic}.testi-author{display:flex;align-items:center;gap:10px}.testi-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--blue));display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:white}.testi-name{font-size:13px;font-weight:700;color:var(--text)}.testi-loc{font-size:11px;color:var(--muted2)}.faq-list{max-width:680px;margin:48px auto 0;display:flex;flex-direction:column;gap:8px}.faq-item{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color 0.2s}.faq-item.open{border-color:var(--orange)}.faq-q{padding:18px 22px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-weight:600;font-size:14px}.faq-arrow{font-size:18px;color:var(--muted);transition:transform 0.3s}.faq-item.open .faq-arrow{transform:rotate(180deg);color:var(--orange)}.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(.4,0,.2,1),padding 0.35s;padding:0 22px;font-size:13px;color:var(--muted);line-height:1.7}.faq-item.open .faq-a{max-height:200px;padding:0 22px 18px}.cta-banner{background:linear-gradient(135deg,rgba(245,166,35,0.12),rgba(79,142,255,0.08));border:1px solid rgba(245,166,35,0.2);border-radius:24px;padding:64px 48px;text-align:center;margin:0 5% 80px;position:relative;overflow:hidden}.cta-banner::before{content:'';position:absolute;top:-50%;left:50%;transform:translateX(-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(245,166,35,0.12) 0%,transparent 70%);pointer-events:none}.cta-banner h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4rem);letter-spacing:2px;margin-bottom:16px}.cta-banner p{color:var(--muted);font-size:15px;margin-bottom:32px}.cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}footer{background:var(--surface);border-top:1px solid var(--border);padding:40px 5% 24px}.footer-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:32px}.footer-brand .nav-logo{font-size:28px;display:block;margin-bottom:10px}.footer-brand p{font-size:13px;color:var(--muted);max-width:240px;line-height:1.7}.footer-links h4{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:14px}.footer-links ul{list-style:none;display:flex;flex-direction:column;gap:8px}.footer-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color 0.2s}.footer-links a:hover{color:var(--orange)}.footer-bottom{border-top:1px solid var(--border);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}.footer-bottom p{font-size:12px;color:var(--muted2)}.wa-float{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;font-size:26px;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);cursor:pointer;z-index:400;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;animation:bounceIn 0.8s 1s ease both}.wa-float:hover{transform:scale(1.12);box-shadow:0 6px 30px rgba(37,211,102,0.6)}@media (max-width:768px){.wa-float{width:50px;height:50px;font-size:22px;bottom:16px;right:16px}}@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}@keyframes bounceIn{from{opacity:0;transform:scale(0)}80%{transform:scale(1.1)}to{opacity:1;transform:scale(1)}}@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}@keyframes slideIn{from{opacity:0;transform:translateX(100%)}to{opacity:1;transform:translateX(0)}}@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(.4,0,.2,1),transform 0.7s cubic-bezier(.4,0,.2,1)}.reveal.visible{opacity:1;transform:translateY(0)}.modal-overlay{position:fixed;inset:0;z-index:999;background:var(--modal-bg);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity 0.25s ease}.modal-overlay.open{opacity:1;pointer-events:all}.modal-box{background:var(--card);border:1px solid var(--border2);border-radius:24px;width:100%;max-width:580px;max-height:88vh;overflow-y:auto;transform:translateY(24px) scale(0.97);transition:transform 0.3s cubic-bezier(.4,0,.2,1);position:relative}.modal-overlay.open .modal-box{transform:translateY(0) scale(1)}.modal-header{padding:28px 28px 0;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;position:sticky;top:0;background:var(--card);padding-bottom:20px;border-bottom:1px solid var(--border);z-index:2}.modal-title-wrap{display:flex;align-items:center;gap:14px}.modal-emoji{font-size:36px}.modal-product-name{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:1px;color:var(--text)}.modal-product-sub{font-size:13px;color:var(--muted);margin-top:2px}.modal-close{background:var(--surface);border:1px solid var(--border);color:var(--muted);font-size:18px;width:36px;height:36px;border-radius:10px;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.2s;font-family:monospace}.modal-close:hover{background:var(--border);color:var(--text)}.modal-body{padding:20px 28px 28px}.modal-section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:14px}.variant-list{display:flex;flex-direction:column;gap:10px}.variant-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;transition:border-color 0.2s;flex-wrap:wrap}.variant-card:hover{border-color:var(--orange)}.variant-card.recommended{border-color:rgba(245,166,35,0.4);background:rgba(245,166,35,0.04)}.variant-left{flex:1;min-width:0}.variant-name{font-weight:700;font-size:14px;color:var(--text);display:flex;align-items:center;gap:8px;flex-wrap:wrap}.variant-badge{font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border-radius:20px}.vbadge-best{background:var(--orange);color:white}.vbadge-hemat{background:var(--green);color:#000}.vbadge-populer{background:var(--blue);color:white}.variant-desc{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.5}.variant-right{display:flex;align-items:center;gap:12px;flex-shrink:0;flex-wrap:wrap}.variant-price{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--orange2);letter-spacing:0.5px;white-space:nowrap}.variant-price small{font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;color:var(--muted);font-weight:400}.variant-btns{display:flex;gap:8px;align-items:center}.variant-order{background:rgba(245,166,35,0.1);border:1px solid rgba(245,166,35,0.3);color:var(--orange);font-size:12px;font-weight:700;padding:8px 16px;border-radius:8px;cursor:pointer;transition:all 0.2s;white-space:nowrap;font-family:'Plus Jakarta Sans',sans-serif;text-decoration:none;display:inline-block}.variant-order:hover{background:var(--orange);color:white}.variant-cart{background:var(--surface);border:1px solid var(--border2);color:var(--muted);font-size:18px;width:36px;height:36px;border-radius:8px;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center}.variant-cart:hover{border-color:var(--green);color:var(--green);background:rgba(34,199,122,0.08)}.variant-cart.added{border-color:var(--green);color:var(--green);background:rgba(34,199,122,0.12)}.cart-panel{position:fixed;top:0;right:-420px;width:420px;max-width:100vw;height:100vh;background:var(--card);border-left:1px solid var(--border2);z-index:600;display:flex;flex-direction:column;transition:right 0.35s cubic-bezier(.4,0,.2,1);box-shadow:-8px 0 40px var(--shadow)}.cart-panel.open{right:0}.cart-overlay{position:fixed;inset:0;z-index:599;background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:opacity 0.3s}.cart-overlay.open{opacity:1;pointer-events:all}.cart-header{padding:20px 24px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}.cart-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px}.cart-header-close{background:var(--surface);border:1px solid var(--border);color:var(--muted);font-size:18px;width:36px;height:36px;border-radius:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s}.cart-header-close:hover{color:var(--text);border-color:var(--border2)}.cart-body{flex:1;overflow-y:auto;padding:16px 24px}.cart-empty{text-align:center;padding:60px 20px;color:var(--muted)}.cart-empty-icon{font-size:56px;margin-bottom:16px;display:block;opacity:0.5}.cart-empty p{font-size:14px;line-height:1.7}.cart-item{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px 16px;margin-bottom:10px;display:flex;align-items:flex-start;gap:12px}.cart-item-emoji{font-size:28px;flex-shrink:0}.cart-item-info{flex:1;min-width:0}.cart-item-name{font-weight:700;font-size:13px;color:var(--text);margin-bottom:2px}.cart-item-variant{font-size:12px;color:var(--muted)}.cart-item-price{font-family:'Bebas Neue',sans-serif;font-size:18px;color:var(--orange2);margin-top:4px;display:block}.cart-item-remove{background:none;border:none;color:var(--muted2);font-size:16px;cursor:pointer;transition:color 0.2s;flex-shrink:0;padding:2px}.cart-item-remove:hover{color:var(--red)}.cart-footer{padding:20px 24px;border-top:1px solid var(--border)}.cart-summary{margin-bottom:16px}.cart-summary-row{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:8px}.cart-summary-row.total{color:var(--text);font-weight:700;font-size:16px;border-top:1px solid var(--border);padding-top:10px;margin-top:10px}.cart-checkout{width:100%;padding:14px;border-radius:12px;background:linear-gradient(135deg,var(--orange),#e06000);color:white;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;border:none;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 20px rgba(245,166,35,0.3)}.cart-checkout:hover{box-shadow:0 6px 30px rgba(245,166,35,0.5);transform:translateY(-1px)}.cart-clear{width:100%;margin-top:8px;padding:10px;border-radius:10px;background:transparent;border:1px solid var(--border2);color:var(--muted);font-size:13px;font-weight:600;cursor:pointer;transition:all 0.2s;font-family:'Plus Jakarta Sans',sans-serif}.cart-clear:hover{border-color:var(--red);color:var(--red)}#tracking-page{display:none;position:fixed;inset:0;z-index:700;background:var(--bg);overflow-y:auto;padding:80px 5% 60px}#tracking-page.open{display:block;animation:fadeUp 0.3s ease both}.tracking-header{display:flex;align-items:center;gap:16px;margin-bottom:40px}.tracking-back{background:var(--card);border:1px solid var(--border2);color:var(--text);font-size:18px;width:44px;height:44px;border-radius:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s}.tracking-back:hover{border-color:var(--orange);color:var(--orange)}.tracking-title{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;letter-spacing:2px}.tracking-form-wrap{max-width:560px;margin-bottom:40px}.tracking-input-row{display:flex;gap:10px}.tracking-input{flex:1;padding:14px 18px;background:var(--card);border:1px solid var(--border);border-radius:12px;color:var(--text);font-size:14px;font-family:'Plus Jakarta Sans',sans-serif;outline:none;transition:border-color 0.2s}.tracking-input:focus{border-color:var(--orange)}.tracking-input::placeholder{color:var(--muted)}.tracking-search-btn{padding:14px 24px;background:linear-gradient(135deg,var(--orange),#e06000);color:white;border:none;border-radius:12px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;cursor:pointer;transition:all 0.2s;white-space:nowrap;box-shadow:0 4px 16px rgba(245,166,35,0.3)}.tracking-search-btn:hover{box-shadow:0 6px 24px rgba(245,166,35,0.5);transform:translateY(-1px)}.tracking-result{max-width:680px;display:none}.tracking-result.show{display:block;animation:fadeUp 0.35s ease both}.tracking-order-card{background:var(--card);border:1px solid var(--border2);border-radius:20px;padding:28px;margin-bottom:20px}.tracking-order-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:24px}.tracking-order-id{font-size:12px;color:var(--muted);margin-bottom:4px}.tracking-order-name{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px}.tracking-status{padding:6px 16px;border-radius:20px;font-size:12px;font-weight:700;letter-spacing:0.5px}.status-pending{background:rgba(255,190,0,0.15);color:var(--orange2);border:1px solid rgba(255,190-0,0.3)}.status-process{background:rgba(79,142,255,0.15);color:var(--blue);border:1px solid rgba(79,142,255,0.3)}.status-done{background:rgba(34,199,122,0.15);color:var(--green);border:1px solid rgba(34,199,122,0.3)}.tracking-timeline{position:relative;padding-left:24px}.tracking-timeline::before{content:'';position:absolute;left:8px;top:6px;bottom:0;width:2px;background:var(--border2)}.timeline-step{position:relative;padding-bottom:24px}.timeline-step:last-child{padding-bottom:0}.timeline-dot{position:absolute;left:-20px;top:4px;width:14px;height:14px;border-radius:50%;border:2px solid var(--border2);background:var(--bg);z-index:1}.timeline-step.done .timeline-dot{background:var(--green);border-color:var(--green)}.timeline-step.active .timeline-dot{background:var(--orange);border-color:var(--orange);box-shadow:0 0 8px rgba(245,166,35,0.5);animation:pulse 1.5s infinite}.timeline-label{font-weight:700;font-size:14px;color:var(--text);margin-bottom:4px}.timeline-step:not(.done):not(.active) .timeline-label{color:var(--muted)}.timeline-time{font-size:12px;color:var(--muted2)}.tracking-info-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-top:20px}.tracking-info-item{background:var(--surface);border-radius:12px;padding:14px}.tracking-info-label{font-size:11px;color:var(--muted2);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}.tracking-info-value{font-size:14px;font-weight:700;color:var(--text)}.tracking-not-found{text-align:center;padding:48px 20px}.tracking-not-found .icon{font-size:56px;margin-bottom:16px;display:block}.tracking-not-found h3{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:1px;margin-bottom:8px}.tracking-not-found p{color:var(--muted);font-size:14px;line-height:1.6}.tracking-demo-hint{margin-top:16px;background:rgba(245,166,35,0.08);border:1px solid rgba(245,166,35,0.2);border-radius:10px;padding:12px 16px;font-size:13px;color:var(--muted)}.tracking-demo-hint strong{color:var(--orange)}.toast{position:fixed;bottom:88px;left:16px;z-index:801;background:var(--card);border:1px solid var(--border2);border-radius:12px;padding:12px 16px;font-size:13px;font-weight:600;color:var(--text);box-shadow:0 4px 20px var(--shadow);transform:translateY(20px);opacity:0;pointer-events:none;transition:all 0.3s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;gap:10px;max-width:calc(100vw - 88px)}.toast.show{transform:translateY(0);opacity:1;pointer-events:auto}.toast-icon{font-size:18px;flex-shrink:0}.data-wizard{animation:fadeUp 0.25s ease both}.data-wizard-label{font-weight:800;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:16px}.data-wizard-nav{display:flex;align-items:center;gap:12px;margin-bottom:20px}.data-back-btn{background:var(--card);border:1px solid var(--border2);color:var(--muted);font-size:12px;font-weight:700;padding:8px 14px;border-radius:8px;cursor:pointer;transition:all 0.2s;font-family:'Plus Jakarta Sans',sans-serif}.data-back-btn:hover{border-color:var(--orange);color:var(--orange)}.data-breadcrumb{font-size:13px;font-weight:700;color:var(--orange);background:rgba(245,166,35,0.1);border:1px solid rgba(245,166,35,0.25);padding:6px 14px;border-radius:8px}.data-op-selector{display:flex;gap:12px;flex-wrap:wrap}.data-op-btn{background:var(--card);border:2px solid var(--border);border-radius:16px;padding:16px 20px;cursor:pointer;transition:all 0.25s;display:flex;flex-direction:column;gap:4px;min-width:140px;position:relative;overflow:hidden}.data-op-btn::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(245,166,35,0.07),transparent);opacity:0;transition:opacity 0.2s}.data-op-btn:hover{border-color:var(--orange);transform:translateY(-3px);box-shadow:0 6px 20px var(--shadow)}.data-op-btn:hover::before{opacity:1}.data-op-btn.selected{border-color:var(--orange);background:rgba(245,166,35,0.08)}.data-op-dot{width:8px;height:8px;border-radius:50%;margin-bottom:6px}.data-op-btn-name{font-size:14px;font-weight:800;color:var(--text)}.data-op-btn-sub{font-size:11px;color:var(--muted)}.data-cat-selector{display:flex;gap:10px;flex-wrap:wrap}.data-cat-btn{background:var(--card);border:2px solid var(--border);border-radius:14px;padding:14px 20px;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;gap:10px}.data-cat-btn:hover{border-color:var(--orange);transform:translateY(-2px)}.data-cat-btn.active{border-color:var(--orange);background:rgba(245,166,35,0.08)}.data-cat-icon{font-size:22px}.data-cat-name{font-size:14px;font-weight:800;color:var(--text);display:block}.data-cat-sub{font-size:11px;color:var(--muted);display:block}.data-quota-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}.data-quota-card{background:var(--card);border:1.5px solid var(--border);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:8px;transition:all 0.2s;position:relative}.data-quota-card:hover{border-color:var(--orange);transform:translateY(-3px);box-shadow:0 6px 20px var(--shadow)}.data-quota-card.recommended{border-color:var(--orange)}.data-quota-badge{position:absolute;top:-1px;right:14px;background:var(--orange);color:white;font-size:9px;font-weight:800;letter-spacing:1px;padding:3px 8px;border-radius:0 0 8px 8px}.data-quota-gb{font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:1px;color:var(--text);line-height:1}.data-quota-gb span{font-size:15px;font-family:'Plus Jakarta Sans',sans-serif;color:var(--muted);font-weight:500}.data-quota-period{font-size:11px;color:var(--muted);font-weight:500}.data-quota-detail{font-size:11px;color:var(--muted2);line-height:1.5}.data-quota-price{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--orange2);margin-top:4px}.data-quota-order{background:linear-gradient(135deg,var(--orange),#e06000);color:white;font-size:12px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;padding:9px 14px;border-radius:8px;border:none;cursor:pointer;transition:all 0.2s;width:100%;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;margin-top:4px}.data-quota-order:hover{box-shadow:0 4px 12px rgba(245,166,35,0.4)}@media(max-width:768px){.data-op-selector{gap:8px}.data-op-btn{min-width:calc(50% - 4px);flex:1 1 calc(50% - 4px);padding:12px 14px}.data-quota-grid{grid-template-columns:1fr 1fr}.data-cat-selector{gap:8px}.data-cat-btn{flex:1 1 calc(50% - 4px)}}@media(max-width:480px){.data-op-selector{display:grid;grid-template-columns:1fr 1fr}.data-quota-grid{grid-template-columns:1fr 1fr}.data-cat-btn{flex:1 1 100%}}.wa-popup{position:fixed;bottom:90px;right:28px;z-index:800;background:var(--card);border:1px solid var(--border2);border-radius:20px;padding:18px 20px;width:280px;box-shadow:0 8px 40px var(--shadow);transform:translateY(20px) scale(0.95);opacity:0;pointer-events:none;transition:all 0.35s cubic-bezier(.4,0,.2,1)}.wa-popup.show{transform:translateY(0) scale(1);opacity:1;pointer-events:all}.wa-popup-close{position:absolute;top:10px;right:12px;background:none;border:none;color:var(--muted);cursor:pointer;font-size:16px;transition:color 0.2s;line-height:1}.wa-popup-close:hover{color:var(--text)}.wa-popup-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#25d366,#128c7e);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:12px;position:relative}.wa-popup-online{position:absolute;bottom:1px;right:1px;width:12px;height:12px;border-radius:50%;background:var(--green);border:2px solid var(--card)}.wa-popup-name{font-weight:800;font-size:14px;color:var(--text);margin-bottom:2px}.wa-popup-status{font-size:11px;color:var(--green);font-weight:600;margin-bottom:10px}.wa-popup-bubble{background:var(--surface);border-radius:0 12px 12px 12px;padding:10px 14px;font-size:13px;color:var(--muted);line-height:1.5;margin-bottom:14px}.wa-popup-btn{width:100%;padding:11px;border-radius:10px;background:linear-gradient(135deg,#25d366,#128c7e);color:white;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:13px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;transition:all 0.2s}.wa-popup-btn:hover{box-shadow:0 4px 16px rgba(37,211,102,0.4);transform:translateY(-1px)}@media (max-width:768px){.wa-popup{right:12px;left:auto;width:260px;bottom:76px;padding:14px 16px;border-radius:16px}.wa-popup-avatar{width:36px;height:36px;font-size:18px;margin-bottom:8px}.wa-popup-name{font-size:12px}.wa-popup-status{font-size:10px;margin-bottom:8px}.wa-popup-bubble{font-size:11px;padding:8px 10px;margin-bottom:10px;line-height:1.4}.wa-popup-btn{font-size:12px;padding:8px}}.item-price-wrap{display:flex;flex-direction:column;gap:0}.item-price-old{font-size:11px;color:var(--muted2);text-decoration:line-through;font-family:'Plus Jakarta Sans',sans-serif;font-weight:500;line-height:1.2}.item-discount-badge{display:inline-block;background:var(--red);color:white;font-size:9px;font-weight:800;letter-spacing:0.5px;padding:2px 6px;border-radius:4px;margin-left:4px;vertical-align:middle}.live-bar{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:10px 5%;display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap}.live-item{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--text)}.live-dot{width:8px;height:8px;border-radius:50%;background:var(--red);animation:pulse 1.5s infinite;flex-shrink:0}.live-dot.green{background:var(--green)}.live-dot.orange{background:var(--orange)}.live-num{font-family:'Bebas Neue',sans-serif;font-size:18px;color:var(--orange2);letter-spacing:0.5px}.new-section{padding:60px 5% 0}.new-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:32px}.new-card{background:var(--card);border:1.5px solid rgba(245,166,35,0.3);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:10px;transition:all 0.25s;position:relative;overflow:hidden}.new-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),var(--orange))}.new-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px var(--shadow);border-color:var(--orange)}.new-card-badge{position:absolute;top:14px;right:14px;background:var(--red);color:white;font-size:9px;font-weight:800;letter-spacing:1px;padding:3px 8px;border-radius:20px}.new-card-top{display:flex;align-items:center;gap:12px}.new-card-emoji{font-size:28px;flex-shrink:0}.new-card-name{font-size:15px;font-weight:700;color:var(--text);line-height:1.3}@media (max-width:768px){.new-card-badge{position:static;display:inline-block;margin-bottom:8px;font-size:9px;align-self:flex-start}.new-card{display:flex;flex-direction:column}.new-card-top{align-items:flex-start}.new-card-name{font-size:13px}.new-card-emoji{font-size:22px;margin-top:2px}}.new-card-desc{font-size:12px;color:var(--muted);line-height:1.6;flex:1}.new-card-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-top:auto}.new-card-price{font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--orange2);letter-spacing:0.5px}.new-card-price small{font-family:'Plus Jakarta Sans',sans-serif;font-size:10px;color:var(--muted);font-weight:500}.new-card-old{font-size:10px;color:var(--muted2);text-decoration:line-through;display:block;margin-bottom:2px}.new-card-order{background:linear-gradient(135deg,var(--orange),#e06000);color:white;font-size:12px;font-weight:700;padding:7px 14px;border-radius:8px;border:none;cursor:pointer;transition:all 0.2s;text-decoration:none;display:flex;align-items:center;gap:6px;font-family:'Plus Jakarta Sans',sans-serif}.new-card-order:hover{box-shadow:0 4px 12px rgba(245,166,35,0.4);transform:translateY(-1px)}@media(max-width:768px){.wa-popup{width:calc(100vw - 48px);right:16px;bottom:90px}.live-bar{gap:12px;padding:10px 4%;justify-content:center;flex-wrap:wrap}.live-item{font-size:12px}.new-section{padding:40px 5% 0}.new-grid{grid-template-columns:1fr 1fr;gap:10px}.new-card{padding:14px;gap:8px}.new-card-emoji{font-size:22px}.new-card-name{font-size:13px}.new-card-desc{font-size:11px}.new-card-price{font-size:17px}.new-card-footer{flex-direction:column;align-items:flex-start;gap:6px}.new-card-order{width:100%;justify-content:center}}@media(max-width:480px){.new-grid{grid-template-columns:1fr 1fr;gap:8px}.live-bar{gap:8px;flex-wrap:wrap;justify-content:center;padding:12px 5%}.live-item{font-size:11px;flex:1;min-width:140px;justify-content:center}.live-num{font-size:15px}.wa-popup{right:12px;width:calc(100vw - 24px);bottom:80px}}.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:var(--card);border:1px solid var(--border2);padding:10px;border-radius:10px;transition:border-color 0.2s}.hamburger:hover{border-color:var(--orange)}.hamburger span{display:block;width:20px;height:2px;background:var(--text);border-radius:2px;transition:all 0.3s}.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}.hamburger.active span:nth-child(2){opacity:0}.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}.mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--bg);z-index:498;padding:24px 5%;flex-direction:column;gap:8px;border-top:1px solid var(--border);overflow-y:auto;animation:fadeUp 0.2s ease both}.mobile-nav.open{display:flex}.mobile-nav-link{display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--card);border:1px solid var(--border);border-radius:14px;color:var(--text);text-decoration:none;font-weight:600;font-size:14px;transition:all 0.2s;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif}.mobile-nav-link:hover,.mobile-nav-link.active{border-color:var(--orange);color:var(--orange)}.mobile-nav-icon{font-size:20px}.mobile-nav-wa{background:linear-gradient(135deg,#25d366,#128c7e);color:white;border:none;margin-top:8px}.mobile-nav-wa:hover{color:white;border:none}.mobile-nav-promo{background:linear-gradient(135deg,#ff4500,var(--orange));color:white;border:none}.mobile-nav-promo:hover{color:white;border:none}@media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}nav{padding:0 12px;height:56px;gap:6px}.nav-logo{font-size:15px;letter-spacing:0.5px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis}.nav-right{gap:5px;flex-shrink:0}.cart-btn{padding:7px;gap:0;font-size:0;width:36px;height:36px;justify-content:center;border-radius:8px}.cart-btn span:not(.cart-count){display:none !important}.cart-btn::before{content:'🛒';font-size:16px}.theme-toggle{width:36px;height:36px;font-size:15px;border-radius:8px;flex-shrink:0}.nav-cta{display:none}.hamburger{padding:8px}.hero{padding:28px 4% 40px;min-height:auto}.hero-stats{flex-wrap:wrap;gap:20px;margin-top:36px}.stat-num{font-size:28px}.hero-sub{font-size:15px;margin:16px 0 28px}.steps{flex-direction:column;gap:20px;padding:24px 5%}.steps::before{display:none}.step{padding:20px}.cta-banner{padding:40px 24px;margin:0 16px 60px}.cta-actions{flex-direction:column;gap:10px}.cta-actions .btn-primary,.cta-actions .btn-secondary{width:100%;justify-content:center}h1{font-size:clamp(2.8rem,9vw,4.5rem)}section{padding:56px 5%}.section-title{font-size:clamp(1.8rem,5vw,2.4rem)}.cart-panel{width:100%;max-width:100%}.tracking-input-row{flex-direction:column}.tracking-search-btn{width:100%}.items-grid{grid-template-columns:1fr 1fr;gap:8px;align-items:stretch}.item-card{padding:12px;border-radius:12px}.item-top{margin-bottom:8px;gap:8px}.item-emoji{font-size:20px;flex-shrink:0}.item-name{font-size:12px;line-height:1.3;padding-right:28px}.item-desc{font-size:11px;margin-bottom:10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;flex:1}.item-price{font-size:15px}.item-price span{font-size:9px}.item-price-old{font-size:10px}.item-footer{gap:4px}.item-order{font-size:10px;padding:5px 8px}.item-view-btn{font-size:11px;padding:8px 6px;margin-top:8px}.item-badge{font-size:8px;padding:2px 5px;top:8px;right:8px}.cat-tabs{gap:8px;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}.cat-tabs::-webkit-scrollbar{height:0}.cat-tab{padding:10px 14px;flex-shrink:0}.cat-tab-count{display:none}.trust-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:14px 5%;justify-items:start}.trust-item{flex-shrink:0;font-size:12px;white-space:nowrap}.pricing-grid{grid-template-columns:1fr;gap:16px;max-width:420px;margin:0 auto}.testi-grid{grid-template-columns:1fr 1fr;gap:12px}.testi-card{padding:16px}.testi-text{font-size:12px}.footer-top{grid-template-columns:1fr 1fr;gap:32px}.modal-box{padding:24px 18px}.variant-card{flex-direction:column;gap:12px}.variant-right{width:100%;flex-direction:row;justify-content:space-between;align-items:center}}@media(max-width:480px){.trust-bar{grid-template-columns:repeat(2,1fr);gap:8px;padding:12px 4%}.trust-item{font-size:11px;gap:6px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:9px 12px}.hero-btns{flex-direction:column}.btn-primary,.btn-secondary{justify-content:center}.variant-right{width:100%;justify-content:space-between}.items-grid{grid-template-columns:1fr 1fr}.testi-grid{grid-template-columns:1fr}nav{padding:0 10px}.nav-logo{font-size:14px}.promo-banner{font-size:11px;padding:8px 36px 8px 12px}section{padding:44px 4%}.footer-top{grid-template-columns:1fr;gap:24px}.services-header{margin-bottom:28px}.pricing-grid{max-width:100%}}.steps-visual{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;position:relative}.step-visual-card{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 16px 32px;position:relative;animation:fadeUp 0.5s ease both}.step-visual-card:nth-child(1){animation-delay:0.1s}.step-visual-card:nth-child(2){animation-delay:0.2s}.step-visual-card:nth-child(3){animation-delay:0.3s}.step-visual-card:nth-child(4){animation-delay:0.4s}.step-visual-icon-wrap{position:relative;width:80px;height:80px;margin-bottom:20px;display:flex;align-items:center;justify-content:center;--step-color:var(--orange)}.step-visual-pulse{position:absolute;inset:0;border-radius:50%;background:rgba(245,166,35,0.12);animation:stepPulse 2s ease-in-out infinite}.step-visual-icon-wrap::before{content:'';position:absolute;inset:6px;border-radius:50%;border:2px solid var(--step-color,var(--orange));opacity:0.5}.step-visual-icon{font-size:32px;position:relative;z-index:1;filter:drop-shadow(0 4px 12px rgba(245,166,35,0.3))}.step-visual-connector{position:absolute;top:40px;right:-30px;width:60px;display:flex;align-items:center;gap:4px;z-index:2}.step-final .step-visual-connector{display:none}.step-connector-line{flex:1;height:2px;background:var(--border);border-radius:2px;overflow:hidden}.step-connector-fill{height:100%;width:0;background:linear-gradient(90deg,var(--orange),#22c77a);border-radius:2px;transition:width 1.5s ease}.reveal.visible .step-connector-fill{width:100%}.step-connector-arrow{color:var(--muted);font-size:14px}.step-visual-num{font-family:'Bebas Neue',sans-serif;font-size:40px;line-height:1;color:var(--orange);opacity:0.15;position:absolute;top:0;left:50%;transform:translateX(-50%);pointer-events:none}.step-visual-title{font-weight:700;font-size:15px;margin-bottom:10px;margin-top:4px}.step-visual-desc{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:14px}.step-visual-badge{font-size:11px;padding:5px 12px;border-radius:20px;border:1px solid rgba(245,166,35,0.3);background:rgba(245,166,35,0.08);color:var(--orange);font-weight:600}@keyframes stepPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.15);opacity:0.6}}.cara-order-cta{margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px 32px;background:var(--card);border:1px solid var(--border);border-radius:20px;flex-wrap:wrap}.cara-order-method-title{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;font-weight:600}.cara-order-method-list{display:flex;flex-wrap:wrap;gap:8px}.pay-chip{font-size:12px;padding:6px 12px;border-radius:8px;background:var(--bg);border:1px solid var(--border);font-weight:500}.testi-rating-summary{display:flex;gap:32px;align-items:center;padding:28px 32px;background:var(--card);border:1px solid var(--border);border-radius:20px;margin:40px 0 32px;flex-wrap:wrap}.testi-overall-score{text-align:center;min-width:100px}.testi-big-score{font-family:'Bebas Neue',sans-serif;font-size:60px;line-height:1;color:var(--orange)}.testi-big-stars{color:var(--orange);font-size:20px;margin:4px 0}.testi-big-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}.testi-bars{flex:1;min-width:200px;display:flex;flex-direction:column;gap:8px}.testi-bar-row{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--muted)}.testi-bar-wrap{flex:1;height:6px;background:var(--border);border-radius:3px;overflow:hidden}.testi-bar-fill{height:100%;background:var(--orange);border-radius:3px;transition:width 1.2s ease}.testi-summary-stats{display:flex;gap:24px;flex-wrap:wrap}.testi-sum-stat{text-align:center}.testi-sum-num{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--text);line-height:1}.testi-sum-label{font-size:11px;color:var(--muted);margin-top:2px}.testi-filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}.testi-filter-btn{padding:8px 18px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:13px;font-weight:600;cursor:pointer;transition:all 0.2s;font-family:'Plus Jakarta Sans',sans-serif}.testi-filter-btn:hover,.testi-filter-btn.active{background:var(--orange);border-color:var(--orange);color:#000}.testi-card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.testi-verified{font-size:11px;color:#22c77a;font-weight:600}.testi-service-tag{display:inline-block;font-size:11px;padding:4px 10px;border-radius:6px;background:var(--bg);border:1px solid var(--border);color:var(--muted);margin-bottom:14px;font-weight:500}.testi-date{font-size:11px;color:var(--muted);margin-left:auto}.testi-load-more{text-align:center;margin-top:32px}.testi-card.hidden{display:none}.tracking-quick-btns{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:14px}.tracking-quick-btn{padding:6px 14px;border-radius:20px;border:1px solid var(--border);background:var(--card);color:var(--muted);font-size:12px;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;transition:all 0.2s}.tracking-quick-btn:hover{border-color:var(--orange);color:var(--orange)}.done-btn{border-color:rgba(34,199,122,0.4);color:#22c77a}.process-btn{border-color:rgba(245,166,35,0.4);color:var(--orange)}.pending-btn{border-color:rgba(156,163,175,0.4)}.tracking-progress-bar{width:100%;height:6px;background:var(--border);border-radius:3px;margin:20px 0;overflow:hidden}.tracking-progress-fill{height:100%;border-radius:3px;transition:width 1s ease}.tracking-progress-fill.done{background:linear-gradient(90deg,var(--orange),#22c77a);width:100%}.tracking-progress-fill.process{background:linear-gradient(90deg,var(--orange),var(--orange));width:66%}.tracking-progress-fill.pending{background:var(--border2);width:25%}@media (max-width:900px){.steps-visual{grid-template-columns:1fr 1fr;gap:24px}.step-visual-connector{display:none}.cara-order-cta{flex-direction:column;align-items:flex-start}.testi-rating-summary{flex-direction:column;gap:20px}.testi-summary-stats{justify-content:center}}@media (max-width:500px){.steps-visual{grid-template-columns:1fr}}@media (max-width:768px){.hero-promo-pill{padding:8px 14px;flex-wrap:wrap;gap:8px}.hero-promo-pill span{font-size:12px}.hero-badge{font-size:11px;padding:5px 13px;margin-bottom:18px}.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}.hero-stats>div{text-align:center;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 8px}.stat-num{font-size:22px}.stat-label{font-size:10px}}@media (max-width:480px){.hero{padding:32px 4% 40px;min-height:auto}.hero-stats{grid-template-columns:repeat(3,1fr);gap:8px}.stat-num{font-size:20px}.stat-label{font-size:9px}.hero-btns{flex-direction:column;gap:10px}.hero-btns .btn-primary,.hero-btns .btn-secondary{width:100%;justify-content:center;padding:13px 20px}}@media (max-width:480px){.promo-banner{font-size:11px;padding:8px 36px 8px 12px;text-align:left;justify-content:flex-start;gap:6px}.promo-tag{font-size:9px}}@media (max-width:768px){.cara-order-cta{padding:20px;gap:16px;text-align:center}.cara-order-cta>div{width:100%}.cara-order-method-list{justify-content:center}}@media (max-width:480px){.testi-rating-summary{padding:20px 16px;gap:16px}.testi-big-score{font-size:48px}.testi-summary-stats{gap:16px}.testi-sum-num{font-size:22px}}@media (max-width:768px){.cat-tabs{overflow-x:auto;flex-wrap:nowrap;padding-bottom:8px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}.cat-tab{scroll-snap-align:start;min-width:120px}.cat-tab-icon{font-size:18px}.cat-tab-name{font-size:12px}}@media (max-width:480px){.items-grid{grid-template-columns:1fr 1fr;gap:8px}.item-card{padding:12px;border-radius:12px}.item-emoji{font-size:20px}.item-name{font-size:12px;line-height:1.25}.item-desc{font-size:10px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.item-price{font-size:16px}.item-price span{font-size:9px}.item-footer{gap:6px}.item-order{font-size:11px;padding:5px 10px}.item-view-btn{font-size:11px;padding:8px;margin-top:8px}.item-badge{font-size:8px;padding:2px 6px;top:10px;right:10px}}@media (max-width:360px){.new-grid{grid-template-columns:1fr}.new-card{padding:14px}}@media (max-width:480px){section{padding:40px 4%}.new-section{padding:32px 4% 0}.section-eyebrow{font-size:10px;letter-spacing:2px}.section-desc{font-size:13px}}@media (max-width:480px){footer{padding:48px 4% 24px}.footer-top{grid-template-columns:1fr;gap:28px}.footer-bottom{flex-direction:column;gap:12px;text-align:center;font-size:11px}}@media (max-width:480px){.modal-box{padding:20px 16px;border-radius:20px 20px 0 0;max-height:85vh;overflow-y:auto}.modal-overlay{align-items:flex-end}.variant-card{gap:10px}.modal-section-label{font-size:10px}}@media (max-width:480px){.cart-panel{width:100%;max-width:100%;border-radius:20px 20px 0 0;bottom:0;top:auto;max-height:80vh;overflow-y:auto}}@media (max-width:480px){.tracking-page{padding:16px}.tracking-input-row{flex-direction:column}.tracking-search-btn{width:100%}.tracking-quick-btns{gap:6px}.tracking-quick-btn{font-size:11px;padding:5px 10px}.tracking-order-card{padding:16px}.tracking-order-name{font-size:18px}}@media (max-width:768px){.hero-badge{display:none}.hero-promo-pill{display:none}.hero{min-height:unset !important;align-items:flex-start !important;padding-top:24px !important;padding-bottom:40px !important}}@media (max-width:480px){.pricing-grid{grid-template-columns:1fr;max-width:100%}.pricing-card{padding:24px 20px}}@media (max-width:360px){.trust-item{font-size:10px;gap:4px;padding:7px 10px}.live-item{font-size:10px;gap:4px}.live-num{font-size:13px}}@media (max-width:480px){.toast{bottom:80px;right:12px;left:12px;max-width:100%;font-size:12px}}@media (max-width:480px){.wa-float{width:52px;height:52px;font-size:22px;bottom:16px;right:16px}}@media (max-width:360px){.testi-grid{grid-template-columns:1fr}.testi-filters{gap:6px}.testi-filter-btn{font-size:11px;padding:6px 12px}}@media (max-width:480px){.steps-visual{gap:16px}.step-visual-card{padding:0 8px 24px}.step-visual-icon-wrap{width:64px;height:64px;margin-bottom:14px}.step-visual-icon{font-size:26px}.step-visual-title{font-size:13px}.step-visual-desc{font-size:12px}}@media (max-width:480px){.data-op-btn{padding:12px;min-width:unset}.data-op-btn-name{font-size:13px}.data-quota-grid{grid-template-columns:1fr 1fr;gap:8px}.data-quota-card{padding:14px}.data-quota-gb{font-size:26px}.data-quota-price{font-size:18px}}@media (max-width:768px){::-webkit-scrollbar{width:2px;height:2px}}
+/* ===== PAYMENT PAGE STYLES ===== */
+#paymentOverlay{position:fixed;inset:0;z-index:1100;background:var(--modal-bg);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity 0.25s ease}
+#paymentOverlay.open{opacity:1;pointer-events:all}
+.payment-box{background:var(--card);border:1px solid var(--border2);border-radius:24px;width:100%;max-width:520px;max-height:90vh;overflow-y:auto;transform:translateY(24px) scale(0.97);transition:transform 0.3s cubic-bezier(.4,0,.2,1)}
+#paymentOverlay.open .payment-box{transform:translateY(0) scale(1)}
+.payment-header{padding:22px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--card);z-index:2}
+.payment-back{background:var(--surface);border:1px solid var(--border);color:var(--muted);font-size:16px;width:34px;height:34px;border-radius:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;font-family:monospace}
+.payment-back:hover{border-color:var(--orange);color:var(--orange)}
+.payment-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px;color:var(--text)}
+.payment-close{background:var(--surface);border:1px solid var(--border);color:var(--muted);font-size:18px;width:34px;height:34px;border-radius:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;font-family:monospace}
+.payment-close:hover{background:var(--border);color:var(--text)}
+.payment-body{padding:20px 24px 28px}
+.payment-order-summary{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 18px;margin-bottom:22px;display:flex;align-items:center;gap:14px}
+.payment-order-emoji{font-size:28px;flex-shrink:0}
+.payment-order-info{}
+.payment-order-product{font-weight:700;font-size:14px;color:var(--text)}
+.payment-order-variant{font-size:12px;color:var(--muted);margin-top:2px}
+.payment-order-price{font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--orange2);margin-top:4px}
+.payment-section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.payment-methods{display:flex;flex-direction:column;gap:10px;margin-bottom:22px}
+.pay-method-card{background:var(--surface);border:2px solid var(--border);border-radius:14px;padding:14px 16px;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;gap:14px}
+.pay-method-card:hover{border-color:var(--orange);background:rgba(245,166,35,0.04)}
+.pay-method-card.selected{border-color:var(--orange);background:rgba(245,166,35,0.07)}
+.pay-method-icon{font-size:24px;flex-shrink:0;width:36px;text-align:center}
+.pay-method-info{flex:1}
+.pay-method-name{font-weight:700;font-size:14px;color:var(--text)}
+.pay-method-desc{font-size:12px;color:var(--muted);margin-top:2px}
+.pay-method-radio{width:18px;height:18px;border-radius:50%;border:2px solid var(--border2);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.2s}
+.pay-method-card.selected .pay-method-radio{border-color:var(--orange);background:var(--orange)}
+.pay-method-card.selected .pay-method-radio::after{content:'';width:6px;height:6px;border-radius:50%;background:white}
+.payment-detail-box{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px;margin-bottom:22px;display:none;animation:fadeUp 0.25s ease both}
+.payment-detail-box.show{display:block}
+.payment-detail-title{font-weight:700;font-size:13px;color:var(--text);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.payment-number-row{display:flex;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--border2);border-radius:10px;padding:12px 14px;margin-bottom:10px}
+.payment-number-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.payment-number-value{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px;color:var(--text)}
+.copy-btn{background:rgba(245,166,35,0.1);border:1px solid rgba(245,166,35,0.3);color:var(--orange);font-size:11px;font-weight:700;padding:6px 12px;border-radius:8px;cursor:pointer;transition:all 0.2s;white-space:nowrap;font-family:'Plus Jakarta Sans',sans-serif}
+.copy-btn:hover{background:var(--orange);color:white}
+.copy-btn.copied{background:var(--green);border-color:var(--green);color:white}
+.payment-steps-list{list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--muted);line-height:1.6}
+.payment-steps-list li{display:flex;gap:10px}
+.payment-steps-list li::before{content:attr(data-step);background:var(--orange);color:white;font-size:10px;font-weight:800;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.payment-note{background:rgba(34,199,122,0.08);border:1px solid rgba(34,199,122,0.2);border-radius:10px;padding:12px 14px;font-size:12px;color:var(--green);line-height:1.6;margin-bottom:22px}
+.payment-confirm-btn{width:100%;padding:14px;border-radius:12px;background:linear-gradient(135deg,#25d366,#128c7e);color:white;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;border:none;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 20px rgba(37,211,102,0.3);text-decoration:none}
+.payment-confirm-btn:hover{box-shadow:0 6px 30px rgba(37,211,102,0.5);transform:translateY(-1px);color:white}
+.payment-confirm-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+@media(max-width:480px){.payment-box{border-radius:20px 20px 0 0;max-height:88vh}#paymentOverlay{align-items:flex-end}.payment-header{padding:16px 18px}.payment-body{padding:14px 18px 24px}.payment-number-value{font-size:18px}}
+/* ============================= */
 .modal-tabs{display:flex;gap:8px;flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;-ms-overflow-style:none}.modal-tabs::-webkit-scrollbar{display:none}.modal-tab-btn{flex:0 0 auto;padding:10px 14px;border-radius:10px;border:1.5px solid var(--border2);background:var(--surface);color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all 0.2s;text-align:center;white-space:nowrap}.modal-tab-btn:hover{border-color:var(--orange);color:var(--orange)}.modal-tab-btn.active{border-color:var(--orange);background:rgba(245,166,35,0.1);color:var(--orange)}@media(max-width:480px){.modal-tabs{gap:6px}.modal-tab-btn{font-size:12px;padding:9px 10px}.modal-product-sub{font-size:11px;line-height:1.4}.modal-emoji{font-size:28px}.modal-product-name{font-size:20px}.modal-header{padding:18px 16px 0;padding-bottom:14px}.modal-body{padding:14px 16px 20px}.variant-order{padding:10px 14px;font-size:12px;width:100%;text-align:center;justify-content:center;display:flex}.variant-cart{width:44px;height:44px}.variant-price{font-size:20px}.variant-name{font-size:13px}}</style>
 </head>
 <body>
@@ -234,7 +282,7 @@
  <div class="new-card-old">Rp18.000</div>
  <div class="new-card-price">Rp1.500 <small>/bulan</small></div>
  </div>
- <a class="new-card-order" style="background:linear-gradient(135deg,var(--orange),#e06000)" href="https://wa.me/62882009466583?text=Halo, saya mau order YouTube Premium 1 Bulan PROMO Rp1.500" target="_blank">💬 Order</a>
+ <button class="new-card-order" style="background:linear-gradient(135deg,var(--orange),#e06000);border:none;cursor:pointer" onclick="openPaymentPage('▶️','YouTube Premium','1 Bulan PROMO','Rp1.500','YouTube Premium 1 Bulan PROMO Rp1.500')">🛒 Beli Sekarang</button>
  </div>
  </div>
 
@@ -250,7 +298,7 @@
  <div class="new-card-old">Rp54.000</div>
  <div class="new-card-price">Rp18.000 <small>/bulan</small></div>
  </div>
- <a class="new-card-order" style="background:linear-gradient(135deg,var(--orange),#e06000)" href="https://wa.me/62882009466583?text=Halo, saya mau order Netflix Premium 1P2U 1 Bulan Rp18.000" target="_blank">💬 Order</a>
+ <button class="new-card-order" style="background:linear-gradient(135deg,var(--orange),#e06000);border:none;cursor:pointer" onclick="openPaymentPage('🎬','Netflix Premium','1P2U 1 Bulan','Rp18.000','Netflix Premium 1P2U 1 Bulan Rp18.000')">🛒 Beli Sekarang</button>
  </div>
  </div>
 
@@ -266,7 +314,7 @@
  <div class="new-card-old">Rp65.000</div>
  <div class="new-card-price">Rp30.000 <small>/bulan</small></div>
  </div>
- <a class="new-card-order" style="background:linear-gradient(135deg,var(--orange),#e06000)" href="https://wa.me/62882009466583?text=Halo, saya mau order Netflix Premium 1P1U 1 Bulan Rp30.000" target="_blank">💬 Order</a>
+ <button class="new-card-order" style="background:linear-gradient(135deg,var(--orange),#e06000);border:none;cursor:pointer" onclick="openPaymentPage('🎬','Netflix Premium','1P1U 1 Bulan','Rp30.000','Netflix Premium 1P1U 1 Bulan Rp30.000')">🛒 Beli Sekarang</button>
  </div>
  </div>
 
@@ -284,7 +332,7 @@
  <div class="cat-tab-icon">💎</div>
  <div class="cat-tab-info">
  <span class="cat-tab-name">Aplikasi Premium</span>
- <span class="cat-tab-count" id="catCountPremium">85 layanan</span>
+ <span class="cat-tab-count" id="catCountPremium">90 layanan</span>
  </div>
  </div>
  <div class="cat-tab" onclick="switchCat('ewallet',this)">
@@ -305,14 +353,14 @@
  <div class="cat-tab-icon">📣</div>
  <div class="cat-tab-info">
  <span class="cat-tab-name">Suntik Sosmed</span>
- <span class="cat-tab-count">12 layanan</span>
+ <span class="cat-tab-count">9 layanan</span>
  </div>
  </div>
  <div class="cat-tab" onclick="switchCat('topup',this)">
  <div class="cat-tab-icon">🎮</div>
  <div class="cat-tab-info">
  <span class="cat-tab-name">Top Up Game</span>
- <span class="cat-tab-count">15 layanan</span>
+ <span class="cat-tab-count">5 layanan</span>
  </div>
  </div>
  <div class="cat-tab" onclick="switchCat('digital',this)">
@@ -502,10 +550,6 @@
  <div class="item-card"><span class="item-badge badge-new">BARU</span><div class="item-top"><div class="item-emoji">🎮</div><div class="item-name">TikTok Live — Views</div></div><div class="item-desc">Tambah penonton TikTok Live secara real-time. Stabil, tanpa password. Tersedia durasi 30 menit, 1 jam, 2 jam, & 3 jam.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp10.000/jam</span></div></div><button class="item-view-btn" onclick="openModal('tiktok-live')">Lihat Semua Paket & Harga</button></div>
  <div class="item-card"><div class="item-top"><div class="item-emoji">▶️</div><div class="item-name">YouTube — Subscribers</div></div><div class="item-desc">Tambah subscriber YouTube channel kamu. Proses bertahap, Non Drop, bantu monetisasi, tanpa password. Paket 100 - 100.000 subscribers tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp15.000/100 subscribers</span></div></div><button class="item-view-btn" onclick="openModal('yt-subscribers')">Lihat Semua Paket & Harga</button></div>
  <div class="item-card"><div class="item-top"><div class="item-emoji">👍</div><div class="item-name">YouTube — Views & Likes</div></div><div class="item-desc">Tambah views & likes video YouTube. Proses bertahap, bantu algoritma channel, tanpa password. Paket 1.000 - 1.000.000 views & 500 - 10.000 likes tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp3.000/1.000 views</span></div></div><button class="item-view-btn" onclick="openModal('yt-views')">Lihat Semua Paket & Harga</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">💬</div><div class="item-name">Telegram — Members & Views</div></div><div class="item-desc">Tambah member grup/channel Telegram & boost views postingan. Proses bertahap, Non Drop, tanpa password. Member 100 - 50.000 & views 1.000 - 500.000 tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp5.000/100 members</span></div></div><button class="item-view-btn" onclick="openModal('telegram')">Lihat Semua Paket & Harga</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">🐦</div><div class="item-name">Twitter/X — Followers & Likes</div></div><div class="item-desc">Tambah followers & likes Twitter/X. Proses bertahap, Non Drop, tanpa password. Paket followers 100 - 50.000 & likes 500 - 25.000 tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp5.000/100 followers</span></div></div><button class="item-view-btn" onclick="openModal('twitter')">Lihat Semua Paket & Harga</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">📘</div><div class="item-name">Facebook — Likes & Followers</div></div><div class="item-desc">Tambah likes halaman, likes postingan & followers profil Facebook. Proses bertahap, Non Drop, tanpa password. Page likes, post likes & profile followers tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp5.000/100 likes</span></div></div><button class="item-view-btn" onclick="openModal('facebook')">Lihat Semua Paket & Harga</button></div>
- <div class="item-card"><span class="item-badge badge-sale">HEMAT</span><div class="item-top"><div class="item-emoji">📊</div><div class="item-name">Paket Sosmed Bundle</div></div><div class="item-desc">Paket hemat gabungan IG + TikTok + YouTube sekaligus. Tanpa password, proses bertahap. Tersedia Starter, Growth, Pro, UMKM, Creator, hingga Agency.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp30.000/paket</span></div></div><button class="item-view-btn" onclick="openModal('sosmed-bundle')">Lihat Semua Paket & Harga</button></div>
  </div>
  </div>
 
@@ -514,19 +558,8 @@
  <div class="item-card"><span class="item-badge badge-hot">HOT</span><div class="item-top"><div class="item-emoji">⚔️</div><div class="item-name">Mobile Legends — Diamonds</div></div><div class="item-desc">Top up diamond ML via Login (kami login ke akunmu) atau Via ID+Server (cukup kirim ID & server). Diamond + Bundle tersedia!</div><button class="item-view-btn" onclick="openModal('ml-diamond')">Lihat Semua Paket & Harga</button></div>
  <div class="item-card"><span class="item-badge badge-hot">HOT</span><div class="item-top"><div class="item-emoji">🔫</div><div class="item-name">Free Fire — Diamonds</div></div><div class="item-desc">Top up diamond FF ke ID game kamu. Proses otomatis, aman 100%. Tersedia semua paket dari 70 - 5600 diamond.</div><button class="item-view-btn" onclick="openModal('ff-diamond')">Lihat Semua Paket & Harga</button></div>
  <div class="item-card"><div class="item-top"><div class="item-emoji">🏆</div><div class="item-name">PUBG Mobile — UC</div></div><div class="item-desc">Top up Unknown Cash (UC) PUBG Mobile. Beli skin, royale pass, dan item eksklusif. Semua paket UC tersedia.</div><button class="item-view-btn" onclick="openModal('pubg-uc')">Lihat Semua Paket & Harga</button></div>
- <div class="item-card"><span class="item-badge badge-new">BARU</span><div class="item-top"><div class="item-emoji">⚔️</div><div class="item-name">Genshin Impact — Genesis Crystals</div></div><div class="item-desc">Top up Genesis Crystals Genshin Impact untuk beli Welkin Moon, Blessing, & Primogems. Server Asia & Global.</div><button class="item-view-btn" onclick="openModal('genshin')">Lihat Semua Paket & Harga</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">🎯</div><div class="item-name">Valorant — VP</div></div><div class="item-desc">Top up Valorant Points (VP) untuk beli skin senjata, agent contract, & battle pass. Harga lebih murah dari toko resmi.</div><button class="item-view-btn" onclick="openModal('valorant')">Lihat Semua Paket & Harga</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">🎮</div><div class="item-name">Steam Wallet</div></div><div class="item-desc">Isi Steam Wallet untuk beli game, DLC, item, & langganan di platform Steam. Semua nominal tersedia.</div><button class="item-view-btn" onclick="openModal('steam')">Lihat Semua Paket & Harga</button></div>
  <div class="item-card"><div class="item-top"><div class="item-emoji">🟣</div><div class="item-name">Roblox — Robux</div></div><div class="item-desc">Top up Robux untuk beli avatar item, game pass, & fitur premium di Roblox. Kirim ke username Roblox kamu.</div><button class="item-view-btn" onclick="openModal('roblox')">Lihat Semua Paket & Harga</button></div>
  <div class="item-card"><span class="item-badge badge-hot">HOT</span><div class="item-top"><div class="item-emoji">🎁</div><div class="item-name">Roblox — Gift (Game Pass)</div></div><div class="item-desc">Gift game pass langsung ke akun. Tersedia untuk Salon de Fiestas, Expedition Antarctica, Brookhaven, CDID, Dress To Impress & lebih banyak game!</div><button class="item-view-btn" onclick="openModal('roblox-gift')">Lihat Semua Paket & Harga</button></div>
- <div class="item-card"><span class="item-badge badge-sale">MURAH</span><div class="item-top"><div class="item-emoji">🌟</div><div class="item-name">Honkai Star Rail — Oneiric Shard</div></div><div class="item-desc">Top up Oneiric Shard untuk beli Express Supply Pass & melakukan Warp karakter & light cone pilihan kamu.</div><button class="item-view-btn" onclick="openModal('hsr')">Lihat Semua Paket & Harga</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">🏈</div><div class="item-name">Point Blank — Cash</div></div><div class="item-desc">Top up Cash Point Blank untuk beli karakter, senjata, & item premium. Proses cepat ke ID akun kamu.</div><button class="item-view-btn" onclick="openModal('pb')">Lihat Semua Paket & Harga</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">🔵</div><div class="item-name">Clash of Clans — Gems</div></div><div class="item-desc">Top up gems CoC untuk speedup, beli builder, shield, & hero equipment. Langsung ke ID supercell kamu.</div><button class="item-view-btn" onclick="openModal('coc')">Lihat Semua Paket & Harga</button></div>
- <div class="item-card"><span class="item-badge badge-new">BARU</span><div class="item-top"><div class="item-emoji">🗡️</div><div class="item-name">Clash Royale — Gems</div></div><div class="item-desc">Top up gems Clash Royale untuk beli chest, pass royale, & item eksklusif. Langsung ke ID Supercell.</div><button class="item-view-btn" onclick="openModal('cr-gems')">Lihat Semua Paket & Harga</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">🐉</div><div class="item-name">Ragnarok M — Kafra Points</div></div><div class="item-desc">Top up Kafra Points Ragnarok M: Eternal Love. Beli item premium, costume, & buff. Proses cepat.</div><button class="item-view-btn" onclick="openModal('ragnarok')">Lihat Semua Paket & Harga</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji"></div><div class="item-name">Legends of Runeterra — Coins</div></div><div class="item-desc">Top up Coins LoR untuk beli kartu, kosmetik, & board. Langsung ke akun Riot kamu.</div><button class="item-view-btn" onclick="openModal('lor')">Lihat Semua Paket & Harga</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">🏟️</div><div class="item-name">eFootball — eFootball Coin</div></div><div class="item-desc">Top up eFootball Coin untuk beli pemain, skill trainer, & item eksklusif di eFootball 2024.</div><button class="item-view-btn" onclick="openModal('efootball')">Lihat Semua Paket & Harga</button></div>
- <div class="item-card"><span class="item-badge badge-hot">HOT</span><div class="item-top"><div class="item-emoji">🎰</div><div class="item-name">Stumble Guys — Gems</div></div><div class="item-desc">Top up Gems Stumble Guys untuk beli skin, emote, & item premium. Langsung ke ID game kamu.</div><button class="item-view-btn" onclick="openModal('stumbleguys')">Lihat Semua Paket & Harga</button></div>
  </div>
  </div>
 
@@ -1541,57 +1574,6 @@ variants:[
 {name:'9000 UC',badge:'',bdgClass:'',price:'Rp1.270.000',per:'/paket',desc:'9000 UC PUBG. Paket eksklusif untuk pemain hardcore. Hubungi CS untuk detail.'},
 {name:'12000 UC',badge:'',bdgClass:'',price:'Rp1.680.000',per:'/paket',desc:'12000 UC PUBG Mobile. Paket terbesar. Wajib hubungi CS sebelum order.'},
 ]},
-'genshin': { emoji:'⚔️', name:'Genshin Impact — Genesis Crystals', sub:'Welkin Moon · Blessing · Primogems · Server Asia & Global', variants:[
-{name:'60 Genesis Crystals',badge:'',bdgClass:'',price:'Rp12.000',per:'/paket',desc:'60 Genesis Crystals Genshin. Untuk konversi ke Primogem atau beli item kecil.'},
-{name:'120 Genesis Crystals',badge:'',bdgClass:'',price:'Rp23.000',per:'/paket',desc:'120 Crystal Genshin Impact. Cukup untuk beberapa Acquaint Fate atau item pilihan.'},
-{name:'180 Genesis Crystals',badge:'',bdgClass:'',price:'Rp34.000',per:'/paket',desc:'180 Crystal Genshin. Untuk beli Welkin Moon atau beli beberapa item di toko.'},
-{name:'330 Genesis Crystals',badge:'populer',bdgClass:'vbadge-populer',price:'Rp55.000',per:'/paket',desc:'330 Crystal Genshin. Paling banyak dipesan. Cukup untuk beli Welkin Moon + Blessing.'},
-{name:'480 Genesis Crystals',badge:'',bdgClass:'',price:'Rp80.000',per:'/paket',desc:'480 Crystal Genshin Impact. Untuk beli 2 Welkin Moon atau top up gacha lebih banyak.'},
-{name:'600 Genesis Crystals',badge:'hemat',bdgClass:'vbadge-hemat',price:'Rp100.000',per:'/paket',desc:'600 Crystal Genshin. Nilai hemat untuk top up rutin & gacha banner terbaru.'},
-{name:'980 Genesis Crystals',badge:'',bdgClass:'',price:'Rp160.000',per:'/paket',desc:'980 Crystal Genshin Impact. Nilai bagus untuk gacha karakter atau weapon banner.'},
-{name:'1600 Genesis Crystals',badge:'',bdgClass:'',price:'Rp260.000',per:'/paket',desc:'1600 Crystal Genshin. Cukup untuk beberapa Intertwined Fate & gacha karakter baru.'},
-{name:'1980 Genesis Crystals',badge:'best',bdgClass:'vbadge-best',price:'Rp310.000',per:'/paket',desc:'1980 Crystal Genshin. Nilai terbaik! Untuk Welkin + gacha intensif karakter 5-star.'},
-{name:'3280 Genesis Crystals',badge:'',bdgClass:'',price:'Rp510.000',per:'/paket',desc:'3280 Crystal Genshin Impact. Paket besar untuk gacha soft pity karakter 5-star.'},
-{name:'6480 Genesis Crystals',badge:'',bdgClass:'',price:'Rp1.000.000',per:'/paket',desc:'6480 Crystal Genshin. Paket jumbo untuk 90x gacha pity & koleksi karakter eksklusif.'},
-{name:'8080 Genesis Crystals',badge:'',bdgClass:'',price:'Rp1.250.000',per:'/paket',desc:'8080 Crystal Genshin Impact. Untuk whale yang ingin C6 karakter atau koleksi total.'},
-{name:'12960 Genesis Crystals',badge:'',bdgClass:'',price:'Rp2.000.000',per:'/paket',desc:'12960 Crystal Genshin. Paket eksklusif untuk hardcore gacha. Hubungi CS dulu.'},
-{name:'16000 Genesis Crystals',badge:'',bdgClass:'',price:'Rp2.450.000',per:'/paket',desc:'16000 Crystal Genshin Impact. Untuk whale total. Hubungi CS sebelum order.'},
-{name:'32000 Genesis Crystals',badge:'',bdgClass:'',price:'Rp4.800.000',per:'/paket',desc:'32000 Crystal Genshin. Paket terbesar. Wajib hubungi CS untuk konfirmasi.'},
-]},
-'valorant': { emoji:'🎯', name:'Valorant — VP', sub:'Skin senjata · Agent contract · Battle Pass', variants:[
-{name:'475 VP',badge:'',bdgClass:'',price:'Rp50.000',per:'/paket',desc:'475 VP Valorant. Untuk beli gun buddy, player card, atau spray pilihan.'},
-{name:'1000 VP',badge:'populer',bdgClass:'vbadge-populer',price:'Rp100.000',per:'/paket',desc:'1000 VP Valorant. Paling banyak dipesan. Cukup untuk beli battle pass atau beberapa item.'},
-{name:'1475 VP',badge:'',bdgClass:'',price:'Rp145.000',per:'/paket',desc:'1475 VP. Cukup untuk beli skin senjata tier Premium Battle Pass.'},
-{name:'2050 VP',badge:'hemat',bdgClass:'vbadge-hemat',price:'Rp195.000',per:'/paket',desc:'2050 VP Valorant. Nilai hemat untuk beli skin senjata premium pilihan.'},
-{name:'2550 VP',badge:'',bdgClass:'',price:'Rp240.000',per:'/paket',desc:'2550 VP. Untuk beli skin senjata tier Select atau banyak item kecil sekaligus.'},
-{name:'3650 VP',badge:'',bdgClass:'',price:'Rp340.000',per:'/paket',desc:'3650 VP Valorant. Untuk beli skin senjata tier Premium atau bundle agent contract.'},
-{name:'4750 VP',badge:'best',bdgClass:'vbadge-best',price:'Rp440.000',per:'/paket',desc:'4750 VP Valorant. Nilai terbaik! Untuk beli bundle skin senjata eksklusif tier Ultra.'},
-{name:'5350 VP',badge:'',bdgClass:'',price:'Rp490.000',per:'/paket',desc:'5350 VP. Cukup untuk skin Ultra + battle pass sekaligus.'},
-{name:'7100 VP',badge:'',bdgClass:'',price:'Rp655.000',per:'/paket',desc:'7100 VP Valorant. Paket besar untuk beli bundle premium & beberapa skin tier Ultra.'},
-{name:'9550 VP',badge:'',bdgClass:'',price:'Rp875.000',per:'/paket',desc:'9550 VP. Untuk beli paket bundle eksklusif & koleksi skin senjata terbaik Valorant.'},
-{name:'11000 VP',badge:'',bdgClass:'',price:'Rp1.000.000',per:'/paket',desc:'11000 VP Valorant. Paket jumbo untuk collector skin premium & bundle eksklusif.'},
-{name:'14500 VP',badge:'',bdgClass:'',price:'Rp1.320.000',per:'/paket',desc:'14500 VP. Untuk whale & pemain yang ingin koleksi semua skin tier terbaik.'},
-{name:'18500 VP',badge:'',bdgClass:'',price:'Rp1.680.000',per:'/paket',desc:'18500 VP Valorant. Koleksi total skin & bundle eksklusif game. Hubungi CS dulu.'},
-{name:'24000 VP',badge:'',bdgClass:'',price:'Rp2.180.000',per:'/paket',desc:'24000 VP. Paket eksklusif untuk hardcore. Hubungi CS untuk konfirmasi sebelum order.'},
-{name:'40000 VP',badge:'',bdgClass:'',price:'Rp3.600.000',per:'/paket',desc:'40000 VP Valorant. Paket terbesar. Wajib hubungi CS sebelum order.'},
-]},
-'steam': { emoji:'🎮', name:'Steam Wallet', sub:'Beli game, DLC & item di Steam · Kode instan', variants:[
-{name:'Rp10.000',badge:'',bdgClass:'',price:'Rp11.000',per:'/kode',desc:'Steam Wallet Rp10.000. Langsung dapat kode untuk top up akun Steam kamu.'},
-{name:'Rp20.000',badge:'',bdgClass:'',price:'Rp21.500',per:'/kode',desc:'Steam Wallet Rp20.000. Untuk beli game indie harga rendah atau DLC kecil.'},
-{name:'Rp30.000',badge:'',bdgClass:'',price:'Rp31.500',per:'/kode',desc:'Steam Wallet Rp30.000. Cukup untuk beli beberapa game indie ringan di saat diskon.'},
-{name:'Rp50.000',badge:'populer',bdgClass:'vbadge-populer',price:'Rp52.000',per:'/kode',desc:'Steam Wallet Rp50.000. Paling banyak dipesan. Untuk beli game indie atau DLC favorit.'},
-{name:'Rp75.000',badge:'',bdgClass:'',price:'Rp77.500',per:'/kode',desc:'Steam Wallet Rp75.000. Cukup untuk beli game AA harga normal saat diskon Steam.'},
-{name:'Rp100.000',badge:'hemat',bdgClass:'vbadge-hemat',price:'Rp103.000',per:'/kode',desc:'Steam Wallet Rp100.000. Nilai hemat, untuk beli game AA atau koleksi game indie.'},
-{name:'Rp150.000',badge:'',bdgClass:'',price:'Rp154.000',per:'/kode',desc:'Steam Wallet Rp150.000. Untuk beli beberapa game atau 1 game AA premium favorit.'},
-{name:'Rp200.000',badge:'',bdgClass:'',price:'Rp205.000',per:'/kode',desc:'Steam Wallet Rp200.000. Cukup untuk beli 2-3 game AA atau DLC game AAA pilihan.'},
-{name:'Rp300.000',badge:'',bdgClass:'',price:'Rp307.000',per:'/kode',desc:'Steam Wallet Rp300.000. Untuk beli game AAA terbaru atau koleksi banyak game.'},
-{name:'Rp400.000',badge:'',bdgClass:'',price:'Rp408.000',per:'/kode',desc:'Steam Wallet Rp400.000. Cukup untuk beli game AAA + beberapa DLC sekaligus.'},
-{name:'Rp500.000',badge:'best',bdgClass:'vbadge-best',price:'Rp510.000',per:'/kode',desc:'Steam Wallet Rp500.000. Nilai terbaik! Top up besar untuk koleksi game favoritmu.'},
-{name:'Rp750.000',badge:'',bdgClass:'',price:'Rp762.000',per:'/kode',desc:'Steam Wallet Rp750.000. Untuk koleksi game AAA banyak & DLC lengkap.'},
-{name:'Rp1.000.000',badge:'',bdgClass:'',price:'Rp1.015.000',per:'/kode',desc:'Steam Wallet Rp1.000.000. Paket jumbo untuk koleksi game premium & wishlist panjang.'},
-{name:'Rp1.500.000',badge:'',bdgClass:'',price:'Rp1.520.000',per:'/kode',desc:'Steam Wallet Rp1.500.000. Untuk gamer serius yang ingin koleksi total game terbaik.'},
-{name:'Rp2.000.000',badge:'',bdgClass:'',price:'Rp2.025.000',per:'/kode',desc:'Steam Wallet Rp2.000.000. Paket terbesar. Hubungi CS untuk konfirmasi sebelum order.'},
-]},
 'roblox-gift': { emoji:'🎁', name:'Roblox — Gift (Game Pass)', sub:'Salon de Fiestas · Expedition Antarctica · Brookhaven · CDID · Dress To Impress', tabs:[
 { label:'🎪 Salon de Fiestas', variants:[
 {name:'VIP (50R)',badge:'',bdgClass:'',price:'Rp5.200',per:'/pass',desc:'VIP Salon de Fiestas — 50 Robux. Gift langsung ke akun Roblox kamu.'},
@@ -1678,142 +1660,6 @@ variants:[
 {name:'Premium + 450 Robux',badge:'',bdgClass:'',price:'Rp75.000',per:'/paket',desc:'Roblox Premium + 450 Robux. Langganan Premium sekaligus dapat 450 Robux bonus per bulan.'},
 {name:'Premium + 1000 Robux',badge:'populer',bdgClass:'vbadge-populer',price:'Rp150.000',per:'/paket',desc:'Roblox Premium + 1000 Robux. Paling banyak dipesan. Akses Premium + 1000 Robux bulanan.'},
 {name:'Premium + 2200 Robux',badge:'best',bdgClass:'vbadge-best',price:'Rp300.000',per:'/paket',desc:'Roblox Premium + 2200 Robux. Nilai terbaik! Akses Premium penuh + 2200 Robux setiap bulan.'},
-]},
-'hsr': { emoji:'🌟', name:'Honkai Star Rail — Oneiric Shard', sub:'Warp karakter & light cone · Express Supply Pass', variants:[
-{name:'60 Oneiric Shard',badge:'',bdgClass:'',price:'Rp12.000',per:'/paket',desc:'60 Oneiric Shard HSR. Konversi ke Stellar Jade untuk Warp atau beli item kecil.'},
-{name:'120 Oneiric Shard',badge:'',bdgClass:'',price:'Rp23.000',per:'/paket',desc:'120 Shard HSR. Untuk beli beberapa item di toko atau konversi Stellar Jade.'},
-{name:'180 Oneiric Shard',badge:'',bdgClass:'',price:'Rp34.000',per:'/paket',desc:'180 Shard HSR. Untuk beli Express Supply Pass (Welkin Moon versi HSR).'},
-{name:'330 Oneiric Shard',badge:'populer',bdgClass:'vbadge-populer',price:'Rp55.000',per:'/paket',desc:'330 Shard HSR. Paling banyak dipesan. Cukup untuk beli Express Supply Pass + item.'},
-{name:'480 Oneiric Shard',badge:'',bdgClass:'',price:'Rp80.000',per:'/paket',desc:'480 Shard Honkai Star Rail. Untuk 2 Supply Pass atau beberapa Warp lanjutan.'},
-{name:'600 Oneiric Shard',badge:'hemat',bdgClass:'vbadge-hemat',price:'Rp100.000',per:'/paket',desc:'600 Shard HSR. Nilai hemat untuk gacha karakter 5-star baru & Supply Pass rutin.'},
-{name:'980 Oneiric Shard',badge:'',bdgClass:'',price:'Rp160.000',per:'/paket',desc:'980 Shard Honkai Star Rail. Untuk top up rutin setiap update patch & gacha banner.'},
-{name:'1600 Oneiric Shard',badge:'',bdgClass:'',price:'Rp260.000',per:'/paket',desc:'1600 Shard HSR. Cukup untuk beberapa Warps & mengejar pity karakter 5-star impian.'},
-{name:'1980 Oneiric Shard',badge:'best',bdgClass:'vbadge-best',price:'Rp310.000',per:'/paket',desc:'1980 Shard HSR. Nilai terbaik! Untuk Welkin + gacha intensif karakter & light cone.'},
-{name:'3280 Oneiric Shard',badge:'',bdgClass:'',price:'Rp510.000',per:'/paket',desc:'3280 Shard Honkai Star Rail. Paket besar untuk soft pity & hard pity karakter 5-star.'},
-{name:'4500 Oneiric Shard',badge:'',bdgClass:'',price:'Rp700.000',per:'/paket',desc:'4500 Shard HSR. Untuk penggemar yang ingin koleksi karakter 5-star eksklusif.'},
-{name:'6480 Oneiric Shard',badge:'',bdgClass:'',price:'Rp1.000.000',per:'/paket',desc:'6480 Shard Honkai Star Rail. Paket jumbo, bisa 90x Warp untuk karakter 5-star.'},
-{name:'8080 Oneiric Shard',badge:'',bdgClass:'',price:'Rp1.250.000',per:'/paket',desc:'8080 Shard HSR. Untuk whale & pemain hardcore yang ingin Eidolon karakter 5-star.'},
-{name:'12960 Oneiric Shard',badge:'',bdgClass:'',price:'Rp2.000.000',per:'/paket',desc:'12960 Shard HSR. Paket eksklusif. Hubungi CS untuk konfirmasi sebelum order.'},
-{name:'16000 Oneiric Shard',badge:'',bdgClass:'',price:'Rp2.450.000',per:'/paket',desc:'16000 Shard Honkai Star Rail. Paket terbesar. Wajib hubungi CS sebelum order.'},
-]},
-'pb': { emoji:'🏈', name:'Point Blank — Cash', sub:'Karakter · Senjata · Item premium PB', variants:[
-{name:'50 Cash',badge:'',bdgClass:'',price:'Rp4.000',per:'/paket',desc:'50 Cash Point Blank. Untuk nyoba top up atau beli item kecil di toko PB.'},
-{name:'100 Cash',badge:'',bdgClass:'',price:'Rp7.000',per:'/paket',desc:'100 Cash PB. Untuk beli item aksesoris kecil atau nyoba lucky box.'},
-{name:'200 Cash',badge:'',bdgClass:'',price:'Rp12.000',per:'/paket',desc:'200 Cash Point Blank. Untuk beli item kecil atau cobain item terbaru PB.'},
-{name:'400 Cash',badge:'populer',bdgClass:'vbadge-populer',price:'Rp22.000',per:'/paket',desc:'400 Cash PB. Paling banyak dipesan. Cukup untuk beli item fashion atau senjata skin.'},
-{name:'600 Cash',badge:'hemat',bdgClass:'vbadge-hemat',price:'Rp28.000',per:'/paket',desc:'600 Cash Point Blank. Nilai hemat. Cukup untuk beli senjata atau karakter pilihan.'},
-{name:'800 Cash',badge:'',bdgClass:'',price:'Rp38.000',per:'/paket',desc:'800 Cash PB. Untuk beli senjata premium atau karakter eksklusif terbaru.'},
-{name:'1000 Cash',badge:'',bdgClass:'',price:'Rp46.000',per:'/paket',desc:'1000 Cash Point Blank. Untuk koleksi item & senjata pilihan tanpa batas.'},
-{name:'1300 Cash',badge:'best',bdgClass:'vbadge-best',price:'Rp55.000',per:'/paket',desc:'1300 Cash PB. Nilai terbaik untuk pemain aktif yang ingin top up rutin.'},
-{name:'2000 Cash',badge:'',bdgClass:'',price:'Rp82.000',per:'/paket',desc:'2000 Cash Point Blank. Paket besar untuk pemain yang sering membeli item baru.'},
-{name:'3000 Cash',badge:'',bdgClass:'',price:'Rp120.000',per:'/paket',desc:'3000 Cash PB. Untuk penggemar hardcore yang ingin koleksi total item eksklusif.'},
-{name:'5000 Cash',badge:'',bdgClass:'',price:'Rp195.000',per:'/paket',desc:'5000 Cash Point Blank. Milestone besar untuk pemain elite & collector item PB.'},
-{name:'7000 Cash',badge:'',bdgClass:'',price:'Rp272.000',per:'/paket',desc:'7000 Cash PB. Paket jumbo untuk pemain yang sangat aktif & ingin semua item.'},
-{name:'10000 Cash',badge:'',bdgClass:'',price:'Rp385.000',per:'/paket',desc:'10000 Cash Point Blank. Untuk whale & pemain hardcore. Koleksi total semua item.'},
-{name:'15000 Cash',badge:'',bdgClass:'',price:'Rp575.000',per:'/paket',desc:'15000 Cash PB. Paket eksklusif. Hubungi CS untuk konfirmasi sebelum order.'},
-{name:'20000 Cash',badge:'',bdgClass:'',price:'Rp760.000',per:'/paket',desc:'20000 Cash Point Blank. Paket terbesar. Wajib hubungi CS sebelum order.'},
-]},
-'coc': { emoji:'🔵', name:'Clash of Clans — Gems', sub:'Builder · Shield · Hero equipment · Langsung ke ID Supercell', variants:[
-{name:'80 Gems',badge:'',bdgClass:'',price:'Rp12.000',per:'/paket',desc:'80 Gems CoC langsung ke ID Supercell kamu. Untuk beli kecil atau speedup builder.'},
-{name:'200 Gems',badge:'',bdgClass:'',price:'Rp28.000',per:'/paket',desc:'200 Gems Clash of Clans. Cukup untuk beli builder slot atau shield jangka menengah.'},
-{name:'500 Gems',badge:'populer',bdgClass:'vbadge-populer',price:'Rp65.000',per:'/paket',desc:'500 Gems CoC. Paling banyak dipesan. Untuk speedup builder atau beli shield panjang.'},
-{name:'800 Gems',badge:'',bdgClass:'',price:'Rp100.000',per:'/paket',desc:'800 Gems Clash of Clans. Untuk beli extra builder atau speedup upgrade hero besar.'},
-{name:'1000 Gems',badge:'hemat',bdgClass:'vbadge-hemat',price:'Rp125.000',per:'/paket',desc:'1000 Gems CoC. Nilai hemat untuk beli builder + shield + item hero equipment.'},
-{name:'1200 Gems',badge:'',bdgClass:'',price:'Rp150.000',per:'/paket',desc:'1200 Gems Clash of Clans. Untuk koleksi item hero equipment & builder lengkap.'},
-{name:'1500 Gems',badge:'',bdgClass:'',price:'Rp185.000',per:'/paket',desc:'1500 Gems CoC. Untuk pemain yang sering speedup & membeli item eksklusif.'},
-{name:'2000 Gems',badge:'',bdgClass:'',price:'Rp245.000',per:'/paket',desc:'2000 Gems Clash of Clans. Paket besar untuk speedup upgrade & item hero lengkap.'},
-{name:'2500 Gems',badge:'best',bdgClass:'vbadge-best',price:'Rp300.000',per:'/paket',desc:'2500 Gems CoC. Nilai terbaik! Top up besar cukup untuk berbagai upgrade & item eksklusif.'},
-{name:'4000 Gems',badge:'',bdgClass:'',price:'Rp475.000',per:'/paket',desc:'4000 Gems Clash of Clans. Untuk pemain aktif yang ingin speedup semua upgrade cepat.'},
-{name:'6000 Gems',badge:'',bdgClass:'',price:'Rp710.000',per:'/paket',desc:'6000 Gems CoC. Milestone besar untuk pemain hardcore yang ingin max semua upgrade.'},
-{name:'8000 Gems',badge:'',bdgClass:'',price:'Rp940.000',per:'/paket',desc:'8000 Gems Clash of Clans. Untuk whale & pemain yang ingin max base cepat.'},
-{name:'10000 Gems',badge:'',bdgClass:'',price:'Rp1.170.000',per:'/paket',desc:'10000 Gems CoC. Paket jumbo untuk pemain hardcore. Hubungi CS untuk detail.'},
-{name:'15000 Gems',badge:'',bdgClass:'',price:'Rp1.750.000',per:'/paket',desc:'15000 Gems Clash of Clans. Paket eksklusif. Hubungi CS sebelum order.'},
-{name:'20000 Gems',badge:'',bdgClass:'',price:'Rp2.320.000',per:'/paket',desc:'20000 Gems CoC. Paket terbesar. Wajib hubungi CS untuk konfirmasi sebelum transfer.'},
-]},
-'cr-gems': { emoji:'🗡️', name:'Clash Royale — Gems', sub:'Chest · Pass Royale · Item eksklusif · ID Supercell', variants:[
-{name:'80 Gems',badge:'',bdgClass:'',price:'Rp12.000',per:'/paket',desc:'80 Gems Clash Royale. Untuk buka chest kecil atau speedup unlock deck.'},
-{name:'200 Gems',badge:'',bdgClass:'',price:'Rp28.000',per:'/paket',desc:'200 Gems CR. Cukup untuk beli Pass Royale atau beberapa chest pilihan.'},
-{name:'500 Gems',badge:'populer',bdgClass:'vbadge-populer',price:'Rp65.000',per:'/paket',desc:'500 Gems Clash Royale. Paling banyak dipesan. Untuk Pass Royale + chest ekstra.'},
-{name:'1000 Gems',badge:'hemat',bdgClass:'vbadge-hemat',price:'Rp125.000',per:'/paket',desc:'1000 Gems CR. Nilai hemat untuk Pass Royale Gold + chest banyak + item pilihan.'},
-{name:'1500 Gems',badge:'best',bdgClass:'vbadge-best',price:'Rp185.000',per:'/paket',desc:'1500 Gems Clash Royale. Nilai terbaik! Untuk Pass Royale + koleksi item eksklusif.'},
-{name:'2000 Gems',badge:'',bdgClass:'',price:'Rp245.000',per:'/paket',desc:'2000 Gems CR. Paket besar untuk pemain aktif yang sering upgrade & beli chest.'},
-{name:'2500 Gems',badge:'',bdgClass:'',price:'Rp300.000',per:'/paket',desc:'2500 Gems Clash Royale. Untuk koleksi card eksklusif & upgrade deck cepat.'},
-{name:'3500 Gems',badge:'',bdgClass:'',price:'Rp415.000',per:'/paket',desc:'3500 Gems CR. Untuk whale yang ingin max kartu pilihan & koleksi item rare.'},
-{name:'5000 Gems',badge:'',bdgClass:'',price:'Rp585.000',per:'/paket',desc:'5000 Gems Clash Royale. Milestone besar untuk pemain hardcore yang serius.'},
-{name:'7000 Gems',badge:'',bdgClass:'',price:'Rp815.000',per:'/paket',desc:'7000 Gems CR. Paket jumbo untuk pemain top ladder & koleksi total item.'},
-{name:'10000 Gems',badge:'',bdgClass:'',price:'Rp1.160.000',per:'/paket',desc:'10000 Gems Clash Royale. Untuk whale total. Hubungi CS untuk detail.'},
-{name:'15000 Gems',badge:'',bdgClass:'',price:'Rp1.740.000',per:'/paket',desc:'15000 Gems CR. Paket eksklusif. Hubungi CS sebelum order untuk konfirmasi.'},
-{name:'20000 Gems',badge:'',bdgClass:'',price:'Rp2.315.000',per:'/paket',desc:'20000 Gems Clash Royale. Paket besar. Wajib hubungi CS sebelum order.'},
-{name:'30000 Gems',badge:'',bdgClass:'',price:'Rp3.460.000',per:'/paket',desc:'30000 Gems CR. Paket ultimate. Hubungi CS untuk proses & konfirmasi.'},
-{name:'50000 Gems',badge:'',bdgClass:'',price:'Rp5.750.000',per:'/paket',desc:'50000 Gems Clash Royale. Paket terbesar. Wajib hubungi CS sebelum transfer.'},
-]},
-'ragnarok': { emoji:'🐉', name:'Ragnarok M — Kafra Points', sub:'Item premium · Costume · Buff · Langsung ke akun', variants:[
-{name:'50 Kafra Points',badge:'',bdgClass:'',price:'Rp8.000',per:'/paket',desc:'50 Kafra Points Ragnarok M. Untuk beli item kecil atau Buffalo Stamp kecil.'},
-{name:'100 Kafra Points',badge:'',bdgClass:'',price:'Rp15.000',per:'/paket',desc:'100 Kafra Points Ragnarok M: Eternal Love. Cukup untuk beberapa item toko kafra.'},
-{name:'200 Kafra Points',badge:'',bdgClass:'',price:'Rp28.000',per:'/paket',desc:'200 KP Ragnarok M. Untuk beli item fashion atau buff harian pilihan.'},
-{name:'300 Kafra Points',badge:'populer',bdgClass:'vbadge-populer',price:'Rp42.000',per:'/paket',desc:'300 Kafra Points ROM. Paling banyak dipesan. Cukup untuk costume pilihan.'},
-{name:'500 Kafra Points',badge:'hemat',bdgClass:'vbadge-hemat',price:'Rp68.000',per:'/paket',desc:'500 KP Ragnarok M. Nilai hemat untuk beli costume eksklusif & item buff.'},
-{name:'800 Kafra Points',badge:'best',bdgClass:'vbadge-best',price:'Rp108.000',per:'/paket',desc:'800 Kafra Points ROM. Nilai terbaik! Untuk costume rare & item eksklusif.'},
-{name:'1000 Kafra Points',badge:'',bdgClass:'',price:'Rp135.000',per:'/paket',desc:'1000 KP Ragnarok M: Eternal Love. Paket besar untuk pemain aktif.'},
-{name:'1500 Kafra Points',badge:'',bdgClass:'',price:'Rp200.000',per:'/paket',desc:'1500 KP ROM. Untuk koleksi costume eksklusif & item event terbatas.'},
-{name:'2000 Kafra Points',badge:'',bdgClass:'',price:'Rp265.000',per:'/paket',desc:'2000 Kafra Points Ragnarok M. Paket jumbo untuk pemain hardcore.'},
-{name:'3000 Kafra Points',badge:'',bdgClass:'',price:'Rp395.000',per:'/paket',desc:'3000 KP ROM. Milestone besar untuk collector costume & item rare.'},
-{name:'5000 Kafra Points',badge:'',bdgClass:'',price:'Rp655.000',per:'/paket',desc:'5000 Kafra Points Ragnarok M. Untuk whale & collector item eksklusif total.'},
-{name:'7000 Kafra Points',badge:'',bdgClass:'',price:'Rp915.000',per:'/paket',desc:'7000 KP ROM. Paket besar untuk pemain hardcore yang ingin semua item.'},
-{name:'10000 Kafra Points',badge:'',bdgClass:'',price:'Rp1.300.000',per:'/paket',desc:'10000 KP Ragnarok M. Paket jumbo eksklusif. Hubungi CS untuk detail.'},
-{name:'15000 Kafra Points',badge:'',bdgClass:'',price:'Rp1.950.000',per:'/paket',desc:'15000 Kafra Points ROM. Paket terbesar. Hubungi CS sebelum order.'},
-{name:'20000 Kafra Points',badge:'',bdgClass:'',price:'Rp2.600.000',per:'/paket',desc:'20000 KP Ragnarok M. Paket ultimate. Wajib hubungi CS untuk konfirmasi.'},
-]},
-'lor': { emoji:'', name:'Legends of Runeterra — Coins', sub:'Kartu · Kosmetik · Board · Akun Riot', variants:[
-{name:'475 Coins',badge:'',bdgClass:'',price:'Rp45.000',per:'/paket',desc:'475 Coins LoR. Untuk beli 1-2 kosmetik kecil atau guardian pilihan.'},
-{name:'1000 Coins',badge:'populer',bdgClass:'vbadge-populer',price:'Rp90.000',per:'/paket',desc:'1000 Coins Legends of Runeterra. Paling banyak dipesan. Cukup untuk board atau bundle kosmetik.'},
-{name:'1650 Coins',badge:'hemat',bdgClass:'vbadge-hemat',price:'Rp145.000',per:'/paket',desc:'1650 Coins LoR. Nilai hemat untuk beli bundle guardian + board eksklusif.'},
-{name:'2600 Coins',badge:'best',bdgClass:'vbadge-best',price:'Rp225.000',per:'/paket',desc:'2600 Coins LoR. Nilai terbaik! Untuk koleksi kosmetik eksklusif & bundle terbaik.'},
-{name:'3900 Coins',badge:'',bdgClass:'',price:'Rp335.000',per:'/paket',desc:'3900 Coins Legends of Runeterra. Paket besar untuk pemain koleksi total.'},
-{name:'5200 Coins',badge:'',bdgClass:'',price:'Rp445.000',per:'/paket',desc:'5200 Coins LoR. Untuk whale yang ingin semua kosmetik & bundle eksklusif.'},
-{name:'7200 Coins',badge:'',bdgClass:'',price:'Rp615.000',per:'/paket',desc:'7200 Coins Legends of Runeterra. Paket jumbo untuk koleksi total item.'},
-{name:'10000 Coins',badge:'',bdgClass:'',price:'Rp850.000',per:'/paket',desc:'10000 Coins LoR. Milestone besar. Hubungi CS untuk detail.'},
-{name:'15000 Coins',badge:'',bdgClass:'',price:'Rp1.275.000',per:'/paket',desc:'15000 Coins Legends of Runeterra. Paket eksklusif. Hubungi CS sebelum order.'},
-{name:'20000 Coins',badge:'',bdgClass:'',price:'Rp1.700.000',per:'/paket',desc:'20000 Coins LoR. Paket besar. Hubungi CS untuk konfirmasi.'},
-{name:'30000 Coins',badge:'',bdgClass:'',price:'Rp2.550.000',per:'/paket',desc:'30000 Coins Legends of Runeterra. Paket jumbo eksklusif. Hubungi CS dulu.'},
-{name:'50000 Coins',badge:'',bdgClass:'',price:'Rp4.250.000',per:'/paket',desc:'50000 Coins LoR. Paket terbesar. Wajib hubungi CS untuk konfirmasi.'},
-{name:'75000 Coins',badge:'',bdgClass:'',price:'Rp6.350.000',per:'/paket',desc:'75000 Coins LoR. Paket ultra. Hubungi CS untuk detail & proses.'},
-{name:'100000 Coins',badge:'',bdgClass:'',price:'Rp8.450.000',per:'/paket',desc:'100000 Coins Legends of Runeterra. Paket ultimate. Wajib hubungi CS.'},
-{name:'Custom Nominal',badge:'',bdgClass:'',price:'Custom',per:'/paket',desc:'Nominal custom sesuai kebutuhan kamu. Hubungi CS untuk penawaran & konfirmasi harga.'},
-]},
-'efootball': { emoji:'🏟️', name:'eFootball — eFootball Coin', sub:'Pemain · Skill trainer · Item eksklusif eFootball 2024', variants:[
-{name:'100 Coin',badge:'',bdgClass:'',price:'Rp10.000',per:'/paket',desc:'100 eFootball Coin. Untuk beli skill trainer kecil atau item aksesoris.'},
-{name:'200 Coin',badge:'',bdgClass:'',price:'Rp19.000',per:'/paket',desc:'200 eFootball Coin. Cukup untuk beli pemain Bronze atau skill trainer.'},
-{name:'400 Coin',badge:'populer',bdgClass:'vbadge-populer',price:'Rp36.000',per:'/paket',desc:'400 eFootball Coin. Paling banyak dipesan. Untuk beli pemain Silver atau featured player.'},
-{name:'600 Coin',badge:'hemat',bdgClass:'vbadge-hemat',price:'Rp53.000',per:'/paket',desc:'600 eFootball Coin. Nilai hemat untuk beli pemain featured & skill trainer pilihan.'},
-{name:'800 Coin',badge:'best',bdgClass:'vbadge-best',price:'Rp70.000',per:'/paket',desc:'800 eFootball Coin. Nilai terbaik! Untuk beli pemain Epic atau featured player eksklusif.'},
-{name:'1000 Coin',badge:'',bdgClass:'',price:'Rp87.000',per:'/paket',desc:'1000 eFootball Coin. Untuk beli beberapa pemain featured & skill trainer banyak.'},
-{name:'1500 Coin',badge:'',bdgClass:'',price:'Rp129.000',per:'/paket',desc:'1500 eFootball Coin. Paket besar untuk gacha pemain Epic & Legendary pilihan.'},
-{name:'2000 Coin',badge:'',bdgClass:'',price:'Rp171.000',per:'/paket',desc:'2000 eFootball Coin. Untuk pemain aktif yang suka koleksi pemain top dunia.'},
-{name:'3000 Coin',badge:'',bdgClass:'',price:'Rp255.000',per:'/paket',desc:'3000 eFootball Coin. Milestone besar untuk membangun squad impian tanpa batas.'},
-{name:'5000 Coin',badge:'',bdgClass:'',price:'Rp425.000',per:'/paket',desc:'5000 eFootball Coin. Paket jumbo untuk whale & pemain hardcore eFootball.'},
-{name:'7000 Coin',badge:'',bdgClass:'',price:'Rp595.000',per:'/paket',desc:'7000 eFootball Coin. Untuk koleksi total pemain Legendary & item eksklusif.'},
-{name:'10000 Coin',badge:'',bdgClass:'',price:'Rp848.000',per:'/paket',desc:'10000 eFootball Coin. Paket eksklusif. Hubungi CS untuk detail.'},
-{name:'15000 Coin',badge:'',bdgClass:'',price:'Rp1.272.000',per:'/paket',desc:'15000 eFootball Coin. Paket besar. Hubungi CS sebelum order.'},
-{name:'20000 Coin',badge:'',bdgClass:'',price:'Rp1.695.000',per:'/paket',desc:'20000 eFootball Coin. Paket jumbo eksklusif. Hubungi CS untuk konfirmasi.'},
-{name:'30000 Coin',badge:'',bdgClass:'',price:'Rp2.540.000',per:'/paket',desc:'30000 eFootball Coin. Paket terbesar. Wajib hubungi CS untuk konfirmasi.'},
-]},
-'stumbleguys': { emoji:'🎰', name:'Stumble Guys — Gems', sub:'Skin · Emote · Item premium · Langsung ke ID game', variants:[
-{name:'50 Gems',badge:'',bdgClass:'',price:'Rp7.000',per:'/paket',desc:'50 Gems Stumble Guys. Untuk beli emote kecil atau cobain item baru.'},
-{name:'100 Gems',badge:'',bdgClass:'',price:'Rp13.000',per:'/paket',desc:'100 Gems Stumble Guys. Untuk beli skin karakter atau item aksesoris pilihan.'},
-{name:'200 Gems',badge:'populer',bdgClass:'vbadge-populer',price:'Rp24.000',per:'/paket',desc:'200 Gems Stumble Guys. Paling banyak dipesan. Untuk skin & emote pilihan.'},
-{name:'400 Gems',badge:'hemat',bdgClass:'vbadge-hemat',price:'Rp46.000',per:'/paket',desc:'400 Gems Stumble Guys. Nilai hemat untuk skin eksklusif & beberapa emote.'},
-{name:'600 Gems',badge:'best',bdgClass:'vbadge-best',price:'Rp68.000',per:'/paket',desc:'600 Gems Stumble Guys. Nilai terbaik! Untuk skin rare & emote eksklusif event.'},
-{name:'800 Gems',badge:'',bdgClass:'',price:'Rp90.000',per:'/paket',desc:'800 Gems Stumble Guys. Paket besar untuk koleksi skin & emote pilihan.'},
-{name:'1200 Gems',badge:'',bdgClass:'',price:'Rp133.000',per:'/paket',desc:'1200 Gems Stumble Guys. Untuk koleksi skin eksklusif event & bundle item premium.'},
-{name:'1600 Gems',badge:'',bdgClass:'',price:'Rp177.000',per:'/paket',desc:'1600 Gems Stumble Guys. Milestone besar untuk collector skin & emote terlengkap.'},
-{name:'2000 Gems',badge:'',bdgClass:'',price:'Rp220.000',per:'/paket',desc:'2000 Gems Stumble Guys. Paket jumbo untuk pemain hardcore yang ingin semua skin.'},
-{name:'3000 Gems',badge:'',bdgClass:'',price:'Rp328.000',per:'/paket',desc:'3000 Gems Stumble Guys. Untuk whale & collector skin eksklusif.'},
-{name:'5000 Gems',badge:'',bdgClass:'',price:'Rp545.000',per:'/paket',desc:'5000 Gems Stumble Guys. Paket eksklusif. Hubungi CS untuk detail.'},
-{name:'7500 Gems',badge:'',bdgClass:'',price:'Rp815.000',per:'/paket',desc:'7500 Gems Stumble Guys. Paket besar. Hubungi CS sebelum order.'},
-{name:'10000 Gems',badge:'',bdgClass:'',price:'Rp1.085.000',per:'/paket',desc:'10000 Gems Stumble Guys. Paket jumbo. Hubungi CS untuk konfirmasi.'},
-{name:'15000 Gems',badge:'',bdgClass:'',price:'Rp1.625.000',per:'/paket',desc:'15000 Gems Stumble Guys. Paket eksklusif. Wajib hubungi CS sebelum order.'},
-{name:'20000 Gems',badge:'',bdgClass:'',price:'Rp2.165.000',per:'/paket',desc:'20000 Gems Stumble Guys. Paket terbesar. Hubungi CS untuk proses & konfirmasi.'},
 ]},
 'ig-followers': {
 emoji: '📸', name: 'Instagram — Followers', sub: 'Max 5M · Real Accounts · Non Drop · 30 Days Refill · Instant Start · 100K/Day',
@@ -1969,86 +1815,6 @@ variants: [
 { name:'10.000 Likes', badge:'', bdgClass:'', price:'Rp100.000', per:'/paket', desc:'10.000 likes YouTube. Paket terbesar. Hubungi CS untuk detail proses.' },
 ]
 },
-'telegram': {
-emoji: '💬', name: 'Telegram — Members & Views', sub: 'Grup & channel · Proses cepat & aman',
-variants: [
-{ name:'100 Members', badge:'', bdgClass:'', price:'Rp5.000', per:'/paket', desc:'100 member Telegram grup/channel. Proses 1-2 hari, Non Drop.' },
-{ name:'250 Members', badge:'', bdgClass:'', price:'Rp10.000', per:'/paket', desc:'250 member Telegram. Cocok untuk grup bisnis & channel berita yang baru dibuat.' },
-{ name:'500 Members', badge:'populer', bdgClass:'vbadge-populer', price:'Rp18.000', per:'/paket', desc:'500 member Telegram. Paling banyak dipesan, proses bertahap 2-4 hari.' },
-{ name:'1.000 Members', badge:'hemat', bdgClass:'vbadge-hemat', price:'Rp30.000', per:'/paket', desc:'1.000 member Telegram. Nilai hemat, channel/grup terlihat aktif & terpercaya.' },
-{ name:'2.500 Members', badge:'', bdgClass:'', price:'Rp65.000', per:'/paket', desc:'2.500 member Telegram. Boost besar untuk komunitas & channel berita.' },
-{ name:'5.000 Members', badge:'best', bdgClass:'vbadge-best', price:'Rp110.000', per:'/paket', desc:'5.000 member Telegram. Nilai terbaik, channel kamu terlihat besar & kredibel.' },
-{ name:'10.000 Members', badge:'', bdgClass:'', price:'Rp200.000', per:'/paket', desc:'10.000 member Telegram. Milestone besar untuk komunitas & brand channel.' },
-{ name:'25.000 Members', badge:'', bdgClass:'', price:'Rp450.000', per:'/paket', desc:'25.000 member Telegram. Untuk brand besar & channel yang ingin dominan.' },
-{ name:'50.000 Members', badge:'', bdgClass:'', price:'Rp850.000', per:'/paket', desc:'50.000 member Telegram. Paket jumbo untuk brand nasional & channel viral.' },
-{ name:'1.000 Post Views', badge:'', bdgClass:'', price:'Rp4.000', per:'/paket', desc:'1.000 views per postingan Telegram channel. Buat konten kamu terlihat viral.' },
-{ name:'5.000 Post Views', badge:'', bdgClass:'', price:'Rp14.000', per:'/paket', desc:'5.000 views post Telegram. Boost engagement untuk setiap konten yang kamu posting.' },
-{ name:'10.000 Post Views', badge:'', bdgClass:'', price:'Rp25.000', per:'/paket', desc:'10.000 views post Telegram. Konten channel kamu terlihat ramai & aktif dibaca.' },
-{ name:'50.000 Post Views', badge:'', bdgClass:'', price:'Rp90.000', per:'/paket', desc:'50.000 views post Telegram. Untuk channel berita & brand yang ingin reach luas.' },
-{ name:'100.000 Post Views', badge:'', bdgClass:'', price:'Rp160.000', per:'/paket', desc:'100.000 views post Telegram. Paket besar untuk channel viral & brand nasional.' },
-{ name:'500.000 Post Views', badge:'', bdgClass:'', price:'Rp700.000', per:'/paket', desc:'500.000 views post Telegram. Paket jumbo. Hubungi CS untuk konfirmasi proses.' },
-]
-},
-'twitter': {
-emoji: '🐦', name: 'Twitter/X — Followers & Likes', sub: 'Tingkatkan kredibilitas & reach konten',
-variants: [
-{ name:'100 Followers', badge:'', bdgClass:'', price:'Rp5.000', per:'/paket', desc:'100 followers Twitter/X real. Proses 1-2 hari, Non Drop.' },
-{ name:'250 Followers', badge:'', bdgClass:'', price:'Rp10.000', per:'/paket', desc:'250 followers X. Cocok untuk akun bisnis & personal branding yang baru.' },
-{ name:'500 Followers', badge:'populer', bdgClass:'vbadge-populer', price:'Rp18.000', per:'/paket', desc:'500 followers Twitter/X. Paling banyak dipesan, proses bertahap 2-4 hari.' },
-{ name:'1.000 Followers', badge:'hemat', bdgClass:'vbadge-hemat', price:'Rp30.000', per:'/paket', desc:'1.000 followers X. Nilai hemat, tingkatkan kredibilitas akun Twitter kamu.' },
-{ name:'2.500 Followers', badge:'', bdgClass:'', price:'Rp65.000', per:'/paket', desc:'2.500 followers Twitter/X. Boost besar untuk personal branding & bisnis.' },
-{ name:'5.000 Followers', badge:'best', bdgClass:'vbadge-best', price:'Rp110.000', per:'/paket', desc:'5.000 followers X. Nilai terbaik, akun kamu terlihat berpengaruh & terpercaya.' },
-{ name:'10.000 Followers', badge:'', bdgClass:'', price:'Rp200.000', per:'/paket', desc:'10.000 followers Twitter/X. Milestone besar untuk influencer & brand nasional.' },
-{ name:'25.000 Followers', badge:'', bdgClass:'', price:'Rp450.000', per:'/paket', desc:'25.000 followers X. Untuk brand yang ingin dominan di platform Twitter.' },
-{ name:'50.000 Followers', badge:'', bdgClass:'', price:'Rp850.000', per:'/paket', desc:'50.000 followers Twitter/X. Paket jumbo untuk brand besar & influencer.' },
-{ name:'500 Likes', badge:'', bdgClass:'', price:'Rp7.000', per:'/paket', desc:'500 likes tweet. Boost engagement tweet untuk reach lebih luas.' },
-{ name:'1.000 Likes', badge:'', bdgClass:'', price:'Rp12.000', per:'/paket', desc:'1.000 likes Twitter/X. Tingkatkan engagement tweet & tampil di trending.' },
-{ name:'2.500 Likes', badge:'', bdgClass:'', price:'Rp25.000', per:'/paket', desc:'2.500 likes tweet. Kontenmu semakin viral di timeline & rekomendasi X.' },
-{ name:'5.000 Likes', badge:'', bdgClass:'', price:'Rp45.000', per:'/paket', desc:'5.000 likes Twitter/X. Buat tweet kamu trending & dibicarakan banyak orang.' },
-{ name:'10.000 Likes', badge:'', bdgClass:'', price:'Rp85.000', per:'/paket', desc:'10.000 likes tweet. Paket besar untuk brand campaign & viral tweet.' },
-{ name:'25.000 Likes', badge:'', bdgClass:'', price:'Rp200.000', per:'/paket', desc:'25.000 likes Twitter/X. Paket jumbo. Hubungi CS untuk konfirmasi proses detail.' },
-]
-},
-'facebook': {
-emoji: '📘', name: 'Facebook — Likes & Followers', sub: 'Boost halaman & profil · Social proof bisnis',
-variants: [
-{ name:'100 Page Likes', badge:'', bdgClass:'', price:'Rp5.000', per:'/paket', desc:'100 likes halaman Facebook real. Proses 1-2 hari, aman & tidak drop.' },
-{ name:'250 Page Likes', badge:'', bdgClass:'', price:'Rp10.000', per:'/paket', desc:'250 likes page FB. Cocok untuk halaman bisnis baru yang ingin terlihat kredibel.' },
-{ name:'500 Page Likes', badge:'populer', bdgClass:'vbadge-populer', price:'Rp18.000', per:'/paket', desc:'500 likes halaman Facebook. Paling banyak dipesan, proses bertahap 2-4 hari.' },
-{ name:'1.000 Page Likes', badge:'hemat', bdgClass:'vbadge-hemat', price:'Rp30.000', per:'/paket', desc:'1.000 likes page FB. Nilai hemat, halaman bisnis kamu semakin terpercaya.' },
-{ name:'2.500 Page Likes', badge:'', bdgClass:'', price:'Rp65.000', per:'/paket', desc:'2.500 likes halaman Facebook. Boost besar untuk bisnis lokal & UMKM.' },
-{ name:'5.000 Page Likes', badge:'best', bdgClass:'vbadge-best', price:'Rp110.000', per:'/paket', desc:'5.000 likes page FB. Nilai terbaik, halaman kamu terlihat established & terpercaya.' },
-{ name:'10.000 Page Likes', badge:'', bdgClass:'', price:'Rp200.000', per:'/paket', desc:'10.000 likes halaman Facebook. Milestone besar untuk brand & bisnis online.' },
-{ name:'25.000 Page Likes', badge:'', bdgClass:'', price:'Rp450.000', per:'/paket', desc:'25.000 likes page FB. Untuk brand yang ingin dominan di platform Facebook.' },
-{ name:'50.000 Page Likes', badge:'', bdgClass:'', price:'Rp850.000', per:'/paket', desc:'50.000 likes halaman Facebook. Paket jumbo untuk brand nasional.' },
-{ name:'500 Post Likes', badge:'', bdgClass:'', price:'Rp7.000', per:'/paket', desc:'500 likes post Facebook. Boost engagement postingan promo & konten bisnis.' },
-{ name:'1.000 Post Likes', badge:'', bdgClass:'', price:'Rp12.000', per:'/paket', desc:'1.000 likes post FB. Tingkatkan reach & engagement postingan secara organik.' },
-{ name:'2.500 Post Likes', badge:'', bdgClass:'', price:'Rp25.000', per:'/paket', desc:'2.500 likes post Facebook. Konten kamu akan semakin viral di timeline.' },
-{ name:'5.000 Post Likes', badge:'', bdgClass:'', price:'Rp45.000', per:'/paket', desc:'5.000 likes post FB. Buat postingan kamu viral & dibicarakan banyak pengguna.' },
-{ name:'500 Profile Followers', badge:'', bdgClass:'', price:'Rp10.000', per:'/paket', desc:'500 followers profil Facebook. Tingkatkan kredibilitas profil personal & bisnis.' },
-{ name:'1.000 Profile Followers', badge:'', bdgClass:'', price:'Rp18.000', per:'/paket', desc:'1.000 followers profil FB. Profil kamu semakin dikenal & terpercaya di platform.' },
-]
-},
-'sosmed-bundle': {
-emoji: '📊', name: 'Paket Sosmed Bundle', sub: 'Hemat · IG + TikTok + YouTube sekaligus',
-variants: [
-{ name:'Bundle Starter — IG 500F + TikTok 500F', badge:'', bdgClass:'', price:'Rp30.000', per:'/paket', desc:'Paket pemula: 500 followers Instagram + 500 followers TikTok. Hemat Rp8.000 vs beli terpisah.' },
-{ name:'Bundle Starter+ — IG 1000F + TikTok 1000F', badge:'populer', bdgClass:'vbadge-populer', price:'Rp55.000', per:'/paket', desc:'1.000 followers IG + 1.000 followers TikTok. Paket paling populer untuk akun baru.' },
-{ name:'Bundle Basic — IG 1000F + TikTok 1000F + YT 100Sub', badge:'hemat', bdgClass:'vbadge-hemat', price:'Rp120.000', per:'/paket', desc:'Boost 3 platform sekaligus! IG 1000F + TikTok 1000F + YouTube 100 Subscriber.' },
-{ name:'Bundle Growth — IG 2500F + TikTok 2500F', badge:'', bdgClass:'', price:'Rp125.000', per:'/paket', desc:'2.500 followers IG + 2.500 followers TikTok. Percepatan besar untuk 2 platform utama.' },
-{ name:'Bundle Pro — IG 5000F + TikTok 5000F + YT 500Sub', badge:'best', bdgClass:'vbadge-best', price:'Rp500.000', per:'/paket', desc:'Paket pro: 5.000 followers IG + 5.000 followers TikTok + 500 subscriber YouTube. Nilai terbaik!' },
-{ name:'Bundle Engagement — IG 1000L + TikTok 1000L + YT 1000V', badge:'', bdgClass:'', price:'Rp55.000', per:'/paket', desc:'Boost engagement: 1.000 likes IG + 1.000 likes TikTok + 1.000 views YouTube.' },
-{ name:'Bundle Views — IG 10000V + TikTok 10000V + YT 5000V', badge:'', bdgClass:'', price:'Rp45.000', per:'/paket', desc:'Boost views 3 platform: 10.000 views IG + 10.000 views TikTok + 5.000 views YouTube.' },
-{ name:'Bundle Viral — IG 5000F+5000L + TikTok 5000F+5000L', badge:'', bdgClass:'', price:'Rp350.000', per:'/paket', desc:'Paket viral: followers + likes di IG & TikTok sekaligus. Untuk akun yang ingin viral cepat.' },
-{ name:'Bundle UMKM — IG 1000F + FB 1000L + TikTok 1000F', badge:'', bdgClass:'', price:'Rp80.000', per:'/paket', desc:'Khusus UMKM: boost 3 platform bisnis utama sekaligus. Hemat & efektif.' },
-{ name:'Bundle Creator — IG 2500F + TikTok 2500F + YT 250Sub', badge:'', bdgClass:'', price:'Rp185.000', per:'/paket', desc:'Paket konten kreator: boost followers & subscriber di 3 platform utama.' },
-{ name:'Bundle Brand — IG 5000F + TikTok 5000F + FB 5000L + YT 500Sub', badge:'', bdgClass:'', price:'Rp550.000', per:'/paket', desc:'Paket brand: 4 platform sekaligus untuk bisnis yang ingin hadir di semua sosmed.' },
-{ name:'Bundle Influencer — IG 10000F + TikTok 10000F + YT 1000Sub', badge:'', bdgClass:'', price:'Rp800.000', per:'/paket', desc:'Paket influencer: 10.000 followers IG + 10.000 followers TikTok + 1.000 subscriber YT.' },
-{ name:'Bundle Agency Kecil — IG 25000F + TikTok 25000F', badge:'', bdgClass:'', price:'Rp850.000', per:'/paket', desc:'Untuk agency & brand besar: 25.000 followers IG + 25.000 followers TikTok.' },
-{ name:'Bundle Agency — IG 50000F + TikTok 50000F + YT 5000Sub', badge:'', bdgClass:'', price:'Rp3.500.000', per:'/paket', desc:'Paket agency lengkap: 50.000 followers IG + TikTok + 5.000 subscriber YT. Hubungi CS dulu.' },
-{ name:'Bundle Ultimate — Custom Semua Platform', badge:'', bdgClass:'', price:'Custom', per:'/paket', desc:'Bundle sesuai kebutuhan kamu — pilih platform, jumlah, & target sendiri. Hubungi CS untuk penawaran terbaik.' },
-]
-},
 'gopay': {
 emoji: '💚', name: 'Top Up GoPay', sub: 'Instan · Admin Rp1.500 · Masuk dalam 5 menit',
 variants: [
@@ -2123,7 +1889,8 @@ return `<div style="font-size:11px;font-weight:800;letter-spacing:2px;text-trans
 }
 const p = PRODUCTS[key] || {};
 const badge = v.badge ? `<span class="variant-badge ${v.bdgClass}">${v.badge.toUpperCase()}</span>` : '';
-const wa = `https://wa.me/${WA}?text=${encodeURIComponent('Halo, saya mau order ' + (p.name||key) + ' ' + v.name + ' ' + v.price + ' apakah ada?')}`;
+const waText = (p.name||key) + ' ' + v.name + ' ' + v.price;
+const payEmoji = p.emoji || '🛍️';
 return `<div class="variant-card${v.badge === 'best' ? ' recommended' : ''}">
 <div class="variant-left">
 <div class="variant-name">${v.name} ${badge}</div>
@@ -2133,7 +1900,7 @@ return `<div class="variant-card${v.badge === 'best' ? ' recommended' : ''}">
 <div class="variant-price">${v.price}${v.per ? '<small>' + v.per + '</small>' : ''}</div>
 <div class="variant-btns">
 <button class="variant-cart${cart.find(c=>c.id===key+'_'+i)?' added':''}" onclick="addToCart('${key}',${i})" title="Tambah ke Keranjang">🛒</button>
-<a class="variant-order" href="${wa}" target="_blank">Order WA</a>
+<button class="variant-order" onclick="openPaymentPage('${payEmoji}','${(p.name||key).replace(/'/g,"\\'")}','${v.name.replace(/'/g,"\\'")}','${v.price}','${waText.replace(/'/g,"\\'")}')">Beli Sekarang</button>
 </div>
 </div>
 </div>`;
@@ -2466,6 +2233,216 @@ const observer = new IntersectionObserver(entries => {
 entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));</script>
+
+
+<!-- ===== PAYMENT PAGE OVERLAY ===== -->
+<div id="paymentOverlay" onclick="closePaymentOutside(event)">
+  <div class="payment-box">
+    <div class="payment-header">
+      <button class="payment-back" onclick="closePayment()" title="Kembali">&#8592;</button>
+      <div class="payment-title">Pilih Pembayaran</div>
+      <button class="payment-close" onclick="closePaymentFull()">&#215;</button>
+    </div>
+    <div class="payment-body">
+      <div class="payment-order-summary">
+        <div class="payment-order-emoji" id="payEmoji">▶️</div>
+        <div class="payment-order-info">
+          <div class="payment-order-product" id="payProduct">YouTube Premium</div>
+          <div class="payment-order-variant" id="payVariant">Invite 1 Bulan</div>
+          <div class="payment-order-price" id="payPrice">Rp1.500</div>
+        </div>
+      </div>
+
+      <div class="payment-section-label">Pilih Metode Bayar</div>
+      <div class="payment-methods">
+        <div class="pay-method-card" onclick="selectPayMethod(this,'gopay')">
+          <div class="pay-method-icon">💚</div>
+          <div class="pay-method-info">
+            <div class="pay-method-name">GoPay</div>
+            <div class="pay-method-desc">Transfer ke nomor GoPay</div>
+          </div>
+          <div class="pay-method-radio"></div>
+        </div>
+        <div class="pay-method-card" onclick="selectPayMethod(this,'qris')">
+          <div class="pay-method-icon">📱</div>
+          <div class="pay-method-info">
+            <div class="pay-method-name">QRIS</div>
+            <div class="pay-method-desc">Scan QR — semua e-wallet & m-banking</div>
+          </div>
+          <div class="pay-method-radio"></div>
+        </div>
+        <div class="pay-method-card" onclick="selectPayMethod(this,'dana')">
+          <div class="pay-method-icon">🔵</div>
+          <div class="pay-method-info">
+            <div class="pay-method-name">DANA</div>
+            <div class="pay-method-desc">Transfer ke nomor DANA</div>
+          </div>
+          <div class="pay-method-radio"></div>
+        </div>
+        <div class="pay-method-card" onclick="selectPayMethod(this,'shopeepay')">
+          <div class="pay-method-icon">🧡</div>
+          <div class="pay-method-info">
+            <div class="pay-method-name">ShopeePay</div>
+            <div class="pay-method-desc">Transfer ke nomor ShopeePay</div>
+          </div>
+          <div class="pay-method-radio"></div>
+        </div>
+        <div class="pay-method-card" onclick="selectPayMethod(this,'bca')">
+          <div class="pay-method-icon">🏦</div>
+          <div class="pay-method-info">
+            <div class="pay-method-name">Transfer Bank BCA</div>
+            <div class="pay-method-desc">Transfer ke rekening BCA</div>
+          </div>
+          <div class="pay-method-radio"></div>
+        </div>
+        <div class="pay-method-card" onclick="selectPayMethod(this,'bri')">
+          <div class="pay-method-icon">🏦</div>
+          <div class="pay-method-info">
+            <div class="pay-method-name">Transfer Bank BRI</div>
+            <div class="pay-method-desc">Transfer ke rekening BRI</div>
+          </div>
+          <div class="pay-method-radio"></div>
+        </div>
+      </div>
+
+      <div class="payment-detail-box" id="payDetailBox">
+        <div class="payment-detail-title" id="payDetailTitle">💚 Detail GoPay</div>
+        <div class="payment-number-row">
+          <div>
+            <div class="payment-number-label" id="payNumberLabel">Nomor GoPay</div>
+            <div class="payment-number-value" id="payNumberValue">0882-0094-66583</div>
+          </div>
+          <button class="copy-btn" id="copyBtn" onclick="copyNumber()">Salin</button>
+        </div>
+        <div id="payQrisWrap" style="display:none;text-align:center;margin-bottom:14px">
+          <div style="font-size:12px;color:var(--muted);margin-bottom:10px">Scan QR ini dengan aplikasi apapun</div>
+          <div style="background:white;border-radius:12px;padding:14px;display:inline-block;border:2px solid var(--orange)">
+            <svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+              <rect width="140" height="140" fill="white"/>
+              <text x="70" y="65" text-anchor="middle" font-size="10" fill="#888" font-family="sans-serif">QRIS</text>
+              <text x="70" y="80" text-anchor="middle" font-size="9" fill="#f5a623" font-weight="bold" font-family="sans-serif">Storegame Joker</text>
+              <text x="70" y="96" text-anchor="middle" font-size="8" fill="#aaa" font-family="sans-serif">Ganti dengan QRIS asli kamu</text>
+              <rect x="10" y="10" width="35" height="35" rx="4" fill="none" stroke="#000" stroke-width="3"/>
+              <rect x="17" y="17" width="21" height="21" rx="2" fill="#000"/>
+              <rect x="95" y="10" width="35" height="35" rx="4" fill="none" stroke="#000" stroke-width="3"/>
+              <rect x="102" y="17" width="21" height="21" rx="2" fill="#000"/>
+              <rect x="10" y="95" width="35" height="35" rx="4" fill="none" stroke="#000" stroke-width="3"/>
+              <rect x="17" y="102" width="21" height="21" rx="2" fill="#000"/>
+              <rect x="55" y="10" width="5" height="5" fill="#000"/><rect x="65" y="10" width="5" height="5" fill="#000"/>
+              <rect x="55" y="20" width="5" height="5" fill="#000"/><rect x="75" y="15" width="5" height="5" fill="#000"/>
+              <rect x="55" y="55" width="5" height="5" fill="#000"/><rect x="65" y="60" width="5" height="5" fill="#000"/>
+              <rect x="75" y="55" width="5" height="5" fill="#000"/><rect x="80" y="65" width="5" height="5" fill="#000"/>
+              <rect x="55" y="70" width="5" height="5" fill="#000"/><rect x="65" y="75" width="5" height="5" fill="#000"/>
+              <rect x="95" y="55" width="5" height="5" fill="#000"/><rect x="105" y="60" width="5" height="5" fill="#000"/>
+              <rect x="115" y="55" width="5" height="5" fill="#000"/><rect x="95" y="70" width="5" height="5" fill="#000"/>
+              <rect x="105" y="75" width="5" height="5" fill="#000"/><rect x="120" y="65" width="5" height="5" fill="#000"/>
+            </svg>
+          </div>
+          <div style="font-size:11px;color:var(--muted);margin-top:8px">Nomor QRIS: <strong style="color:var(--text)">ID10023456789</strong></div>
+        </div>
+        <ul class="payment-steps-list" id="payStepsList">
+          <li data-step="1">Buka aplikasi GoPay kamu</li>
+          <li data-step="2">Pilih "Kirim" lalu masukkan nomor di atas</li>
+          <li data-step="3">Masukkan nominal sesuai harga produk</li>
+          <li data-step="4">Konfirmasi pembayaran via WhatsApp</li>
+        </ul>
+      </div>
+
+      <div class="payment-note">
+        ✅ Setelah transfer, klik tombol di bawah untuk kirim bukti bayar ke WhatsApp CS kami. Pesanan diproses dalam 15-60 menit.
+      </div>
+
+      <a class="payment-confirm-btn" id="payConfirmBtn" href="#" target="_blank">
+        💬 Konfirmasi Bayar via WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+<!-- ================================ -->
+
+<script>
+// ===== PAYMENT PAGE LOGIC =====
+var _payData = {};
+
+var PAYMENT_INFO = {
+  gopay:     { icon:'💚', name:'GoPay',           label:'Nomor GoPay',   value:'0882-0094-66583', steps:['Buka aplikasi GoPay kamu','Pilih "Kirim" lalu masukkan nomor di atas','Masukkan nominal sesuai harga produk','Konfirmasi pembayaran via WhatsApp'], qris:false },
+  qris:      { icon:'📱', name:'QRIS',             label:'Nomor QRIS',    value:'ID10023456789',   steps:['Buka aplikasi e-wallet atau m-banking kamu','Pilih fitur Scan QR','Scan QR di atas','Konfirmasi pembayaran via WhatsApp'], qris:true },
+  dana:      { icon:'🔵', name:'DANA',             label:'Nomor DANA',    value:'0882-0094-66583', steps:['Buka aplikasi DANA kamu','Pilih "Kirim Uang"','Masukkan nomor di atas','Konfirmasi pembayaran via WhatsApp'], qris:false },
+  shopeepay: { icon:'🧡', name:'ShopeePay',        label:'Nomor ShopeePay',value:'0882-0094-66583',steps:['Buka aplikasi Shopee kamu','Pilih ShopeePay lalu "Kirim"','Masukkan nomor di atas','Konfirmasi pembayaran via WhatsApp'], qris:false },
+  bca:       { icon:'🏦', name:'Bank BCA',         label:'No. Rekening BCA',value:'1234567890',    steps:['Buka m-banking atau ATM BCA kamu','Pilih Transfer ke rekening BCA','Masukkan nomor di atas, a/n Storegame Joker','Konfirmasi pembayaran via WhatsApp'], qris:false },
+  bri:       { icon:'🏦', name:'Bank BRI',         label:'No. Rekening BRI',value:'9876543210',    steps:['Buka m-banking atau ATM BRI kamu','Pilih Transfer ke rekening BRI','Masukkan nomor di atas, a/n Storegame Joker','Konfirmasi pembayaran via WhatsApp'], qris:false }
+};
+
+var _selectedMethod = null;
+
+function openPaymentPage(emoji, product, variant, price, waText) {
+  _payData = { emoji:emoji, product:product, variant:variant, price:price, waText:waText };
+  _selectedMethod = null;
+  document.getElementById('payEmoji').textContent = emoji;
+  document.getElementById('payProduct').textContent = product;
+  document.getElementById('payVariant').textContent = variant;
+  document.getElementById('payPrice').textContent = price;
+  document.getElementById('payDetailBox').classList.remove('show');
+  document.getElementById('payConfirmBtn').href = '#';
+  document.querySelectorAll('.pay-method-card').forEach(c => c.classList.remove('selected'));
+  document.getElementById('paymentOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function selectPayMethod(el, method) {
+  document.querySelectorAll('.pay-method-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  _selectedMethod = method;
+  var info = PAYMENT_INFO[method];
+  document.getElementById('payDetailTitle').textContent = info.icon + ' Detail ' + info.name;
+  document.getElementById('payNumberLabel').textContent = info.label;
+  document.getElementById('payNumberValue').textContent = info.value;
+  var qrisWrap = document.getElementById('payQrisWrap');
+  var numRow = document.getElementById('payNumberValue').parentElement.parentElement;
+  if (info.qris) {
+    qrisWrap.style.display = 'block';
+    numRow.style.display = 'none';
+  } else {
+    qrisWrap.style.display = 'none';
+    numRow.style.display = 'flex';
+  }
+  var steps = info.steps;
+  document.getElementById('payStepsList').innerHTML = steps.map(function(s,i){
+    return '<li data-step="'+(i+1)+'">'+s+'</li>';
+  }).join('');
+  var copyBtn = document.getElementById('copyBtn');
+  copyBtn.textContent = 'Salin';
+  copyBtn.classList.remove('copied');
+  document.getElementById('payDetailBox').classList.add('show');
+  var waMsg = 'Halo, saya mau order ' + _payData.waText + '.\n\nMetode bayar: ' + info.name + '\nNominal: ' + _payData.price + '\n\nMohon konfirmasi ya kak 🙏';
+  document.getElementById('payConfirmBtn').href = 'https://wa.me/62882009466583?text=' + encodeURIComponent(waMsg);
+}
+
+function copyNumber() {
+  var info = PAYMENT_INFO[_selectedMethod];
+  if (!info) return;
+  navigator.clipboard.writeText(info.value.replace(/-/g,'')).then(function(){
+    var btn = document.getElementById('copyBtn');
+    btn.textContent = 'Tersalin!';
+    btn.classList.add('copied');
+    setTimeout(function(){ btn.textContent='Salin'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+
+function closePayment() {
+  document.getElementById('paymentOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function closePaymentFull() {
+  closePayment();
+}
+
+function closePaymentOutside(e) {
+  if (e.target === document.getElementById('paymentOverlay')) closePayment();
+}
+// ==============================
+</script>
 
 </body>
 </html>
