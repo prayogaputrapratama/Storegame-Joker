@@ -254,10 +254,6 @@
 
  <h1>SEMUA<br><span>LAYANAN</span><br>DIGITAL</h1>
  <p class="hero-sub">Aplikasi premium, top up game, sosmed boost, e-wallet — semua tersedia dengan harga terbaik & garansi penuh.</p>
- <div class="hero-btns">
- <a href="#services" class="btn-primary">⚡ Lihat Semua Layanan</a>
- <a href="https://wa.me/62882009466583" class="btn-secondary" target="_blank">💬 Chat WA Sekarang</a>
- </div>
  <div class="hero-stats">
  <div>
  <span class="stat-num">5.000+</span>
@@ -319,37 +315,7 @@
  </div>
  </div>
 
- <div class="new-card">
- <span class="new-card-badge" style="background:var(--red)">PROMO</span>
- <div class="new-card-top">
- <div class="new-card-emoji">🎬</div>
- <div class="new-card-name">Netflix Premium 1P2U</div>
- </div>
- <div class="new-card-desc">Sharing 1 profil, 2 user. Streaming 4K UHD semua konten tersedia. 1 bulan full garansi!</div>
- <div class="new-card-footer">
- <div>
- <div class="new-card-old">Rp54.000</div>
- <div class="new-card-price">Rp18.000 <small>/bulan</small></div>
- </div>
- <button class="new-card-order" style="background:linear-gradient(135deg,var(--orange),#e06000);border:none;cursor:pointer" onclick="openProductDetail('🎬','Netflix Premium','1P2U 1 Bulan','Rp18.000','Netflix Premium 1P2U 1 Bulan Rp18.000','Rp54.000')">🛒 Beli Sekarang</button>
- </div>
- </div>
 
- <div class="new-card">
- <span class="new-card-badge" style="background:var(--red)">PROMO</span>
- <div class="new-card-top">
- <div class="new-card-emoji">🎬</div>
- <div class="new-card-name">Netflix Premium 1P1U</div>
- </div>
- <div class="new-card-desc">Sharing 1 profil, 1 user. Streaming 4K UHD semua konten tersedia. 1 bulan full garansi!</div>
- <div class="new-card-footer">
- <div>
- <div class="new-card-old">Rp65.000</div>
- <div class="new-card-price">Rp30.000 <small>/bulan</small></div>
- </div>
- <button class="new-card-order" style="background:linear-gradient(135deg,var(--orange),#e06000);border:none;cursor:pointer" onclick="openProductDetail('🎬','Netflix Premium','1P1U 1 Bulan','Rp30.000','Netflix Premium 1P1U 1 Bulan Rp30.000','Rp65.000')">🛒 Beli Sekarang</button>
- </div>
- </div>
 
  </div>
 </div>
@@ -1013,6 +979,7 @@ document.body.style.overflow = panel.classList.contains('open') ? 'hidden' : '';
 }
 function addToCart(productKey, variantIdx) {
 const p = PRODUCTS[productKey];
+if (!p || !p.variants || !p.variants[variantIdx]) { showToast('Produk tidak ditemukan', '⚠️'); return; }
 const v = p.variants[variantIdx];
 const id = productKey + '_' + variantIdx;
 const existing = cart.find(item => item.id === id);
@@ -1083,7 +1050,7 @@ const PRODUCTS = {
 {name:'3 Bulan — IndPlan No Garansi (No Renew)',badge:'',bdgClass:'',price:'Rp25.000',per:'/3 bln',desc:'Tanya stock sebelum order. IndPlan no garansi. No renew. Include YouTube Music.'},
 ]},
 'netflix': { emoji:'🎬', name:'Netflix Premium', sub:'Sharing 1P2U & 1P1U · 4K UHD · Full garansi · Semua konten tersedia', variants:[
-{name:'1P2U — 1 Bulan',badge:'populer',bdgClass:'vbadge-populer',price:'Rp18.000',per:'/bulan',priceOld:'Rp54.000',desc:'Sharing 1 profil untuk 2 user. Streaming 4K UHD semua konten Netflix. Akun aman metode sharing resmi. Full garansi 1 bulan.'},
+{name:'1P2U — 1 Bulan',badge:'populer',bdgClass:'vbadge-populer',price:'Rp25.000',per:'/bulan',priceOld:'Rp54.000',desc:'Sharing 1 profil untuk 2 user. Streaming 4K UHD semua konten Netflix. Akun aman metode sharing resmi. Full garansi 1 bulan.'},
 {name:'1P1U — 1 Bulan',badge:'best',bdgClass:'vbadge-best',price:'Rp30.000',per:'/bulan',priceOld:'Rp65.000',desc:'Sharing 1 profil eksklusif untuk 1 user. Lebih private & leluasa. Streaming 4K UHD tanpa rebutan profil. Full garansi 1 bulan.'},
 ]},
 'spotify': {
