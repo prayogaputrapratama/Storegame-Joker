@@ -866,7 +866,7 @@
  <div class="cart-footer" id="cartFooter" style="display:none">
  <div class="cart-summary" id="cartSummary"></div>
  <button class="cart-checkout" onclick="checkoutCart()">
- 💬 Checkout via WhatsApp
+ 🛒 Checkout
  </button>
  <button class="cart-clear" onclick="clearCart()">🗑️ Kosongkan Keranjang</button>
  </div>
@@ -1025,16 +1025,54 @@ items.innerHTML = cart.map(item => `
 <button class="cart-item-remove" onclick="removeFromCart('${item.id}')" title="Hapus">✕</button>
 </div>
 `).join('');
+// Hitung total harga dari semua item
+var totalRaw = 0;
+cart.forEach(function(item) {
+  var raw = item.priceRaw || 0;
+  if (!raw && item.price) {
+    var cleaned = item.price.replace(/[^0-9]/g, '');
+    raw = parseInt(cleaned) || 0;
+  }
+  totalRaw += raw;
+});
+var totalFormatted = totalRaw > 0
+  ? 'Rp' + totalRaw.toLocaleString('id-ID')
+  : count + ' layanan';
 document.getElementById('cartSummary').innerHTML = `
 <div class="cart-summary-row"><span>${count} item dipilih</span><span></span></div>
-<div class="cart-summary-row total"><span>Total Item</span><span>${count} layanan</span></div>
+<div class="cart-summary-row total"><span>Total Pembayaran</span><span>${totalFormatted}</span></div>
 `;
 }
 function checkoutCart() {
 if (cart.length === 0) return;
-const lines = cart.map(item => `- ${item.name} (${item.variant}) = ${item.price}`).join('%0A');
-const msg = `Halo, saya mau order beberapa layanan:%0A%0A${lines}%0A%0ATotal: ${cart.length} layanan. Mohon info pembayarannya ya!`;
-window.open('https://wa.me/62882009466583?text=' + msg, '_blank');
+// Hitung total harga
+var totalRaw = 0;
+cart.forEach(function(item) {
+  var raw = item.priceRaw || 0;
+  if (!raw && item.price) {
+    var cleaned = item.price.replace(/[^0-9]/g, '');
+    raw = parseInt(cleaned) || 0;
+  }
+  totalRaw += raw;
+});
+var totalFormatted = totalRaw > 0
+  ? 'Rp' + totalRaw.toLocaleString('id-ID')
+  : cart.length + ' layanan';
+// Buat ringkasan item untuk payment overlay
+var itemLines = cart.map(function(item) {
+  return '- ' + item.name + ' (' + item.variant + ') = ' + item.price;
+}).join('\n');
+var waMsg = 'Halo, saya mau order beberapa layanan:\n\n' + itemLines + '\n\nTotal: ' + totalFormatted + '\n\nMetode bayar: QRIS\n\nMohon konfirmasi ya kak 🙏';
+// Tampilkan summary di payment overlay
+document.getElementById('payEmoji').textContent = '🛒';
+document.getElementById('payProduct').textContent = 'Order Keranjang (' + cart.length + ' item)';
+document.getElementById('payVariant').innerHTML = cart.map(function(item) {
+  return '<span style="display:block;font-size:11px;color:var(--muted)">' + item.name + ' – ' + item.price + '</span>';
+}).join('');
+document.getElementById('payPrice').textContent = totalFormatted;
+document.getElementById('payConfirmBtn').href = 'https://wa.me/62882009466583?text=' + encodeURIComponent(waMsg);
+document.getElementById('paymentOverlay').classList.add('open');
+document.body.style.overflow = 'hidden';
 }
 const WA = '62882009466583';
 const PRODUCTS = {
