@@ -2702,30 +2702,40 @@ function closePaymentOutside(e) {
 </script>
 
 <style>
-/* FOOTER RESPONSIVE OVERRIDE - FINAL */
+/* FOOTER RESPONSIVE - FIXED */
 @media (max-width: 768px) {
   .footer-top {
     display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 16px !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 24px 16px !important;
   }
+  .footer-brand {
+    grid-column: 1 / -1 !important;
+    margin-bottom: 4px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+  .footer-brand p { display: none !important; }
   .footer-links h4 { font-size: 11px !important; margin-bottom: 10px !important; }
-  .footer-links a { font-size: 11px !important; }
-  .footer-links ul { gap: 6px !important; }
+  .footer-links a { font-size: 12px !important; }
+  .footer-links ul { gap: 8px !important; }
+  .footer-bottom { flex-direction: column !important; text-align: center !important; gap: 4px !important; }
+  .footer-bottom p { font-size: 11px !important; }
 }
 @media (max-width: 480px) {
   .footer-top {
     display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 10px !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 20px 12px !important;
   }
-  .footer-brand { grid-column: 1 / -1 !important; margin-bottom: 4px !important; }
-  .footer-brand p { display: none !important; }
-  .footer-links h4 { font-size: 10px !important; letter-spacing: 0.5px !important; margin-bottom: 8px !important; }
-  .footer-links a { font-size: 10px !important; }
-  .footer-links ul { gap: 5px !important; }
-  .footer-bottom { flex-direction: column !important; text-align: center !important; gap: 6px !important; }
-  .footer-bottom p { font-size: 10px !important; }
+  .footer-brand {
+    grid-column: 1 / -1 !important;
+    margin-bottom: 0 !important;
+  }
+  .footer-links h4 { font-size: 11px !important; letter-spacing: 0.5px !important; margin-bottom: 8px !important; }
+  .footer-links a { font-size: 12px !important; }
+  .footer-links ul { gap: 7px !important; }
 }
 </style>
 </body>
