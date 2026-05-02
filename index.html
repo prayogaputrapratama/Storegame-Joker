@@ -488,10 +488,30 @@
  </div>
  </div>
 
- <div class="data-wizard" id="data-step-category" style="display:none">
+ <div class="data-wizard" id="data-step-type" style="display:none">
  <div class="data-wizard-nav">
  <button class="data-back-btn" onclick="goBackToOperator()">← Ganti Operator</button>
  <div class="data-breadcrumb" id="data-bread-op"></div>
+ </div>
+ <div class="data-wizard-label">💡 Pilih Jenis Layanan</div>
+ <div class="data-op-selector">
+ <div class="data-op-btn" onclick="selectType('kuota')" style="min-width:140px">
+ <div class="data-op-dot" style="background:#f59e0b"></div>
+ <div class="data-op-btn-name">📶 Kuota Internet</div>
+ <div class="data-op-btn-sub">Paket data & internet</div>
+ </div>
+ <div class="data-op-btn" onclick="selectType('pulsa')" style="min-width:140px">
+ <div class="data-op-dot" style="background:#10b981"></div>
+ <div class="data-op-btn-name">💰 Pulsa</div>
+ <div class="data-op-btn-sub">Pulsa reguler</div>
+ </div>
+ </div>
+ </div>
+
+ <div class="data-wizard" id="data-step-category" style="display:none">
+ <div class="data-wizard-nav">
+ <button class="data-back-btn" onclick="goBackToType()">← Ganti Jenis</button>
+ <div class="data-breadcrumb" id="data-bread-type"></div>
  </div>
  <div class="data-wizard-label">📋 Pilih Kategori Kuota</div>
  <div class="data-cat-selector" id="data-cat-list"></div>
@@ -499,10 +519,10 @@
 
  <div class="data-wizard" id="data-step-quota" style="display:none">
  <div class="data-wizard-nav">
- <button class="data-back-btn" onclick="goBackToCategory()">← Ganti Kategori</button>
+ <button class="data-back-btn" onclick="goBackToCategory()">← Kembali</button>
  <div class="data-breadcrumb" id="data-bread-cat"></div>
  </div>
- <div class="data-wizard-label">📦 Pilih Paket Kuota</div>
+ <div class="data-wizard-label">📦 Pilih Paket</div>
  <div class="data-quota-grid" id="data-quota-list"></div>
  </div>
 
@@ -517,9 +537,9 @@
  <div class="item-card"><div class="item-top"><div class="item-emoji">❤️‍🔥</div><div class="item-name">TikTok — Likes</div></div><div class="item-desc">Tambah likes video TikTok. Mulai instan, Non Drop, isi ulang 30 hari, kecepatan 100K/hari, tanpa password. Paket 100 - 1.000 likes tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp1.000/100 likes</span></div></div><button class="item-view-btn" onclick="openModal('tiktok-likes')">Lihat Semua Paket & Harga</button></div>
  <div class="item-card"><div class="item-top"><div class="item-emoji">👀</div><div class="item-name">TikTok — Views</div></div><div class="item-desc">Tambah views video TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password. Paket 5.000 - 100.000 views tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp1.000/5.000 views</span></div></div><button class="item-view-btn" onclick="openModal('tiktok-views')">Lihat Semua Paket & Harga</button></div>
  <div class="item-card"><div class="item-top"><div class="item-emoji">🎮</div><div class="item-name">TikTok Live — Views</div></div><div class="item-desc">Tambah penonton TikTok Live secara real-time. Stabil, tanpa password. Tersedia durasi 30 menit, 1 jam, 2 jam, & 3 jam.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp10.000/jam</span></div></div><button class="item-view-btn" onclick="openModal('tiktok-live')">Lihat Semua Paket & Harga</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">▶️</div><div class="item-name">YouTube — Subscribers</div></div><div class="item-desc">Tambah subscriber YouTube channel kamu. Proses bertahap, Non Drop, bantu monetisasi, tanpa password. Paket 100 - 100.000 subscribers tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp15.000/100 subscribers</span></div></div><button class="item-view-btn" onclick="openModal('yt-subscribers')">Lihat Semua Paket & Harga</button></div>
+ <div class="item-card"><div class="item-top"><div class="item-emoji">▶️</div><div class="item-name">YouTube — Subscribers</div></div><div class="item-desc">Tambah subscriber YouTube saluran kamu. Proses bertahap, Non Drop, bantu monetisasi, tanpa password. Paket 100 - 100.000 subscribers tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp15.000/100 subscribers</span></div></div><button class="item-view-btn" onclick="openModal('yt-subscribers')">Lihat Semua Paket & Harga</button></div>
  <div class="item-card"><div class="item-top"><div class="item-emoji">👍</div><div class="item-name">YouTube — Views & Likes</div></div><div class="item-desc">Tambah views & likes video YouTube. Proses bertahap, bantu algoritma channel, tanpa password. Paket 1.000 - 1.000.000 views & 500 - 10.000 likes tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp3.000/1.000 views</span></div></div><button class="item-view-btn" onclick="openModal('yt-views')">Lihat Semua Paket & Harga</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">💬</div><div class="item-name">WhatsApp Channel — Member</div></div><div class="item-desc">Tambah member WhatsApp Channel kamu. Member global, high quality, proses instan, tanpa password. Paket 100 - 1.000 member tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp10.000/100 member</span></div></div><button class="item-view-btn" onclick="openModal('wa-channel-member')">Lihat Semua Paket & Harga</button></div>
+ <div class="item-card"><div class="item-top"><div class="item-emoji">💬</div><div class="item-name">WhatsApp Saluran — Member</div></div><div class="item-desc">Tambah member WhatsApp Saluran kamu. Member global, high quality, proses instan, tanpa password. Paket 100 - 1.000 member tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp10.000/100 member</span></div></div><button class="item-view-btn" onclick="openModal('wa-channel-member')">Lihat Semua Paket & Harga</button></div>
  <div class="item-card"><div class="item-top"><div class="item-emoji">💼</div><div class="item-name">LinkedIn — Followers</div></div><div class="item-desc">Tambah followers LinkedIn profil atau page kamu. Real people, high quality, proses instan, tanpa password. Paket 100 - 1.000 followers tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp17.000/100 followers</span></div></div><button class="item-view-btn" onclick="openModal('linkedin-followers')">Lihat Semua Paket & Harga</button></div>
  <div class="item-card"><div class="item-top"><div class="item-emoji">👥</div><div class="item-name">Facebook — Followers</div></div><div class="item-desc">Tambah followers Facebook page atau profil. High quality, Non Drop, 90 Days Refill, instant start. Paket 100 - 1.000 followers tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp3.000/100 followers</span></div></div><button class="item-view-btn" onclick="openModal('fb-followers')">Lihat Semua Paket & Harga</button></div>
  </div>
@@ -1706,202 +1726,210 @@ variants:[
 {name:'Premium + 2200 Robux',badge:'',bdgClass:'',price:'Rp300.000',per:'/paket',desc:'Roblox Premium + 2200 Robux. Nilai terbaik! Akses Premium penuh + 2200 Robux setiap bulan.'},
 ]},
 'ig-followers': {
-emoji: '📸', name: 'Instagram — Followers', sub: 'Max 5M · Real Accounts · Non Drop · 30 Days Refill · Instant Start · 100K/Day',
-variants: [
-{ name:'100 Followers', badge:'', bdgClass:'', price:'Rp4.000', per:'/paket', desc:'100 followers Instagram. Non Drop, 30 Days Refill. Instant Start.' },
-{ name:'200 Followers', badge:'', bdgClass:'', price:'Rp6.000', per:'/paket', desc:'200 followers IG real. Non Drop, 30 Days Refill. Instant Start, Speed 100K/Day.' },
-{ name:'300 Followers', badge:'', bdgClass:'', price:'Rp8.000', per:'/paket', desc:'300 followers IG real. Non Drop, 30 Days Refill. Instant Start, Speed 100K/Day.' },
-{ name:'400 Followers', badge:'', bdgClass:'', price:'Rp10.000', per:'/paket', desc:'400 followers IG real. Non Drop, 30 Days Refill. Instant Start, Speed 100K/Day.' },
-{ name:'500 Followers', badge:'', bdgClass:'', price:'Rp12.000', per:'/paket', desc:'500 followers IG real. Non Drop, 30 Days Refill. Paling banyak dipesan!' },
-{ name:'600 Followers', badge:'', bdgClass:'', price:'Rp14.000', per:'/paket', desc:'600 followers IG real. Non Drop, 30 Days Refill. Instant Start, Speed 100K/Day.' },
-{ name:'700 Followers', badge:'', bdgClass:'', price:'Rp16.000', per:'/paket', desc:'700 followers IG real. Non Drop, 30 Days Refill. Instant Start, Speed 100K/Day.' },
-{ name:'800 Followers', badge:'', bdgClass:'', price:'Rp18.000', per:'/paket', desc:'800 followers IG real. Non Drop, 30 Days Refill. Instant Start, Speed 100K/Day.' },
-{ name:'900 Followers', badge:'', bdgClass:'', price:'Rp19.000', per:'/paket', desc:'900 followers IG real. Non Drop, 30 Days Refill. Instant Start, Speed 100K/Day.' },
-{ name:'1.000 Followers', badge:'', bdgClass:'', price:'Rp20.000', per:'/paket', desc:'1.000 followers Instagram real. Non Drop, 30 Days Refill. Nilai hemat terbaik!' },
+emoji: '📸', name: 'Instagram — Followers', sub: 'Bot Random · Indonesia Aktif · Indonesia Aktif Organik · Non Drop · Refill Garansi',
+tabs: [
+{ label: 'Bot Random', variants: [
+{ name:'100 Followers', badge:'', bdgClass:'', price:'Rp4.000', per:'/paket', desc:'100 followers Instagram Bot Random. Non Drop, 30 Days Refill. Instant Start. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'200 Followers', badge:'', bdgClass:'', price:'Rp6.000', per:'/paket', desc:'200 followers IG Bot Random. Non Drop, 30 Days Refill. Instant Start, Speed 100K/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'300 Followers', badge:'', bdgClass:'', price:'Rp8.000', per:'/paket', desc:'300 followers IG Bot Random. Non Drop, 30 Days Refill. Instant Start, Speed 100K/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'400 Followers', badge:'', bdgClass:'', price:'Rp10.000', per:'/paket', desc:'400 followers IG Bot Random. Non Drop, 30 Days Refill. Instant Start, Speed 100K/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'500 Followers', badge:'🔥', bdgClass:'badge-bestseller', price:'Rp12.000', per:'/paket', desc:'500 followers IG Bot Random. Non Drop, 30 Days Refill. Paling banyak dipesan! | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'600 Followers', badge:'', bdgClass:'', price:'Rp14.000', per:'/paket', desc:'600 followers IG Bot Random. Non Drop, 30 Days Refill. Instant Start, Speed 100K/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'700 Followers', badge:'', bdgClass:'', price:'Rp16.000', per:'/paket', desc:'700 followers IG Bot Random. Non Drop, 30 Days Refill. Instant Start, Speed 100K/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'800 Followers', badge:'', bdgClass:'', price:'Rp18.000', per:'/paket', desc:'800 followers IG Bot Random. Non Drop, 30 Days Refill. Instant Start, Speed 100K/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'900 Followers', badge:'', bdgClass:'', price:'Rp19.000', per:'/paket', desc:'900 followers IG Bot Random. Non Drop, 30 Days Refill. Instant Start, Speed 100K/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'1.000 Followers', badge:'', bdgClass:'', price:'Rp20.000', per:'/paket', desc:'1.000 followers IG Bot Random. Non Drop, 30 Days Refill. Nilai hemat terbaik! | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+]},
+{ label: 'Indonesia Aktif', variants: [
+{ name:'Segera Hadir', badge:'', bdgClass:'', price:'—', per:'', desc:'Paket Indonesia Aktif segera tersedia. Hubungi kami via WhatsApp untuk info lebih lanjut. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+]},
+{ label: 'Indonesia Aktif Organik', variants: [
+{ name:'Segera Hadir', badge:'', bdgClass:'', price:'—', per:'', desc:'Paket Indonesia Aktif Organik segera tersedia. Hubungi kami via WhatsApp untuk info lebih lanjut. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+]},
 ]
 },
 'ig-likes': {
 emoji: '❤️', name: 'Instagram — Likes', sub: 'Instant · Non-Drop · 100K/Day · 365 Days Refill',
 variants: [
-{ name:'100 Likes', badge:'', bdgClass:'', price:'Rp2.000', per:'/paket', desc:'100 likes Instagram. Instant, Non-Drop, 365 Days Refill. Speed 100K/Day.' },
-{ name:'200 Likes', badge:'', bdgClass:'', price:'Rp3.000', per:'/paket', desc:'200 likes Instagram. Instant, Non-Drop, 365 Days Refill. Speed 100K/Day.' },
-{ name:'300 Likes', badge:'', bdgClass:'', price:'Rp4.000', per:'/paket', desc:'300 likes Instagram. Instant, Non-Drop, 365 Days Refill. Speed 100K/Day.' },
-{ name:'400 Likes', badge:'', bdgClass:'', price:'Rp5.000', per:'/paket', desc:'400 likes Instagram. Instant, Non-Drop, 365 Days Refill. Speed 100K/Day.' },
-{ name:'500 Likes', badge:'', bdgClass:'', price:'Rp6.000', per:'/paket', desc:'500 likes Instagram. Instant, Non-Drop, 365 Days Refill. Paling banyak dipesan!' },
-{ name:'600 Likes', badge:'', bdgClass:'', price:'Rp7.000', per:'/paket', desc:'600 likes Instagram. Instant, Non-Drop, 365 Days Refill. Speed 100K/Day.' },
-{ name:'700 Likes', badge:'', bdgClass:'', price:'Rp8.000', per:'/paket', desc:'700 likes Instagram. Instant, Non-Drop, 365 Days Refill. Speed 100K/Day.' },
-{ name:'800 Likes', badge:'', bdgClass:'', price:'Rp9.000', per:'/paket', desc:'800 likes Instagram. Instant, Non-Drop, 365 Days Refill. Speed 100K/Day.' },
-{ name:'900 Likes', badge:'', bdgClass:'', price:'Rp10.000', per:'/paket', desc:'900 likes Instagram. Instant, Non-Drop, 365 Days Refill. Speed 100K/Day.' },
-{ name:'1.000 Likes', badge:'', bdgClass:'', price:'Rp11.000', per:'/paket', desc:'1.000 likes Instagram. Instant, Non-Drop, 365 Days Refill. Nilai hemat terbaik!' },
+{ name:'100 Likes', badge:'', bdgClass:'', price:'Rp2.000', per:'/paket', desc:'100 likes Instagram. Instant, Non-Drop, 365 Days Refill. Speed 100K/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'200 Likes', badge:'', bdgClass:'', price:'Rp3.000', per:'/paket', desc:'200 likes Instagram. Instant, Non-Drop, 365 Days Refill. Speed 100K/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'300 Likes', badge:'', bdgClass:'', price:'Rp4.000', per:'/paket', desc:'300 likes Instagram. Instant, Non-Drop, 365 Days Refill. Speed 100K/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'400 Likes', badge:'', bdgClass:'', price:'Rp5.000', per:'/paket', desc:'400 likes Instagram. Instant, Non-Drop, 365 Days Refill. Speed 100K/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'500 Likes', badge:'', bdgClass:'', price:'Rp6.000', per:'/paket', desc:'500 likes Instagram. Instant, Non-Drop, 365 Days Refill. Paling banyak dipesan! | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'600 Likes', badge:'', bdgClass:'', price:'Rp7.000', per:'/paket', desc:'600 likes Instagram. Instant, Non-Drop, 365 Days Refill. Speed 100K/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'700 Likes', badge:'', bdgClass:'', price:'Rp8.000', per:'/paket', desc:'700 likes Instagram. Instant, Non-Drop, 365 Days Refill. Speed 100K/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'800 Likes', badge:'', bdgClass:'', price:'Rp9.000', per:'/paket', desc:'800 likes Instagram. Instant, Non-Drop, 365 Days Refill. Speed 100K/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'900 Likes', badge:'', bdgClass:'', price:'Rp10.000', per:'/paket', desc:'900 likes Instagram. Instant, Non-Drop, 365 Days Refill. Speed 100K/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'1.000 Likes', badge:'', bdgClass:'', price:'Rp11.000', per:'/paket', desc:'1.000 likes Instagram. Instant, Non-Drop, 365 Days Refill. Nilai hemat terbaik! | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
 ]
 },
 'ig-views': {
 emoji: '👁️', name: 'Instagram — Video Views', sub: 'All Link Work · Super Fast · Non Drop · Speed 20M/Day',
 variants: [
-{ name:'5.000 Views', badge:'', bdgClass:'', price:'Rp500', per:'/paket', desc:'5.000 views Instagram. All Link Work, Non Drop, Speed 20M/Day.' },
-{ name:'10.000 Views', badge:'', bdgClass:'', price:'Rp900', per:'/paket', desc:'10.000 views Instagram. All Link Work, Non Drop, Speed 20M/Day.' },
-{ name:'20.000 Views', badge:'', bdgClass:'', price:'Rp1.800', per:'/paket', desc:'20.000 views Instagram. All Link Work, Non Drop, Speed 20M/Day.' },
-{ name:'30.000 Views', badge:'', bdgClass:'', price:'Rp2.700', per:'/paket', desc:'30.000 views Instagram. All Link Work, Non Drop, Speed 20M/Day.' },
-{ name:'40.000 Views', badge:'', bdgClass:'', price:'Rp3.500', per:'/paket', desc:'40.000 views Instagram. All Link Work, Non Drop, Speed 20M/Day.' },
-{ name:'50.000 Views', badge:'', bdgClass:'', price:'Rp4.500', per:'/paket', desc:'50.000 views Instagram. All Link Work, Non Drop. Paling banyak dipesan!' },
-{ name:'60.000 Views', badge:'', bdgClass:'', price:'Rp5.500', per:'/paket', desc:'60.000 views Instagram. All Link Work, Non Drop, Speed 20M/Day.' },
-{ name:'70.000 Views', badge:'', bdgClass:'', price:'Rp6.000', per:'/paket', desc:'70.000 views Instagram. All Link Work, Non Drop, Speed 20M/Day.' },
-{ name:'80.000 Views', badge:'', bdgClass:'', price:'Rp7.000', per:'/paket', desc:'80.000 views Instagram. All Link Work, Non Drop, Speed 20M/Day.' },
-{ name:'90.000 Views', badge:'', bdgClass:'', price:'Rp8.000', per:'/paket', desc:'90.000 views Instagram. All Link Work, Non Drop, Speed 20M/Day.' },
-{ name:'100.000 Views', badge:'', bdgClass:'', price:'Rp9.000', per:'/paket', desc:'100.000 views Instagram. All Link Work, Non Drop. Nilai hemat terbaik!' },
-{ name:'5.000.000 Views', badge:'', bdgClass:'', price:'Rp3.500.000', per:'/paket', desc:'5 juta views Instagram. Paket ultimate untuk brand nasional. Hubungi CS sebelum order.' },
-{ name:'10.000.000 Views', badge:'', bdgClass:'', price:'Rp6.500.000', per:'/paket', desc:'10 juta views IG. Paket terbesar. Wajib hubungi CS untuk custom proses & garansi.' },
+{ name:'5.000 Views', badge:'', bdgClass:'', price:'Rp500', per:'/paket', desc:'5.000 views Instagram. All Link Work, Non Drop, Speed 20M/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'10.000 Views', badge:'', bdgClass:'', price:'Rp900', per:'/paket', desc:'10.000 views Instagram. All Link Work, Non Drop, Speed 20M/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'20.000 Views', badge:'', bdgClass:'', price:'Rp1.800', per:'/paket', desc:'20.000 views Instagram. All Link Work, Non Drop, Speed 20M/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'30.000 Views', badge:'', bdgClass:'', price:'Rp2.700', per:'/paket', desc:'30.000 views Instagram. All Link Work, Non Drop, Speed 20M/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'40.000 Views', badge:'', bdgClass:'', price:'Rp3.500', per:'/paket', desc:'40.000 views Instagram. All Link Work, Non Drop, Speed 20M/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'50.000 Views', badge:'', bdgClass:'', price:'Rp4.500', per:'/paket', desc:'50.000 views Instagram. All Link Work, Non Drop. Paling banyak dipesan! | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'60.000 Views', badge:'', bdgClass:'', price:'Rp5.500', per:'/paket', desc:'60.000 views Instagram. All Link Work, Non Drop, Speed 20M/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'70.000 Views', badge:'', bdgClass:'', price:'Rp6.000', per:'/paket', desc:'70.000 views Instagram. All Link Work, Non Drop, Speed 20M/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'80.000 Views', badge:'', bdgClass:'', price:'Rp7.000', per:'/paket', desc:'80.000 views Instagram. All Link Work, Non Drop, Speed 20M/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'90.000 Views', badge:'', bdgClass:'', price:'Rp8.000', per:'/paket', desc:'90.000 views Instagram. All Link Work, Non Drop, Speed 20M/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'100.000 Views', badge:'', bdgClass:'', price:'Rp9.000', per:'/paket', desc:'100.000 views Instagram. All Link Work, Non Drop. Nilai hemat terbaik! | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'5.000.000 Views', badge:'', bdgClass:'', price:'Rp3.500.000', per:'/paket', desc:'5 juta views Instagram. Paket ultimate untuk brand nasional. Hubungi CS sebelum order. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'10.000.000 Views', badge:'', bdgClass:'', price:'Rp6.500.000', per:'/paket', desc:'10 juta views IG. Paket terbesar. Wajib hubungi CS untuk custom proses & garansi. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
 ]
 },
 'tiktok-followers': {
 emoji: '🎵', name: 'TikTok — Followers', sub: 'Maks 1 Juta · Kecepatan 1K-2K/hari · Server Non Drop · Isi Ulang 30 Hari',
 variants: [
-{ name:'100 Followers', badge:'', bdgClass:'', price:'Rp5.000', per:'/paket', desc:'100 followers TikTok. Maks 1 Juta, kecepatan 1K-2K/hari, server Non Drop, isi ulang 30 hari, tanpa password.' },
-{ name:'200 Followers', badge:'', bdgClass:'', price:'Rp10.000', per:'/paket', desc:'200 followers TikTok. Maks 1 Juta, kecepatan 1K-2K/hari, server Non Drop, isi ulang 30 hari, tanpa password.' },
-{ name:'300 Followers', badge:'', bdgClass:'', price:'Rp15.000', per:'/paket', desc:'300 followers TikTok. Maks 1 Juta, kecepatan 1K-2K/hari, server Non Drop, isi ulang 30 hari, tanpa password.' },
-{ name:'400 Followers', badge:'', bdgClass:'', price:'Rp20.000', per:'/paket', desc:'400 followers TikTok. Maks 1 Juta, kecepatan 1K-2K/hari, server Non Drop, isi ulang 30 hari, tanpa password.' },
-{ name:'500 Followers', badge:'', bdgClass:'', price:'Rp25.000', per:'/paket', desc:'500 followers TikTok. Maks 1 Juta, kecepatan 1K-2K/hari, server Non Drop, isi ulang 30 hari, tanpa password. Paling banyak dipesan!' },
-{ name:'600 Followers', badge:'', bdgClass:'', price:'Rp30.000', per:'/paket', desc:'600 followers TikTok. Maks 1 Juta, kecepatan 1K-2K/hari, server Non Drop, isi ulang 30 hari, tanpa password.' },
-{ name:'700 Followers', badge:'', bdgClass:'', price:'Rp35.000', per:'/paket', desc:'700 followers TikTok. Maks 1 Juta, kecepatan 1K-2K/hari, server Non Drop, isi ulang 30 hari, tanpa password.' },
-{ name:'800 Followers', badge:'', bdgClass:'', price:'Rp40.000', per:'/paket', desc:'800 followers TikTok. Maks 1 Juta, kecepatan 1K-2K/hari, server Non Drop, isi ulang 30 hari, tanpa password.' },
-{ name:'900 Followers', badge:'', bdgClass:'', price:'Rp45.000', per:'/paket', desc:'900 followers TikTok. Maks 1 Juta, kecepatan 1K-2K/hari, server Non Drop, isi ulang 30 hari, tanpa password.' },
-{ name:'1.000 Followers', badge:'', bdgClass:'', price:'Rp50.000', per:'/paket', desc:'1.000 followers TikTok. Maks 1 Juta, kecepatan 1K-2K/hari, server Non Drop, isi ulang 30 hari, tanpa password. Nilai hemat terbaik!' },
+{ name:'100 Followers', badge:'', bdgClass:'', price:'Rp5.000', per:'/paket', desc:'100 followers TikTok. Maks 1 Juta, kecepatan 1K-2K/hari, server Non Drop, isi ulang 30 hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'200 Followers', badge:'', bdgClass:'', price:'Rp10.000', per:'/paket', desc:'200 followers TikTok. Maks 1 Juta, kecepatan 1K-2K/hari, server Non Drop, isi ulang 30 hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'300 Followers', badge:'', bdgClass:'', price:'Rp15.000', per:'/paket', desc:'300 followers TikTok. Maks 1 Juta, kecepatan 1K-2K/hari, server Non Drop, isi ulang 30 hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'400 Followers', badge:'', bdgClass:'', price:'Rp20.000', per:'/paket', desc:'400 followers TikTok. Maks 1 Juta, kecepatan 1K-2K/hari, server Non Drop, isi ulang 30 hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'500 Followers', badge:'', bdgClass:'', price:'Rp25.000', per:'/paket', desc:'500 followers TikTok. Maks 1 Juta, kecepatan 1K-2K/hari, server Non Drop, isi ulang 30 hari, tanpa password. Paling banyak dipesan! | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'600 Followers', badge:'', bdgClass:'', price:'Rp30.000', per:'/paket', desc:'600 followers TikTok. Maks 1 Juta, kecepatan 1K-2K/hari, server Non Drop, isi ulang 30 hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'700 Followers', badge:'', bdgClass:'', price:'Rp35.000', per:'/paket', desc:'700 followers TikTok. Maks 1 Juta, kecepatan 1K-2K/hari, server Non Drop, isi ulang 30 hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'800 Followers', badge:'', bdgClass:'', price:'Rp40.000', per:'/paket', desc:'800 followers TikTok. Maks 1 Juta, kecepatan 1K-2K/hari, server Non Drop, isi ulang 30 hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'900 Followers', badge:'', bdgClass:'', price:'Rp45.000', per:'/paket', desc:'900 followers TikTok. Maks 1 Juta, kecepatan 1K-2K/hari, server Non Drop, isi ulang 30 hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'1.000 Followers', badge:'', bdgClass:'', price:'Rp50.000', per:'/paket', desc:'1.000 followers TikTok. Maks 1 Juta, kecepatan 1K-2K/hari, server Non Drop, isi ulang 30 hari, tanpa password. Nilai hemat terbaik! | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
 ]
 },
 'tiktok-likes': {
 emoji: '❤️‍🔥', name: 'TikTok — Likes', sub: 'Maks 1 Juta · Kualitas Tinggi · Non Drop · Isi Ulang 30 Hari · Mulai Instan · Kecepatan 100K/hari',
 variants: [
-{ name:'100 Likes', badge:'', bdgClass:'', price:'Rp1.000', per:'/paket', desc:'100 likes TikTok. Mulai instan, Non Drop, isi ulang 30 hari, kecepatan 100K/hari, tanpa password.' },
-{ name:'200 Likes', badge:'', bdgClass:'', price:'Rp2.000', per:'/paket', desc:'200 likes TikTok. Mulai instan, Non Drop, isi ulang 30 hari, kecepatan 100K/hari, tanpa password.' },
-{ name:'300 Likes', badge:'', bdgClass:'', price:'Rp3.000', per:'/paket', desc:'300 likes TikTok. Mulai instan, Non Drop, isi ulang 30 hari, kecepatan 100K/hari, tanpa password.' },
-{ name:'400 Likes', badge:'', bdgClass:'', price:'Rp3.500', per:'/paket', desc:'400 likes TikTok. Mulai instan, Non Drop, isi ulang 30 hari, kecepatan 100K/hari, tanpa password.' },
-{ name:'500 Likes', badge:'', bdgClass:'', price:'Rp4.000', per:'/paket', desc:'500 likes TikTok. Mulai instan, Non Drop, isi ulang 30 hari, kecepatan 100K/hari, tanpa password. Paling banyak dipesan!' },
-{ name:'600 Likes', badge:'', bdgClass:'', price:'Rp4.500', per:'/paket', desc:'600 likes TikTok. Mulai instan, Non Drop, isi ulang 30 hari, kecepatan 100K/hari, tanpa password.' },
-{ name:'700 Likes', badge:'', bdgClass:'', price:'Rp5.000', per:'/paket', desc:'700 likes TikTok. Mulai instan, Non Drop, isi ulang 30 hari, kecepatan 100K/hari, tanpa password.' },
-{ name:'800 Likes', badge:'', bdgClass:'', price:'Rp5.500', per:'/paket', desc:'800 likes TikTok. Mulai instan, Non Drop, isi ulang 30 hari, kecepatan 100K/hari, tanpa password.' },
-{ name:'900 Likes', badge:'', bdgClass:'', price:'Rp6.000', per:'/paket', desc:'900 likes TikTok. Mulai instan, Non Drop, isi ulang 30 hari, kecepatan 100K/hari, tanpa password.' },
-{ name:'1.000 Likes', badge:'', bdgClass:'', price:'Rp7.000', per:'/paket', desc:'1.000 likes TikTok. Mulai instan, Non Drop, isi ulang 30 hari, kecepatan 100K/hari, tanpa password. Nilai hemat terbaik!' },
+{ name:'100 Likes', badge:'', bdgClass:'', price:'Rp1.000', per:'/paket', desc:'100 likes TikTok. Mulai instan, Non Drop, isi ulang 30 hari, kecepatan 100K/hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'200 Likes', badge:'', bdgClass:'', price:'Rp2.000', per:'/paket', desc:'200 likes TikTok. Mulai instan, Non Drop, isi ulang 30 hari, kecepatan 100K/hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'300 Likes', badge:'', bdgClass:'', price:'Rp3.000', per:'/paket', desc:'300 likes TikTok. Mulai instan, Non Drop, isi ulang 30 hari, kecepatan 100K/hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'400 Likes', badge:'', bdgClass:'', price:'Rp3.500', per:'/paket', desc:'400 likes TikTok. Mulai instan, Non Drop, isi ulang 30 hari, kecepatan 100K/hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'500 Likes', badge:'', bdgClass:'', price:'Rp4.000', per:'/paket', desc:'500 likes TikTok. Mulai instan, Non Drop, isi ulang 30 hari, kecepatan 100K/hari, tanpa password. Paling banyak dipesan! | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'600 Likes', badge:'', bdgClass:'', price:'Rp4.500', per:'/paket', desc:'600 likes TikTok. Mulai instan, Non Drop, isi ulang 30 hari, kecepatan 100K/hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'700 Likes', badge:'', bdgClass:'', price:'Rp5.000', per:'/paket', desc:'700 likes TikTok. Mulai instan, Non Drop, isi ulang 30 hari, kecepatan 100K/hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'800 Likes', badge:'', bdgClass:'', price:'Rp5.500', per:'/paket', desc:'800 likes TikTok. Mulai instan, Non Drop, isi ulang 30 hari, kecepatan 100K/hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'900 Likes', badge:'', bdgClass:'', price:'Rp6.000', per:'/paket', desc:'900 likes TikTok. Mulai instan, Non Drop, isi ulang 30 hari, kecepatan 100K/hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'1.000 Likes', badge:'', bdgClass:'', price:'Rp7.000', per:'/paket', desc:'1.000 likes TikTok. Mulai instan, Non Drop, isi ulang 30 hari, kecepatan 100K/hari, tanpa password. Nilai hemat terbaik! | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
 ]
 },
 'tiktok-views': {
 emoji: '👀', name: 'TikTok — Views', sub: 'Mulai Instan · Kecepatan 10-50 Juta/hari · Non Drop',
 variants: [
-{ name:'5.000 Views', badge:'', bdgClass:'', price:'Rp1.000', per:'/paket', desc:'5.000 views TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password.' },
-{ name:'10.000 Views', badge:'', bdgClass:'', price:'Rp1.500', per:'/paket', desc:'10.000 views TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password.' },
-{ name:'20.000 Views', badge:'', bdgClass:'', price:'Rp2.500', per:'/paket', desc:'20.000 views TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password.' },
-{ name:'30.000 Views', badge:'', bdgClass:'', price:'Rp3.500', per:'/paket', desc:'30.000 views TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password.' },
-{ name:'40.000 Views', badge:'', bdgClass:'', price:'Rp4.500', per:'/paket', desc:'40.000 views TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password.' },
-{ name:'50.000 Views', badge:'', bdgClass:'', price:'Rp5.500', per:'/paket', desc:'50.000 views TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password. Paling banyak dipesan!' },
-{ name:'60.000 Views', badge:'', bdgClass:'', price:'Rp6.500', per:'/paket', desc:'60.000 views TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password.' },
-{ name:'70.000 Views', badge:'', bdgClass:'', price:'Rp7.500', per:'/paket', desc:'70.000 views TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password.' },
-{ name:'80.000 Views', badge:'', bdgClass:'', price:'Rp8.500', per:'/paket', desc:'80.000 views TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password.' },
-{ name:'90.000 Views', badge:'', bdgClass:'', price:'Rp9.000', per:'/paket', desc:'90.000 views TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password.' },
-{ name:'100.000 Views', badge:'', bdgClass:'', price:'Rp10.000', per:'/paket', desc:'100.000 views TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password. Nilai hemat terbaik!' },
+{ name:'5.000 Views', badge:'', bdgClass:'', price:'Rp1.000', per:'/paket', desc:'5.000 views TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'10.000 Views', badge:'', bdgClass:'', price:'Rp1.500', per:'/paket', desc:'10.000 views TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'20.000 Views', badge:'', bdgClass:'', price:'Rp2.500', per:'/paket', desc:'20.000 views TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'30.000 Views', badge:'', bdgClass:'', price:'Rp3.500', per:'/paket', desc:'30.000 views TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'40.000 Views', badge:'', bdgClass:'', price:'Rp4.500', per:'/paket', desc:'40.000 views TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'50.000 Views', badge:'', bdgClass:'', price:'Rp5.500', per:'/paket', desc:'50.000 views TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password. Paling banyak dipesan! | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'60.000 Views', badge:'', bdgClass:'', price:'Rp6.500', per:'/paket', desc:'60.000 views TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'70.000 Views', badge:'', bdgClass:'', price:'Rp7.500', per:'/paket', desc:'70.000 views TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'80.000 Views', badge:'', bdgClass:'', price:'Rp8.500', per:'/paket', desc:'80.000 views TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'90.000 Views', badge:'', bdgClass:'', price:'Rp9.000', per:'/paket', desc:'90.000 views TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'100.000 Views', badge:'', bdgClass:'', price:'Rp10.000', per:'/paket', desc:'100.000 views TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password. Nilai hemat terbaik! | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
 ]
 },
 'tiktok-live': {
 emoji: '🎮', name: 'TikTok Live — Views', sub: 'Real-time viewers · Tingkatkan engagement live',
 variants: [
-{ name:'100 Live Views — 30 Menit', badge:'', bdgClass:'', price:'Rp10.000', per:'/paket', desc:'100 penonton TikTok Live real-time selama 30 menit. Cocok untuk live pertama.' },
-{ name:'200 Live Views — 30 Menit', badge:'', bdgClass:'', price:'Rp18.000', per:'/paket', desc:'200 penonton TikTok Live 30 menit. Tingkatkan kepercayaan & engagement live kamu.' },
-{ name:'300 Live Views — 30 Menit', badge:'', bdgClass:'', price:'Rp25.000', per:'/paket', desc:'300 penonton TikTok Live 30 menit. Paling banyak dipesan untuk live gaming & jualan.' },
-{ name:'500 Live Views — 30 Menit', badge:'', bdgClass:'', price:'Rp35.000', per:'/paket', desc:'500 penonton live 30 menit. Live kamu akan terlihat ramai & aktif.' },
-{ name:'100 Live Views — 1 Jam', badge:'', bdgClass:'', price:'Rp18.000', per:'/paket', desc:'100 penonton TikTok Live selama 1 jam penuh. Stabil & konsisten.' },
-{ name:'200 Live Views — 1 Jam', badge:'', bdgClass:'', price:'Rp30.000', per:'/paket', desc:'200 penonton live 1 jam. Nilai hemat, cocok untuk live jualan & konten.' },
-{ name:'300 Live Views — 1 Jam', badge:'', bdgClass:'', price:'Rp40.000', per:'/paket', desc:'300 penonton TikTok Live 1 jam. Nilai terbaik, live kamu terlihat populer & aktif.' },
-{ name:'500 Live Views — 1 Jam', badge:'', bdgClass:'', price:'Rp55.000', per:'/paket', desc:'500 penonton live 1 jam. Boost besar untuk live TikTok Shop & campaign.' },
-{ name:'1.000 Live Views — 1 Jam', badge:'', bdgClass:'', price:'Rp90.000', per:'/paket', desc:'1.000 penonton TikTok Live 1 jam. Live kamu akan terlihat ramai & trending.' },
-{ name:'200 Live Views — 2 Jam', badge:'', bdgClass:'', price:'Rp50.000', per:'/paket', desc:'200 penonton TikTok Live selama 2 jam. Stabil untuk live panjang & interaktif.' },
-{ name:'300 Live Views — 2 Jam', badge:'', bdgClass:'', price:'Rp65.000', per:'/paket', desc:'300 penonton live 2 jam. Ideal untuk sesi live berdurasi panjang.' },
-{ name:'500 Live Views — 2 Jam', badge:'', bdgClass:'', price:'Rp85.000', per:'/paket', desc:'500 penonton TikTok Live 2 jam. Cocok untuk live konser, gaming marathon, & jualan.' },
-{ name:'1.000 Live Views — 2 Jam', badge:'', bdgClass:'', price:'Rp150.000', per:'/paket', desc:'1.000 penonton live 2 jam. Paket besar untuk live event & campaign besar.' },
-{ name:'500 Live Views — 3 Jam', badge:'', bdgClass:'', price:'Rp120.000', per:'/paket', desc:'500 penonton TikTok Live 3 jam. Sesi live panjang dengan penonton stabil.' },
-{ name:'1.000 Live Views — 3 Jam', badge:'', bdgClass:'', price:'Rp200.000', per:'/paket', desc:'1.000 penonton live 3 jam. Paket jumbo untuk live event eksklusif & brand campaign.' },
+{ name:'100 Live Views — 30 Menit', badge:'', bdgClass:'', price:'Rp10.000', per:'/paket', desc:'100 penonton TikTok Live real-time selama 30 menit. Cocok untuk live pertama. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'200 Live Views — 30 Menit', badge:'', bdgClass:'', price:'Rp18.000', per:'/paket', desc:'200 penonton TikTok Live 30 menit. Tingkatkan kepercayaan & engagement live kamu. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'300 Live Views — 30 Menit', badge:'', bdgClass:'', price:'Rp25.000', per:'/paket', desc:'300 penonton TikTok Live 30 menit. Paling banyak dipesan untuk live gaming & jualan. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'500 Live Views — 30 Menit', badge:'', bdgClass:'', price:'Rp35.000', per:'/paket', desc:'500 penonton live 30 menit. Live kamu akan terlihat ramai & aktif. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'100 Live Views — 1 Jam', badge:'', bdgClass:'', price:'Rp18.000', per:'/paket', desc:'100 penonton TikTok Live selama 1 jam penuh. Stabil & konsisten. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'200 Live Views — 1 Jam', badge:'', bdgClass:'', price:'Rp30.000', per:'/paket', desc:'200 penonton live 1 jam. Nilai hemat, cocok untuk live jualan & konten. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'300 Live Views — 1 Jam', badge:'', bdgClass:'', price:'Rp40.000', per:'/paket', desc:'300 penonton TikTok Live 1 jam. Nilai terbaik, live kamu terlihat populer & aktif. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'500 Live Views — 1 Jam', badge:'', bdgClass:'', price:'Rp55.000', per:'/paket', desc:'500 penonton live 1 jam. Boost besar untuk live TikTok Shop & campaign. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'1.000 Live Views — 1 Jam', badge:'', bdgClass:'', price:'Rp90.000', per:'/paket', desc:'1.000 penonton TikTok Live 1 jam. Live kamu akan terlihat ramai & trending. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'200 Live Views — 2 Jam', badge:'', bdgClass:'', price:'Rp50.000', per:'/paket', desc:'200 penonton TikTok Live selama 2 jam. Stabil untuk live panjang & interaktif. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'300 Live Views — 2 Jam', badge:'', bdgClass:'', price:'Rp65.000', per:'/paket', desc:'300 penonton live 2 jam. Ideal untuk sesi live berdurasi panjang. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'500 Live Views — 2 Jam', badge:'', bdgClass:'', price:'Rp85.000', per:'/paket', desc:'500 penonton TikTok Live 2 jam. Cocok untuk live konser, gaming marathon, & jualan. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'1.000 Live Views — 2 Jam', badge:'', bdgClass:'', price:'Rp150.000', per:'/paket', desc:'1.000 penonton live 2 jam. Paket besar untuk live event & campaign besar. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'500 Live Views — 3 Jam', badge:'', bdgClass:'', price:'Rp120.000', per:'/paket', desc:'500 penonton TikTok Live 3 jam. Sesi live panjang dengan penonton stabil. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'1.000 Live Views — 3 Jam', badge:'', bdgClass:'', price:'Rp200.000', per:'/paket', desc:'1.000 penonton live 3 jam. Paket jumbo untuk live event eksklusif & brand campaign. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
 ]
 },
 'yt-subscribers': {
 emoji: '▶️', name: 'YouTube — Subscribers', sub: 'Real & bertahan lama · Bantu monetisasi channel',
 variants: [
-{ name:'100 Subscribers', badge:'', bdgClass:'', price:'Rp15.000', per:'/paket', desc:'100 subscriber YouTube real. Proses 1-3 hari, tidak drop.' },
-{ name:'250 Subscribers', badge:'', bdgClass:'', price:'Rp30.000', per:'/paket', desc:'250 subscriber YT. Cocok untuk channel baru yang baru mulai berkembang.' },
-{ name:'500 Subscribers', badge:'', bdgClass:'', price:'Rp55.000', per:'/paket', desc:'500 subscriber YouTube. Paling banyak dipesan, proses bertahap 3-7 hari.' },
-{ name:'1.000 Subscribers', badge:'', bdgClass:'', price:'Rp100.000', per:'/paket', desc:'1.000 subscriber YT. Syarat minimum untuk banyak fitur channel & monetisasi awal.' },
-{ name:'2.000 Subscribers', badge:'', bdgClass:'', price:'Rp180.000', per:'/paket', desc:'2.000 subscriber YouTube. Percepatan besar menuju threshold monetisasi YouTube.' },
-{ name:'3.000 Subscribers', badge:'', bdgClass:'', price:'Rp260.000', per:'/paket', desc:'3.000 subscriber YT. Semakin dekat ke 4.000 jam tayang & monetisasi YouTube.' },
-{ name:'4.000 Subscribers', badge:'', bdgClass:'', price:'Rp340.000', per:'/paket', desc:'4.000 subscriber YouTube. Ideal untuk channel yang hampir mencapai syarat monetisasi.' },
-{ name:'5.000 Subscribers', badge:'', bdgClass:'', price:'Rp410.000', per:'/paket', desc:'5.000 subscriber YT. Nilai terbaik, milestone penting untuk creator fund & sponsorship.' },
-{ name:'7.500 Subscribers', badge:'', bdgClass:'', price:'Rp590.000', per:'/paket', desc:'7.500 subscriber YouTube. Percepatan besar, channel kamu semakin terpercaya.' },
-{ name:'10.000 Subscribers', badge:'', bdgClass:'', price:'Rp750.000', per:'/paket', desc:'10.000 subscriber YT. Milestone utama untuk brand deal & kepercayaan penonton.' },
-{ name:'15.000 Subscribers', badge:'', bdgClass:'', price:'Rp1.050.000', per:'/paket', desc:'15.000 subscriber YouTube. Paket besar untuk channel yang ingin cepat berkembang.' },
-{ name:'20.000 Subscribers', badge:'', bdgClass:'', price:'Rp1.350.000', per:'/paket', desc:'20.000 subscriber YT. Untuk channel yang serius dan brand yang ingin presence di YouTube.' },
-{ name:'25.000 Subscribers', badge:'', bdgClass:'', price:'Rp1.650.000', per:'/paket', desc:'25.000 subscriber YouTube. Paket jumbo untuk channel besar & brand nasional.' },
-{ name:'50.000 Subscribers', badge:'', bdgClass:'', price:'Rp3.000.000', per:'/paket', desc:'50.000 subscriber YT. Paket eksklusif. Hubungi CS untuk konfirmasi & proses detail.' },
-{ name:'100.000 Subscribers', badge:'', bdgClass:'', price:'Rp5.500.000', per:'/paket', desc:'100.000 subscriber YouTube. Silver Play Button! Hubungi CS sebelum order.' },
+{ name:'100 Subscribers', badge:'', bdgClass:'', price:'Rp15.000', per:'/paket', desc:'100 subscriber YouTube real. Proses 1-3 hari, tidak drop. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'250 Subscribers', badge:'', bdgClass:'', price:'Rp30.000', per:'/paket', desc:'250 subscriber YT. Cocok untuk channel baru yang baru mulai berkembang. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'500 Subscribers', badge:'', bdgClass:'', price:'Rp55.000', per:'/paket', desc:'500 subscriber YouTube. Paling banyak dipesan, proses bertahap 3-7 hari. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'1.000 Subscribers', badge:'', bdgClass:'', price:'Rp100.000', per:'/paket', desc:'1.000 subscriber YT. Syarat minimum untuk banyak fitur channel & monetisasi awal. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'2.000 Subscribers', badge:'', bdgClass:'', price:'Rp180.000', per:'/paket', desc:'2.000 subscriber YouTube. Percepatan besar menuju threshold monetisasi YouTube. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'3.000 Subscribers', badge:'', bdgClass:'', price:'Rp260.000', per:'/paket', desc:'3.000 subscriber YT. Semakin dekat ke 4.000 jam tayang & monetisasi YouTube. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'4.000 Subscribers', badge:'', bdgClass:'', price:'Rp340.000', per:'/paket', desc:'4.000 subscriber YouTube. Ideal untuk channel yang hampir mencapai syarat monetisasi. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'5.000 Subscribers', badge:'', bdgClass:'', price:'Rp410.000', per:'/paket', desc:'5.000 subscriber YT. Nilai terbaik, milestone penting untuk creator fund & sponsorship. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'7.500 Subscribers', badge:'', bdgClass:'', price:'Rp590.000', per:'/paket', desc:'7.500 subscriber YouTube. Percepatan besar, saluran kamu semakin terpercaya. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'10.000 Subscribers', badge:'', bdgClass:'', price:'Rp750.000', per:'/paket', desc:'10.000 subscriber YT. Milestone utama untuk brand deal & kepercayaan penonton. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'15.000 Subscribers', badge:'', bdgClass:'', price:'Rp1.050.000', per:'/paket', desc:'15.000 subscriber YouTube. Paket besar untuk channel yang ingin cepat berkembang. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'20.000 Subscribers', badge:'', bdgClass:'', price:'Rp1.350.000', per:'/paket', desc:'20.000 subscriber YT. Untuk channel yang serius dan brand yang ingin presence di YouTube. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'25.000 Subscribers', badge:'', bdgClass:'', price:'Rp1.650.000', per:'/paket', desc:'25.000 subscriber YouTube. Paket jumbo untuk channel besar & brand nasional. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'50.000 Subscribers', badge:'', bdgClass:'', price:'Rp3.000.000', per:'/paket', desc:'50.000 subscriber YT. Paket eksklusif. Hubungi CS untuk konfirmasi & proses detail. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'100.000 Subscribers', badge:'', bdgClass:'', price:'Rp5.500.000', per:'/paket', desc:'100.000 subscriber YouTube. Silver Play Button! Hubungi CS sebelum order. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
 ]
 },
 'yt-views': {
 emoji: '👍', name: 'YouTube — Views & Likes', sub: 'Boost views & likes · Bantu algoritma channel',
 variants: [
-{ name:'1.000 Views', badge:'', bdgClass:'', price:'Rp3.000', per:'/paket', desc:'1.000 views YouTube. Proses 1-2 hari, bantu video masuk rekomendasi.' },
-{ name:'2.500 Views', badge:'', bdgClass:'', price:'Rp6.000', per:'/paket', desc:'2.500 views YT. Boost awal untuk video baru agar terlihat di search & rekomendasi.' },
-{ name:'5.000 Views', badge:'', bdgClass:'', price:'Rp10.000', per:'/paket', desc:'5.000 views YouTube. Paling banyak dipesan, proses 2-4 hari.' },
-{ name:'10.000 Views', badge:'', bdgClass:'', price:'Rp18.000', per:'/paket', desc:'10.000 views YT. Nilai hemat, dorong video ke halaman rekomendasi YouTube.' },
-{ name:'25.000 Views', badge:'', bdgClass:'', price:'Rp35.000', per:'/paket', desc:'25.000 views YouTube. Nilai terbaik, algorithm boost untuk video kamu.' },
-{ name:'50.000 Views', badge:'', bdgClass:'', price:'Rp60.000', per:'/paket', desc:'50.000 views YT. Engagement besar untuk konten brand & campaign produk.' },
-{ name:'100.000 Views', badge:'', bdgClass:'', price:'Rp100.000', per:'/paket', desc:'100.000 views YouTube. Milestone besar untuk channel growth & monetisasi.' },
-{ name:'250.000 Views', badge:'', bdgClass:'', price:'Rp220.000', per:'/paket', desc:'250.000 views YT. Untuk channel besar & konten campaign skala nasional.' },
-{ name:'500.000 Views', badge:'', bdgClass:'', price:'Rp400.000', per:'/paket', desc:'500.000 views YouTube. Paket jumbo untuk brand nasional & viral campaign.' },
-{ name:'1.000.000 Views', badge:'', bdgClass:'', price:'Rp750.000', per:'/paket', desc:'1 juta views YT! Viral campaign besar. Hubungi CS untuk konfirmasi proses.' },
-{ name:'500 Likes', badge:'', bdgClass:'', price:'Rp8.000', per:'/paket', desc:'500 likes YouTube. Boost engagement video, bantu algoritma distribusi.' },
-{ name:'1.000 Likes', badge:'', bdgClass:'', price:'Rp14.000', per:'/paket', desc:'1.000 likes YT. Tingkatkan engagement rate & kepercayaan penonton.' },
-{ name:'2.500 Likes', badge:'', bdgClass:'', price:'Rp30.000', per:'/paket', desc:'2.500 likes YouTube. Kombinasi views & likes tinggi = algoritma lebih suka videomu.' },
-{ name:'5.000 Likes', badge:'', bdgClass:'', price:'Rp55.000', per:'/paket', desc:'5.000 likes YT. Paket besar untuk konten yang ingin trending.' },
-{ name:'10.000 Likes', badge:'', bdgClass:'', price:'Rp100.000', per:'/paket', desc:'10.000 likes YouTube. Paket terbesar. Hubungi CS untuk detail proses.' },
+{ name:'1.000 Views', badge:'', bdgClass:'', price:'Rp3.000', per:'/paket', desc:'1.000 views YouTube. Proses 1-2 hari, bantu video masuk rekomendasi. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'2.500 Views', badge:'', bdgClass:'', price:'Rp6.000', per:'/paket', desc:'2.500 views YT. Boost awal untuk video baru agar terlihat di search & rekomendasi. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'5.000 Views', badge:'', bdgClass:'', price:'Rp10.000', per:'/paket', desc:'5.000 views YouTube. Paling banyak dipesan, proses 2-4 hari. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'10.000 Views', badge:'', bdgClass:'', price:'Rp18.000', per:'/paket', desc:'10.000 views YT. Nilai hemat, dorong video ke halaman rekomendasi YouTube. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'25.000 Views', badge:'', bdgClass:'', price:'Rp35.000', per:'/paket', desc:'25.000 views YouTube. Nilai terbaik, algorithm boost untuk video kamu. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'50.000 Views', badge:'', bdgClass:'', price:'Rp60.000', per:'/paket', desc:'50.000 views YT. Engagement besar untuk konten brand & campaign produk. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'100.000 Views', badge:'', bdgClass:'', price:'Rp100.000', per:'/paket', desc:'100.000 views YouTube. Milestone besar untuk channel growth & monetisasi. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'250.000 Views', badge:'', bdgClass:'', price:'Rp220.000', per:'/paket', desc:'250.000 views YT. Untuk channel besar & konten campaign skala nasional. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'500.000 Views', badge:'', bdgClass:'', price:'Rp400.000', per:'/paket', desc:'500.000 views YouTube. Paket jumbo untuk brand nasional & viral campaign. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'1.000.000 Views', badge:'', bdgClass:'', price:'Rp750.000', per:'/paket', desc:'1 juta views YT! Viral campaign besar. Hubungi CS untuk konfirmasi proses. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'500 Likes', badge:'', bdgClass:'', price:'Rp8.000', per:'/paket', desc:'500 likes YouTube. Boost engagement video, bantu algoritma distribusi. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'1.000 Likes', badge:'', bdgClass:'', price:'Rp14.000', per:'/paket', desc:'1.000 likes YT. Tingkatkan engagement rate & kepercayaan penonton. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'2.500 Likes', badge:'', bdgClass:'', price:'Rp30.000', per:'/paket', desc:'2.500 likes YouTube. Kombinasi views & likes tinggi = algoritma lebih suka videomu. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'5.000 Likes', badge:'', bdgClass:'', price:'Rp55.000', per:'/paket', desc:'5.000 likes YT. Paket besar untuk konten yang ingin trending. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'10.000 Likes', badge:'', bdgClass:'', price:'Rp100.000', per:'/paket', desc:'10.000 likes YouTube. Paket terbesar. Hubungi CS untuk detail proses. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
 ]
 },
 'wa-channel-member': {
-emoji: '💬', name: 'WhatsApp Channel — Member', sub: 'Global · High Quality · Instant Start',
+emoji: '💬', name: 'WhatsApp Saluran — Member', sub: 'Global · High Quality · Instant Start',
 variants: [
-{ name:'100 Member', badge:'', bdgClass:'', price:'Rp10.000', per:'/paket', desc:'100 member WA Channel global, high quality. Proses instan, tanpa password.' },
-{ name:'200 Member', badge:'', bdgClass:'', price:'Rp18.000', per:'/paket', desc:'200 member WhatsApp Channel. Global, high quality, instan.' },
-{ name:'300 Member', badge:'', bdgClass:'', price:'Rp25.000', per:'/paket', desc:'300 member WA Channel. Paling banyak dipesan, proses cepat.' },
-{ name:'400 Member', badge:'', bdgClass:'', price:'Rp32.000', per:'/paket', desc:'400 member WhatsApp Channel global, high quality.' },
-{ name:'500 Member', badge:'', bdgClass:'', price:'Rp38.000', per:'/paket', desc:'500 member WA Channel. Nilai hemat, channel kamu semakin ramai.' },
-{ name:'600 Member', badge:'', bdgClass:'', price:'Rp44.000', per:'/paket', desc:'600 member WhatsApp Channel. Global, high quality, proses instan.' },
-{ name:'700 Member', badge:'', bdgClass:'', price:'Rp50.000', per:'/paket', desc:'700 member WA Channel. Tingkatkan kepercayaan & reach channel kamu.' },
-{ name:'800 Member', badge:'', bdgClass:'', price:'Rp55.000', per:'/paket', desc:'800 member WhatsApp Channel global, high quality.' },
-{ name:'900 Member', badge:'', bdgClass:'', price:'Rp60.000', per:'/paket', desc:'900 member WA Channel. Hampir 1.000 — channel kamu semakin besar!' },
-{ name:'1.000 Member', badge:'', bdgClass:'', price:'Rp65.000', per:'/paket', desc:'1.000 member WhatsApp Channel! Nilai terbaik, channel global & high quality.' },
+{ name:'100 Member', badge:'', bdgClass:'', price:'Rp10.000', per:'/paket', desc:'100 member WA Saluran global, high quality. Proses instan, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'200 Member', badge:'', bdgClass:'', price:'Rp18.000', per:'/paket', desc:'200 member WhatsApp Saluran. Global, high quality, instan. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'300 Member', badge:'', bdgClass:'', price:'Rp25.000', per:'/paket', desc:'300 member WA Saluran. Paling banyak dipesan, proses cepat. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'400 Member', badge:'', bdgClass:'', price:'Rp32.000', per:'/paket', desc:'400 member WhatsApp Saluran global, high quality. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'500 Member', badge:'', bdgClass:'', price:'Rp38.000', per:'/paket', desc:'500 member WA Saluran. Nilai hemat, saluran kamu semakin ramai. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'600 Member', badge:'', bdgClass:'', price:'Rp44.000', per:'/paket', desc:'600 member WhatsApp Saluran. Global, high quality, proses instan. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'700 Member', badge:'', bdgClass:'', price:'Rp50.000', per:'/paket', desc:'700 member WA Saluran. Tingkatkan kepercayaan & reach saluran kamu. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'800 Member', badge:'', bdgClass:'', price:'Rp55.000', per:'/paket', desc:'800 member WhatsApp Saluran global, high quality. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'900 Member', badge:'', bdgClass:'', price:'Rp60.000', per:'/paket', desc:'900 member WA Saluran. Hampir 1.000 — saluran kamu semakin besar! | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'1.000 Member', badge:'', bdgClass:'', price:'Rp65.000', per:'/paket', desc:'1.000 member WhatsApp Saluran! Nilai terbaik, saluran global & high quality. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
 ]
 },
 'linkedin-followers': {
 emoji: '💼', name: 'LinkedIn — Followers', sub: 'Real People · High Quality · Instant Start',
 variants: [
-{ name:'100 Followers', badge:'', bdgClass:'', price:'Rp17.000', per:'/paket', desc:'100 followers LinkedIn real people, high quality. Proses instan, tanpa password.' },
-{ name:'200 Followers', badge:'', bdgClass:'', price:'Rp32.000', per:'/paket', desc:'200 followers LinkedIn. Real people, tingkatkan kredibilitas profil kamu.' },
-{ name:'300 Followers', badge:'', bdgClass:'', price:'Rp46.000', per:'/paket', desc:'300 followers LinkedIn. Paling banyak dipesan, real people, instan.' },
-{ name:'400 Followers', badge:'', bdgClass:'', price:'Rp59.000', per:'/paket', desc:'400 followers LinkedIn real people, high quality, proses instan.' },
-{ name:'500 Followers', badge:'', bdgClass:'', price:'Rp71.000', per:'/paket', desc:'500 followers LinkedIn. Nilai hemat, profil kamu semakin profesional & terpercaya.' },
-{ name:'600 Followers', badge:'', bdgClass:'', price:'Rp83.000', per:'/paket', desc:'600 followers LinkedIn real people. Tingkatkan jangkauan konten & network.' },
-{ name:'700 Followers', badge:'', bdgClass:'', price:'Rp95.000', per:'/paket', desc:'700 followers LinkedIn. Real people, high quality, proses instan.' },
-{ name:'800 Followers', badge:'', bdgClass:'', price:'Rp106.000', per:'/paket', desc:'800 followers LinkedIn. Profil kamu semakin dilirik recruiter & klien.' },
-{ name:'900 Followers', badge:'', bdgClass:'', price:'Rp117.000', per:'/paket', desc:'900 followers LinkedIn real people. Hampir 1.000 — kredibilitas tinggi!' },
-{ name:'1.000 Followers', badge:'', bdgClass:'', price:'Rp125.000', per:'/paket', desc:'1.000 followers LinkedIn! Nilai terbaik, real people, profil makin berpengaruh.' },
+{ name:'100 Followers', badge:'', bdgClass:'', price:'Rp17.000', per:'/paket', desc:'100 followers LinkedIn real people, high quality. Proses instan, tanpa password. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'200 Followers', badge:'', bdgClass:'', price:'Rp32.000', per:'/paket', desc:'200 followers LinkedIn. Real people, tingkatkan kredibilitas profil kamu. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'300 Followers', badge:'', bdgClass:'', price:'Rp46.000', per:'/paket', desc:'300 followers LinkedIn. Paling banyak dipesan, real people, instan. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'400 Followers', badge:'', bdgClass:'', price:'Rp59.000', per:'/paket', desc:'400 followers LinkedIn real people, high quality, proses instan. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'500 Followers', badge:'', bdgClass:'', price:'Rp71.000', per:'/paket', desc:'500 followers LinkedIn. Nilai hemat, profil kamu semakin profesional & terpercaya. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'600 Followers', badge:'', bdgClass:'', price:'Rp83.000', per:'/paket', desc:'600 followers LinkedIn real people. Tingkatkan jangkauan konten & network. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'700 Followers', badge:'', bdgClass:'', price:'Rp95.000', per:'/paket', desc:'700 followers LinkedIn. Real people, high quality, proses instan. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'800 Followers', badge:'', bdgClass:'', price:'Rp106.000', per:'/paket', desc:'800 followers LinkedIn. Profil kamu semakin dilirik recruiter & klien. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'900 Followers', badge:'', bdgClass:'', price:'Rp117.000', per:'/paket', desc:'900 followers LinkedIn real people. Hampir 1.000 — kredibilitas tinggi! | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'1.000 Followers', badge:'', bdgClass:'', price:'Rp125.000', per:'/paket', desc:'1.000 followers LinkedIn! Nilai terbaik, real people, profil makin berpengaruh. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
 ]
 },
 'fb-followers': {
 emoji: '👥', name: 'Facebook — Followers', sub: 'Page/Profile · Non Drop · 90 Days Refill',
 variants: [
-{ name:'100 Followers', badge:'', bdgClass:'', price:'Rp3.000', per:'/paket', desc:'100 followers Facebook page/profil. High quality, non drop, 90 days refill, instant start.' },
-{ name:'200 Followers', badge:'', bdgClass:'', price:'Rp5.500', per:'/paket', desc:'200 followers Facebook. High quality profile, non drop, 90 days refill.' },
-{ name:'300 Followers', badge:'', bdgClass:'', price:'Rp8.000', per:'/paket', desc:'300 followers Facebook. Paling banyak dipesan, instant start, non drop.' },
-{ name:'400 Followers', badge:'', bdgClass:'', price:'Rp10.000', per:'/paket', desc:'400 followers Facebook page/profil. High quality, 90 days refill.' },
-{ name:'500 Followers', badge:'', bdgClass:'', price:'Rp12.000', per:'/paket', desc:'500 followers Facebook. Nilai hemat, instant start, non drop, 90 days refill.' },
-{ name:'600 Followers', badge:'', bdgClass:'', price:'Rp14.000', per:'/paket', desc:'600 followers Facebook. High quality profile, non drop, 90 days refill.' },
-{ name:'700 Followers', badge:'', bdgClass:'', price:'Rp16.000', per:'/paket', desc:'700 followers Facebook page/profil. Instant start, high quality.' },
-{ name:'800 Followers', badge:'', bdgClass:'', price:'Rp18.000', per:'/paket', desc:'800 followers Facebook. Non drop, 90 days refill, high quality profile.' },
-{ name:'900 Followers', badge:'', bdgClass:'', price:'Rp20.000', per:'/paket', desc:'900 followers Facebook. Hampir 1.000 — page/profil kamu semakin ramai!' },
-{ name:'1.000 Followers', badge:'', bdgClass:'', price:'Rp22.000', per:'/paket', desc:'1.000 followers Facebook! Nilai terbaik, high quality, non drop, 90 days refill.' },
+{ name:'100 Followers', badge:'', bdgClass:'', price:'Rp3.000', per:'/paket', desc:'100 followers Facebook page/profil. High quality, non drop, 90 days refill, instant start. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'200 Followers', badge:'', bdgClass:'', price:'Rp5.500', per:'/paket', desc:'200 followers Facebook. High quality profile, non drop, 90 days refill. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'300 Followers', badge:'', bdgClass:'', price:'Rp8.000', per:'/paket', desc:'300 followers Facebook. Paling banyak dipesan, instant start, non drop. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'400 Followers', badge:'', bdgClass:'', price:'Rp10.000', per:'/paket', desc:'400 followers Facebook page/profil. High quality, 90 days refill. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'500 Followers', badge:'', bdgClass:'', price:'Rp12.000', per:'/paket', desc:'500 followers Facebook. Nilai hemat, instant start, non drop, 90 days refill. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'600 Followers', badge:'', bdgClass:'', price:'Rp14.000', per:'/paket', desc:'600 followers Facebook. High quality profile, non drop, 90 days refill. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'700 Followers', badge:'', bdgClass:'', price:'Rp16.000', per:'/paket', desc:'700 followers Facebook page/profil. Instant start, high quality. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'800 Followers', badge:'', bdgClass:'', price:'Rp18.000', per:'/paket', desc:'800 followers Facebook. Non drop, 90 days refill, high quality profile. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'900 Followers', badge:'', bdgClass:'', price:'Rp20.000', per:'/paket', desc:'900 followers Facebook. Hampir 1.000 — page/profil kamu semakin ramai! | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'1.000 Followers', badge:'', bdgClass:'', price:'Rp22.000', per:'/paket', desc:'1.000 followers Facebook! Nilai terbaik, high quality, non drop, 90 days refill. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
 ]
 },
 'gopay': {
@@ -2040,11 +2068,55 @@ document.body.style.overflow = '';
 function closeModalOutside(e) {
 if (e.target === document.getElementById('modalOverlay')) closeModal();
 }
+const PULSA_PACKAGES = {
+ telkomsel: [
+ { gb:'Rp5.000', period:'Langsung masuk', detail:'Pulsa reguler Telkomsel', price:'Rp6.000', badge:'' },
+ { gb:'Rp10.000', period:'Langsung masuk', detail:'Pulsa reguler Telkomsel', price:'Rp11.000', badge:'' },
+ { gb:'Rp15.000', period:'Langsung masuk', detail:'Pulsa reguler Telkomsel', price:'Rp16.000', badge:'' },
+ { gb:'Rp20.000', period:'Langsung masuk', detail:'Pulsa reguler Telkomsel', price:'Rp21.000', badge:'' },
+ { gb:'Rp25.000', period:'Langsung masuk', detail:'Pulsa reguler Telkomsel', price:'Rp26.000', badge:'' },
+ { gb:'Rp50.000', period:'Langsung masuk', detail:'Pulsa reguler Telkomsel', price:'Rp51.500', badge:'TERBAIK' },
+ { gb:'Rp100.000', period:'Langsung masuk', detail:'Pulsa reguler Telkomsel', price:'Rp101.500', badge:'' },
+ ],
+ indosat: [
+ { gb:'Rp5.000', period:'Langsung masuk', detail:'Pulsa reguler Indosat IM3', price:'Rp6.000', badge:'' },
+ { gb:'Rp10.000', period:'Langsung masuk', detail:'Pulsa reguler Indosat IM3', price:'Rp11.000', badge:'' },
+ { gb:'Rp20.000', period:'Langsung masuk', detail:'Pulsa reguler Indosat IM3', price:'Rp21.000', badge:'' },
+ { gb:'Rp50.000', period:'Langsung masuk', detail:'Pulsa reguler Indosat IM3', price:'Rp51.500', badge:'TERBAIK' },
+ { gb:'Rp100.000', period:'Langsung masuk', detail:'Pulsa reguler Indosat IM3', price:'Rp101.500', badge:'' },
+ ],
+ xl: [
+ { gb:'Rp5.000', period:'Langsung masuk', detail:'Pulsa reguler XL', price:'Rp6.000', badge:'' },
+ { gb:'Rp10.000', period:'Langsung masuk', detail:'Pulsa reguler XL', price:'Rp11.000', badge:'' },
+ { gb:'Rp20.000', period:'Langsung masuk', detail:'Pulsa reguler XL', price:'Rp21.000', badge:'' },
+ { gb:'Rp50.000', period:'Langsung masuk', detail:'Pulsa reguler XL', price:'Rp51.500', badge:'TERBAIK' },
+ { gb:'Rp100.000', period:'Langsung masuk', detail:'Pulsa reguler XL', price:'Rp101.500', badge:'' },
+ ],
+ tri: [
+ { gb:'Rp5.000', period:'Langsung masuk', detail:'Pulsa reguler Tri (3)', price:'Rp6.000', badge:'' },
+ { gb:'Rp10.000', period:'Langsung masuk', detail:'Pulsa reguler Tri (3)', price:'Rp11.000', badge:'' },
+ { gb:'Rp20.000', period:'Langsung masuk', detail:'Pulsa reguler Tri (3)', price:'Rp21.000', badge:'' },
+ { gb:'Rp50.000', period:'Langsung masuk', detail:'Pulsa reguler Tri (3)', price:'Rp51.500', badge:'TERBAIK' },
+ { gb:'Rp100.000', period:'Langsung masuk', detail:'Pulsa reguler Tri (3)', price:'Rp101.500', badge:'' },
+ ],
+ smartfren: [
+ { gb:'Rp5.000', period:'Langsung masuk', detail:'Pulsa reguler Smartfren', price:'Rp6.000', badge:'' },
+ { gb:'Rp10.000', period:'Langsung masuk', detail:'Pulsa reguler Smartfren', price:'Rp11.000', badge:'' },
+ { gb:'Rp20.000', period:'Langsung masuk', detail:'Pulsa reguler Smartfren', price:'Rp21.000', badge:'' },
+ { gb:'Rp50.000', period:'Langsung masuk', detail:'Pulsa reguler Smartfren', price:'Rp51.500', badge:'TERBAIK' },
+ ],
+ byu: [
+ { gb:'Rp5.000', period:'Langsung masuk', detail:'Pulsa reguler ByU', price:'Rp6.000', badge:'' },
+ { gb:'Rp10.000', period:'Langsung masuk', detail:'Pulsa reguler ByU', price:'Rp11.000', badge:'' },
+ { gb:'Rp20.000', period:'Langsung masuk', detail:'Pulsa reguler ByU', price:'Rp21.000', badge:'' },
+ { gb:'Rp50.000', period:'Langsung masuk', detail:'Pulsa reguler ByU', price:'Rp51.500', badge:'TERBAIK' },
+ ],
+};
 const DATA_PACKAGES = {
  telkomsel: {
  name: 'Telkomsel', color: '#e11d48',
  categories: [
- { id: 'reguler', icon: '📶', name: 'Kuota Reguler', sub: 'All network, all apps',
+ { id: 'reguler', icon: '📶', name: 'Kuota Reguler', sub: 'All network, semua aplikasi',
  periods: {
  harian: [
  { gb: '1GB', period: '1 hari', detail: 'All network, semua aplikasi', price: 'Rp5.000', badge: '' },
@@ -2058,11 +2130,32 @@ const DATA_PACKAGES = {
  ]
  }
  },
- { id: 'nonstop', icon: '🎮', name: 'Kuota Nonstop', sub: 'Sosmed & streaming',
+ { id: 'nonstop', icon: '🎮', name: 'Kuota Nonstop', sub: 'Sosmed & streaming bebas',
+ periods: {
+ harian: [
+ { gb: '1GB', period: '1 hari', detail: 'YouTube, TikTok, Instagram, Twitter, dll', price: 'Rp3.000', badge: '' },
+ ],
+ bulanan: [
+ { gb: '10GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram, Twitter, dll', price: 'Rp25.000', badge: '' },
+ { gb: '20GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram, Twitter, dll', price: 'Rp40.000', badge: 'TERBAIK' },
+ { gb: '30GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram, Twitter, dll', price: 'Rp55.000', badge: '' },
+ ]
+ }
+ },
+ { id: 'combo', icon: '📱', name: 'Combo Sakti', sub: 'Data + telepon + SMS',
  periods: {
  bulanan: [
- { gb: '10GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram, dll', price: 'Rp25.000', badge: '' },
- { gb: '20GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram, dll', price: 'Rp40.000', badge: 'TERBAIK' },
+ { gb: '5GB', period: '30 hari', detail: '5GB data + 100 menit telepon + 100 SMS', price: 'Rp25.000', badge: '' },
+ { gb: '10GB', period: '30 hari', detail: '10GB data + 150 menit telepon + 100 SMS', price: 'Rp40.000', badge: 'TERBAIK' },
+ { gb: '20GB', period: '30 hari', detail: '20GB data + 200 menit telepon + 200 SMS', price: 'Rp65.000', badge: '' },
+ ]
+ }
+ },
+ { id: 'flash', icon: '⚡', name: 'Flash Sale', sub: 'Harga spesial terbatas',
+ periods: {
+ bulanan: [
+ { gb: '8GB', period: '30 hari', detail: 'All network, harga promo terbatas', price: 'Rp20.000', badge: 'TERBAIK' },
+ { gb: '15GB', period: '30 hari', detail: 'All network, harga promo terbatas', price: 'Rp35.000', badge: '' },
  ]
  }
  },
@@ -2071,15 +2164,45 @@ const DATA_PACKAGES = {
  indosat: {
  name: 'Indosat IM3', color: '#ef4444',
  categories: [
- { id: 'freedom', icon: '📶', name: 'Freedom Internet', sub: 'All network',
+ { id: 'freedom-internet', icon: '📶', name: 'Freedom Internet', sub: 'All network, semua aplikasi',
  periods: {
  harian: [
  { gb: '1.5GB', period: '1 hari', detail: 'All network, semua aplikasi', price: 'Rp5.000', badge: '' },
+ { gb: '3GB', period: '2 hari', detail: 'All network, semua aplikasi', price: 'Rp8.000', badge: '' },
  ],
  bulanan: [
  { gb: '8GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp20.000', badge: '' },
  { gb: '15GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp35.000', badge: 'TERBAIK' },
  { gb: '30GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp60.000', badge: '' },
+ { gb: '50GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp90.000', badge: '' },
+ ]
+ }
+ },
+ { id: 'freedom-u', icon: '♾️', name: 'Freedom U', sub: 'Unlimited khusus pelajar & mahasiswa',
+ periods: {
+ bulanan: [
+ { gb: 'Unlimited', period: '30 hari', detail: 'Unlimited sosmed + 10GB all network', price: 'Rp25.000', badge: '' },
+ { gb: 'Unlimited+', period: '30 hari', detail: 'Unlimited sosmed + 20GB all network', price: 'Rp40.000', badge: 'TERBAIK' },
+ ]
+ }
+ },
+ { id: 'freedom-combo', icon: '📱', name: 'Freedom Combo', sub: 'Data + telepon + SMS',
+ periods: {
+ bulanan: [
+ { gb: '7GB', period: '30 hari', detail: '7GB data + 1000 menit telepon + 1000 SMS', price: 'Rp30.000', badge: '' },
+ { gb: '14GB', period: '30 hari', detail: '14GB data + 1000 menit telepon + 1000 SMS', price: 'Rp50.000', badge: 'TERBAIK' },
+ { gb: '25GB', period: '30 hari', detail: '25GB data + 1000 menit telepon + 1000 SMS', price: 'Rp75.000', badge: '' },
+ ]
+ }
+ },
+ { id: 'freedom-nonstop', icon: '🎮', name: 'Freedom Nonstop', sub: 'Kuota khusus sosmed & streaming',
+ periods: {
+ harian: [
+ { gb: '2GB', period: '1 hari', detail: 'TikTok, YouTube, Instagram, WhatsApp', price: 'Rp4.000', badge: '' },
+ ],
+ bulanan: [
+ { gb: '20GB', period: '30 hari', detail: 'TikTok, YouTube, Instagram, WhatsApp', price: 'Rp35.000', badge: 'TERBAIK' },
+ { gb: '40GB', period: '30 hari', detail: 'TikTok, YouTube, Instagram, WhatsApp', price: 'Rp60.000', badge: '' },
  ]
  }
  },
@@ -2088,12 +2211,47 @@ const DATA_PACKAGES = {
  xl: {
  name: 'XL Axiata', color: '#eab308',
  categories: [
- { id: 'xtra', icon: '📶', name: 'XTRA Combo', sub: 'Data + telepon',
+ { id: 'xtra-combo', icon: '📱', name: 'XTRA Combo', sub: 'Data + telepon + SMS',
  periods: {
  bulanan: [
- { gb: '7GB', period: '30 hari', detail: 'All network + bonus telepon', price: 'Rp20.000', badge: '' },
- { gb: '12GB', period: '30 hari', detail: 'All network + bonus telepon', price: 'Rp35.000', badge: 'TERBAIK' },
- { gb: '25GB', period: '30 hari', detail: 'All network + bonus telepon', price: 'Rp55.000', badge: '' },
+ { gb: '7GB', period: '30 hari', detail: 'All network + bonus telepon & SMS', price: 'Rp20.000', badge: '' },
+ { gb: '12GB', period: '30 hari', detail: 'All network + bonus telepon & SMS', price: 'Rp35.000', badge: 'TERBAIK' },
+ { gb: '25GB', period: '30 hari', detail: 'All network + bonus telepon & SMS', price: 'Rp55.000', badge: '' },
+ ]
+ }
+ },
+ { id: 'xtra-data', icon: '📶', name: 'XTRA Data', sub: 'Kuota internet all network',
+ periods: {
+ harian: [
+ { gb: '1GB', period: '1 hari', detail: 'All network, semua aplikasi', price: 'Rp4.000', badge: '' },
+ { gb: '2GB', period: '1 hari', detail: 'All network, semua aplikasi', price: 'Rp7.000', badge: '' },
+ ],
+ bulanan: [
+ { gb: '10GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp30.000', badge: '' },
+ { gb: '20GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp50.000', badge: 'TERBAIK' },
+ { gb: '40GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp80.000', badge: '' },
+ ]
+ }
+ },
+ { id: 'axis-bronet', icon: '🎮', name: 'Axis Bronet', sub: 'Kuota sosmed & hiburan murah',
+ periods: {
+ harian: [
+ { gb: '1.2GB', period: '1 hari', detail: 'YouTube, TikTok, Instagram + all network 200MB', price: 'Rp3.000', badge: '' },
+ ],
+ mingguan: [
+ { gb: '5GB', period: '7 hari', detail: 'YouTube, TikTok, Instagram + all network 1GB', price: 'Rp10.000', badge: '' },
+ ],
+ bulanan: [
+ { gb: '15GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram + all network 5GB', price: 'Rp25.000', badge: 'TERBAIK' },
+ { gb: '25GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram + all network 10GB', price: 'Rp40.000', badge: '' },
+ ]
+ }
+ },
+ { id: 'xl-unlimited', icon: '♾️', name: 'XL Unlimited', sub: 'Internet tanpa batas',
+ periods: {
+ bulanan: [
+ { gb: 'Unlimited', period: '30 hari', detail: 'Unlimited dengan FUP 20GB speed penuh', price: 'Rp50.000', badge: '' },
+ { gb: 'Unlimited+', period: '30 hari', detail: 'Unlimited dengan FUP 40GB speed penuh', price: 'Rp80.000', badge: 'TERBAIK' },
  ]
  }
  },
@@ -2102,12 +2260,43 @@ const DATA_PACKAGES = {
  tri: {
  name: 'Tri (3)', color: '#3b82f6',
  categories: [
- { id: 'always', icon: '📶', name: 'AlwaysOn', sub: 'Internet unlimited',
+ { id: 'always-on', icon: '📶', name: 'AlwaysOn', sub: 'Internet all network aktif terus',
  periods: {
+ harian: [
+ { gb: '1GB', period: '1 hari', detail: 'All network, semua aplikasi', price: 'Rp4.000', badge: '' },
+ ],
  bulanan: [
  { gb: '6GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp15.000', badge: '' },
  { gb: '12GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp28.000', badge: 'TERBAIK' },
  { gb: '25GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp50.000', badge: '' },
+ { gb: '50GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp90.000', badge: '' },
+ ]
+ }
+ },
+ { id: 'tri-nonstop', icon: '🎮', name: 'Kuota Nonstop', sub: 'Sosmed & streaming bebas',
+ periods: {
+ harian: [
+ { gb: '2GB', period: '1 hari', detail: 'YouTube, TikTok, Instagram, WhatsApp, dll', price: 'Rp3.000', badge: '' },
+ ],
+ bulanan: [
+ { gb: '10GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram, WhatsApp, dll', price: 'Rp20.000', badge: 'TERBAIK' },
+ { gb: '25GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram, WhatsApp, dll', price: 'Rp40.000', badge: '' },
+ ]
+ }
+ },
+ { id: 'tri-combo', icon: '📱', name: 'Combo Data', sub: 'Data + telepon + SMS',
+ periods: {
+ bulanan: [
+ { gb: '8GB', period: '30 hari', detail: '8GB data + 300 menit telepon sesama Tri', price: 'Rp25.000', badge: '' },
+ { gb: '16GB', period: '30 hari', detail: '16GB data + 600 menit telepon sesama Tri', price: 'Rp45.000', badge: 'TERBAIK' },
+ ]
+ }
+ },
+ { id: 'tri-unlimited', icon: '♾️', name: 'Super Data', sub: 'Kuota besar unlimited',
+ periods: {
+ bulanan: [
+ { gb: 'Unlimited', period: '30 hari', detail: 'Unlimited dengan FUP 15GB speed penuh', price: 'Rp35.000', badge: '' },
+ { gb: 'Unlimited+', period: '30 hari', detail: 'Unlimited dengan FUP 30GB speed penuh', price: 'Rp60.000', badge: 'TERBAIK' },
  ]
  }
  },
@@ -2116,11 +2305,40 @@ const DATA_PACKAGES = {
  smartfren: {
  name: 'Smartfren', color: '#8b5cf6',
  categories: [
- { id: 'unlimited', icon: '📶', name: 'Unlimited', sub: '4G LTE Advanced',
+ { id: 'unlimited-basic', icon: '📶', name: 'Unlimited Basic', sub: '4G LTE all network',
  periods: {
+ harian: [
+ { gb: '1GB', period: '1 hari', detail: '4G LTE, semua aplikasi', price: 'Rp3.000', badge: '' },
+ ],
  bulanan: [
  { gb: '10GB', period: '30 hari', detail: '4G LTE, semua aplikasi', price: 'Rp18.000', badge: '' },
  { gb: '20GB', period: '30 hari', detail: '4G LTE, semua aplikasi', price: 'Rp32.000', badge: 'TERBAIK' },
+ { gb: '40GB', period: '30 hari', detail: '4G LTE, semua aplikasi', price: 'Rp55.000', badge: '' },
+ ]
+ }
+ },
+ { id: 'unlimited-max', icon: '⚡', name: 'Unlimited Max', sub: 'Kecepatan tinggi tanpa batas',
+ periods: {
+ bulanan: [
+ { gb: 'Unlimited', period: '30 hari', detail: 'Unlimited 4G LTE FUP 20GB full speed', price: 'Rp40.000', badge: '' },
+ { gb: 'Unlimited+', period: '30 hari', detail: 'Unlimited 4G LTE FUP 40GB full speed', price: 'Rp65.000', badge: 'TERBAIK' },
+ ]
+ }
+ },
+ { id: 'sf-nonstop', icon: '🎮', name: 'Kuota Nonstop', sub: 'YouTube, TikTok, sosmed bebas',
+ periods: {
+ harian: [
+ { gb: '2GB', period: '1 hari', detail: 'YouTube, TikTok, Instagram, WhatsApp', price: 'Rp4.000', badge: '' },
+ ],
+ bulanan: [
+ { gb: '25GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram, WhatsApp', price: 'Rp30.000', badge: 'TERBAIK' },
+ ]
+ }
+ },
+ { id: 'sf-starter', icon: '🆕', name: 'Starter Pack', sub: 'Paket perdana hemat',
+ periods: {
+ bulanan: [
+ { gb: '5GB', period: '30 hari', detail: '4G LTE + bonus 5GB nonstop sosmed', price: 'Rp10.000', badge: 'TERBAIK' },
  ]
  }
  },
@@ -2129,12 +2347,32 @@ const DATA_PACKAGES = {
  byu: {
  name: 'ByU', color: '#10b981',
  categories: [
- { id: 'byu-data', icon: '📶', name: 'Data ByU', sub: 'by.U Telkomsel Digital',
+ { id: 'byu-data', icon: '📶', name: 'Data ByU', sub: 'Jaringan Telkomsel all network',
+ periods: {
+ harian: [
+ { gb: '1GB', period: '1 hari', detail: 'Jaringan Telkomsel, semua aplikasi', price: 'Rp5.000', badge: '' },
+ ],
+ bulanan: [
+ { gb: '5GB', period: '30 hari', detail: 'Jaringan Telkomsel, semua aplikasi', price: 'Rp18.000', badge: '' },
+ { gb: '10GB', period: '30 hari', detail: 'Jaringan Telkomsel, semua aplikasi', price: 'Rp30.000', badge: 'TERBAIK' },
+ { gb: '20GB', period: '30 hari', detail: 'Jaringan Telkomsel, semua aplikasi', price: 'Rp50.000', badge: '' },
+ { gb: '40GB', period: '30 hari', detail: 'Jaringan Telkomsel, semua aplikasi', price: 'Rp90.000', badge: '' },
+ ]
+ }
+ },
+ { id: 'byu-unlimited', icon: '♾️', name: 'Unlimited ByU', sub: 'Internet tanpa batas Telkomsel',
  periods: {
  bulanan: [
- { gb: '5GB', period: '30 hari', detail: 'Jaringan Telkomsel, all apps', price: 'Rp18.000', badge: '' },
- { gb: '10GB', period: '30 hari', detail: 'Jaringan Telkomsel, all apps', price: 'Rp30.000', badge: 'TERBAIK' },
- { gb: '20GB', period: '30 hari', detail: 'Jaringan Telkomsel, all apps', price: 'Rp50.000', badge: '' },
+ { gb: 'Unlimited', period: '30 hari', detail: 'Unlimited jaringan Telkomsel FUP 15GB', price: 'Rp35.000', badge: '' },
+ { gb: 'Unlimited+', period: '30 hari', detail: 'Unlimited jaringan Telkomsel FUP 30GB', price: 'Rp60.000', badge: 'TERBAIK' },
+ ]
+ }
+ },
+ { id: 'byu-nonstop', icon: '🎮', name: 'Nonstop ByU', sub: 'Sosmed & streaming bebas',
+ periods: {
+ bulanan: [
+ { gb: '15GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram + 5GB all network', price: 'Rp25.000', badge: 'TERBAIK' },
+ { gb: '30GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram + 10GB all network', price: 'Rp45.000', badge: '' },
  ]
  }
  },
@@ -2144,13 +2382,45 @@ const DATA_PACKAGES = {
 let selectedOperator = null;
 let selectedCategory = null;
 let selectedPeriod = null;
+let selectedType = null;
 function selectOperator(opKey) {
 selectedOperator = opKey;
 const op = DATA_PACKAGES[opKey];
 document.getElementById('data-step-operator').style.display = 'none';
-document.getElementById('data-step-category').style.display = 'block';
+document.getElementById('data-step-type').style.display = 'block';
+document.getElementById('data-step-category').style.display = 'none';
 document.getElementById('data-step-quota').style.display = 'none';
 document.getElementById('data-bread-op').textContent = op.name;
+}
+function selectType(type) {
+selectedType = type;
+const op = DATA_PACKAGES[selectedOperator];
+if (type === 'pulsa') {
+document.getElementById('data-step-type').style.display = 'none';
+document.getElementById('data-step-quota').style.display = 'block';
+document.getElementById('data-bread-cat').textContent = op.name + ' › 💰 Pulsa';
+const pulsaList = PULSA_PACKAGES[selectedOperator] || [];
+const quotaList = document.getElementById('data-quota-list');
+quotaList.innerHTML = pulsaList.map(pkg => {
+const prodName = 'Pulsa ' + op.name;
+const varName = 'Pulsa ' + op.name + ' ' + pkg.gb;
+const waText = 'Pulsa ' + op.name + ' ' + pkg.gb;
+return `<div class="data-quota-card${pkg.badge === 'TERBAIK' ? ' recommended' : ''}">
+${pkg.badge ? `<div class="data-quota-badge">${pkg.badge}</div>` : ''}
+<div class="data-quota-gb" style="font-size:22px">${pkg.gb}</div>
+<div class="data-quota-period">💰 Pulsa · ${pkg.period}</div>
+<div class="data-quota-detail">${pkg.detail}</div>
+<div class="data-quota-price">${pkg.price}</div>
+<div style="display:flex;gap:8px;margin-top:6px">
+<button class="data-quota-order" style="flex:1" onclick="openProductDetail('💰','${prodName.replace(/'/g,'\\x27')}','${varName.replace(/'/g,'\\x27')}','${pkg.price}','${waText.replace(/'/g,'\\x27')}','')">Beli Sekarang</button>
+<button onclick="addDataToCart('💰','${prodName.replace(/'/g,'\\x27')}','${varName.replace(/'/g,'\\x27')}','${pkg.price}')" style="background:var(--surface);border:1.5px solid var(--border2);color:var(--text);font-size:16px;width:36px;height:36px;border-radius:8px;cursor:pointer;flex-shrink:0" title="Keranjang">🛒</button>
+</div>
+</div>`;
+}).join('');
+} else {
+document.getElementById('data-step-type').style.display = 'none';
+document.getElementById('data-step-category').style.display = 'block';
+document.getElementById('data-bread-type').textContent = op.name + ' › 📶 Kuota Internet';
 const catList = document.getElementById('data-cat-list');
 catList.innerHTML = op.categories.map(cat => `
 <div class="data-cat-btn" onclick="selectCategory('${cat.id}')">
@@ -2161,6 +2431,7 @@ catList.innerHTML = op.categories.map(cat => `
 </div>
 </div>
 `).join('');
+}
 }
 function selectCategory(catId) {
 selectedCategory = catId;
@@ -2173,7 +2444,7 @@ breadCat.textContent = op.name + ' › ' + cat.icon + ' ' + cat.name;
 const periods = cat.periods;
 const quotaList = document.getElementById('data-quota-list');
 let html = '';
-const periodLabels = { harian: '☀️ Harian', bulanan: '📆 Bulanan' };
+const periodLabels = { harian: '☀️ Harian', mingguan: '📅 Mingguan', bulanan: '📆 Bulanan' };
 Object.keys(periods).forEach(period => {
 const pkgs = periods[period];
 pkgs.forEach(pkg => {
@@ -2184,7 +2455,7 @@ const waText = 'Paket Data ' + op.name + ' ' + cat.name + ' ' + pkg.gb + ' ' + l
 html += `
 <div class="data-quota-card${pkg.badge === 'TERBAIK' ? ' recommended' : ''}">
 ${pkg.badge ? `<div class="data-quota-badge">${pkg.badge}</div>` : ''}
-<div class="data-quota-gb">${pkg.gb.replace('GB','')}<span> ${pkg.gb.includes('GB') ? 'GB' : ''}</span></div>
+<div class="data-quota-gb">${pkg.gb.replace('GB','').replace('Unlimited+','∞+').replace('Unlimited','∞')}<span> ${pkg.gb.includes('GB') ? 'GB' : pkg.gb.includes('Unlimited') ? '' : ''}</span></div>
 <div class="data-quota-period">${label} · ${pkg.period}</div>
 <div class="data-quota-detail">${pkg.detail}</div>
 <div class="data-quota-price">${pkg.price}</div>
@@ -2208,12 +2479,23 @@ function addDataToCart(emoji, product, variant, price) {
 
 function goBackToOperator() {
 document.getElementById('data-step-operator').style.display = 'block';
+document.getElementById('data-step-type').style.display = 'none';
+document.getElementById('data-step-category').style.display = 'none';
+document.getElementById('data-step-quota').style.display = 'none';
+}
+function goBackToType() {
+document.getElementById('data-step-type').style.display = 'block';
 document.getElementById('data-step-category').style.display = 'none';
 document.getElementById('data-step-quota').style.display = 'none';
 }
 function goBackToCategory() {
+if (selectedType === 'pulsa') {
+document.getElementById('data-step-type').style.display = 'block';
+document.getElementById('data-step-quota').style.display = 'none';
+} else {
 document.getElementById('data-step-category').style.display = 'block';
 document.getElementById('data-step-quota').style.display = 'none';
+}
 }
 function switchCat(id, el) {
 document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
@@ -2450,7 +2732,15 @@ var PRODUCT_DETAIL_INFO = {
  masaAktif: '1 Bulan',
  garansi: 'Full Garansi',
  tipe: 'Sharing',
- features: ['Garansi penuh selama masa aktif', 'Proses 5–60 menit', 'Bergaransi penuh'],
+ features: ['Garansi penuh selama masa aktif', 'Proses 5–60 menit', 'Akun berkualitas tinggi'],
+ priceOld: ''
+ },
+ 'default_sosmed': {
+ desc: 'Layanan sosmed permanen. Ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi refill di ID ORDER. Dilarang private atau ganti username selama proses. Hanya butuh username/link.',
+ masaAktif: 'Permanen',
+ garansi: 'Garansi Refill',
+ tipe: 'Permanen',
+ features: ['Garansi refill sesuai masa yang tertera di ID ORDER', 'Estimasi proses 1 menit – 1 jam, maks 3–7 hari', 'Dilarang private atau ganti username selama proses', 'Hanya butuh username/link akun', 'Tanpa password'],
  priceOld: ''
  },
  'Netflix Premium_1P2U': {
@@ -2537,6 +2827,8 @@ var PRODUCT_DETAIL_INFO = {
 
 var _pendingPayData = null;
 
+var SOSMED_KEYS = ['ig-followers','ig-likes','ig-views','tiktok-followers','tiktok-likes','tiktok-views','tiktok-live','yt-subscribers','yt-views','wa-channel-member','linkedin-followers','fb-followers'];
+
 function openProductDetail(emoji, product, variant, price, waText, priceOld) {
  // Try multiple key formats to find the best match
  var keys = [
@@ -2549,7 +2841,21 @@ function openProductDetail(emoji, product, variant, price, waText, priceOld) {
  for (var ki = 0; ki < keys.length; ki++) {
  if (PRODUCT_DETAIL_INFO[keys[ki]]) { info = PRODUCT_DETAIL_INFO[keys[ki]]; break; }
  }
- if (!info) info = PRODUCT_DETAIL_INFO['default'];
+ // Detect sosmed product — use sosmed default if no specific entry found
+ if (!info) {
+ var isSosmed = false;
+ for (var sk in (typeof PRODUCTS !== 'undefined' ? PRODUCTS : {})) {
+ if (SOSMED_KEYS.indexOf(sk) !== -1) {
+ var sp = PRODUCTS[sk];
+ var allVars = sp.variants ? sp.variants : (sp.tabs ? sp.tabs.reduce(function(a,t){return a.concat(t.variants);},[]) : []);
+ for (var sv = 0; sv < allVars.length; sv++) {
+ if (allVars[sv].name === variant && (sp.name === product || product.indexOf(sp.name) !== -1 || sp.name.indexOf(product) !== -1)) { isSosmed = true; break; }
+ }
+ }
+ if (isSosmed) break;
+ }
+ info = isSosmed ? PRODUCT_DETAIL_INFO['default_sosmed'] : PRODUCT_DETAIL_INFO['default'];
+ }
  
  // Store for later
  _pendingPayData = { emoji, product, variant, price, waText };
