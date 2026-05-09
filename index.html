@@ -10,6 +10,27 @@
 <meta name="robots" content="index, follow">
 <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-xxxxxx"></script>
  <script src="/js/order-form.js"></script>
+ <!-- ORDER FORM OVERLAY -->
+<div id="orderFormOverlay" class="payment-overlay" onclick="if(event.target===this){this.classList.remove('open');document.body.style.overflow='';}">
+  <div class="payment-modal" style="max-width:420px">
+    <button class="modal-close" onclick="document.getElementById('orderFormOverlay').classList.remove('open');document.body.style.overflow=''">✕</button>
+    <div style="text-align:center;margin-bottom:16px">
+      <div id="orderFormProduct" style="font-weight:700;font-size:1.1rem;margin-bottom:4px"></div>
+      <div id="orderFormPrice" style="color:#f59e0b;font-size:1.3rem;font-weight:800"></div>
+    </div>
+    <div id="orderFormFields" style="margin-bottom:16px"></div>
+    <style>
+      .order-field { margin-bottom:14px; }
+      .order-field label { display:block;font-size:0.85rem;color:#9ca3af;margin-bottom:6px; }
+      .order-field input { width:100%;padding:10px 14px;border-radius:8px;border:1px solid #374151;background:#111827;color:#fff;font-size:1rem;box-sizing:border-box; }
+      .of-verify-btn { width:100%;padding:10px;border-radius:8px;border:none;background:#1d4ed8;color:#fff;font-size:0.95rem;cursor:pointer;margin-bottom:10px; }
+      .of-verify-result { padding:10px 14px;border-radius:8px;background:#111827;font-size:0.9rem;margin-bottom:10px; }
+    </style>
+    <button id="orderFormBtn" style="width:100%;padding:14px;border-radius:10px;border:none;background:linear-gradient(135deg,#f59e0b,#d97706);color:#000;font-weight:800;font-size:1rem;cursor:pointer;">
+      💳 Lanjut Bayar
+    </button>
+  </div>
+</div>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://storegamejoker.vercel.app/">
 <meta property="og:title" content="Storegame Joker — Layanan Digital Terlengkap & Termurah">
