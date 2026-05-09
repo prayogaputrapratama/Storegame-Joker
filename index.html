@@ -2903,11 +2903,41 @@ function closeProdDetailOutside(e) {
 }
 
 function proceedToPayment() {
- closeProdDetail();
- if (_pendingPayData) {
- var d = _pendingPayData;
- openPaymentPage(d.emoji, d.product, d.variant, d.price, d.waText);
- }
+  closeProdDetail();
+  if (!_pendingPayData) return;
+  var d = _pendingPayData;
+
+  // Deteksi tipe produk
+  var productType = OrderForm.detectType(d.product, d.variant);
+
+  // Kalau manual (aplikasi premium dll) → tetap WA
+  if (productType === 'manual') {
+    var waMsg = 'Halo, saya mau order ' + d.waText + '.\n\nMohon konfirmasi ya kak 🙏';
+    window.open('https://wa.me/62882009466583?text=' + encodeURIComponent(waMsg), '_blank');
+    return;
+  }
+
+  // Render form input
+  var formHtml = OrderForm.renderForm(productType);
+  if (!formHtml) {
+    var waMsg = 'Halo, saya mau order ' + d.waText + '.\n\nMohon konfirmasi ya kak 🙏';
+    window.open('https://wa.me/62882009466583?text=' + encodeURIComponent(waMsg), '_blank');
+    return;
+  }
+
+  // Reset data
+  OrderForm._data = { verified: false };
+
+  // Tampilkan overlay form order
+  document.getElementById('orderFormProduct').textContent = d.emoji + ' ' + d.product + ' - ' + d.variant;
+  document.getElementById('orderFormPrice').textContent = d.price;
+  document.getElementById('orderFormFields').innerHTML = formHtml;
+  document.getElementById('orderFormBtn').onclick = function() {
+    OrderForm.submit(productType, '', d.price, d.product + ' - ' + d.variant);
+  };
+  document.getElementById('orderFormOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
 }
 // ================================
 
