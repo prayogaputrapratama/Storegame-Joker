@@ -2913,15 +2913,45 @@ function proceedToPayment() {
 var _payData = {};
 
 function openPaymentPage(emoji, product, variant, price, waText) {
- _payData = { emoji:emoji, product:product, variant:variant, price:price, waText:waText };
- document.getElementById('payEmoji').textContent = emoji;
- document.getElementById('payProduct').textContent = product;
- document.getElementById('payVariant').textContent = variant;
- document.getElementById('payPrice').textContent = price;
- document.getElementById('paymentOverlay').classList.add('open');
- document.body.style.overflow = 'hidden';
- var waMsg = 'Halo, saya mau order ' + waText + '.\n\nMetode bayar: QRIS\nNominal: ' + price + '\n\nMohon konfirmasi ya kak 🙏';
- document.getElementById('payConfirmBtn').href = 'https://wa.me/62882009466583?text=' + encodeURIComponent(waMsg);
+  _payData = { emoji:emoji, product:product, variant:variant, price:price, waText:waText };
+  document.getElementById('payEmoji').textContent = emoji;
+  document.getElementById('payProduct').textContent = product;
+  document.getElementById('payVariant').textContent = variant;
+  document.getElementById('payPrice').textContent = price;
+
+  // Ambil angka dari string harga, contoh "Rp 15.000" → 15000
+  var numericPrice = parseInt(price.replace(/[^0-9]/g, ''));
+  var orderId = 'ORDER-' + Date.now();
+
+  fetch('/api/payment/create', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      order_id: orderId,
+      amount: numericPrice,
+      customer_name: 'Pelanggan',
+      customer_email: 'pelanggan@email.com',
+      item_name: product + ' - ' + variant,
+    }),
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (data.token) {
+      snap.pay(data.token, {
+        onSuccess: function(result) {
+          alert('Pembayaran berhasil! Order ID: ' + orderId);
+        },
+        onPending: function(result) {
+          alert('Menunggu pembayaran...');
+        },
+        onError: function(result) {
+          alert('Pembayaran gagal, silahkan coba lagi.');
+        },
+      });
+    } else {
+      alert('Gagal membuat transaksi, coba lagi.');
+    }
+  });
 }
 
 function closePayment() {
