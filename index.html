@@ -3065,6 +3065,10 @@ function closePaymentOutside(e) {
     </div>
     <div id="orderFormFields" style="margin-bottom:16px"></div>
     <style>
+     .payment-overlay { position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:9999;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.2s; }
+.payment-overlay.open { opacity:1;pointer-events:all; }
+.payment-modal { background:#1a1a2e;border-radius:16px;padding:24px;width:90%;max-width:420px;max-height:90vh;overflow-y:auto;position:relative; }
+.modal-close { position:absolute;top:12px;right:12px;background:none;border:none;color:#fff;font-size:1.2rem;cursor:pointer; }
       .order-field { margin-bottom:14px; }
       .order-field label { display:block;font-size:0.85rem;color:#9ca3af;margin-bottom:6px; }
       .order-field input { width:100%;padding:10px 14px;border-radius:8px;border:1px solid #374151;background:#111827;color:#fff;font-size:1rem;box-sizing:border-box; }
