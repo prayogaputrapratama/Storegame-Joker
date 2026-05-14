@@ -244,9 +244,9 @@
 .tu-item:hover{border-color:var(--border);background:var(--card)}
 .tu-item.sel{border-color:var(--orange);background:rgba(245,166,35,0.06);box-shadow:0 0 0 1px var(--orange)}
 .tu-item.sel::after{content:'✓';position:absolute;top:7px;right:9px;font-size:9px;font-weight:800;color:var(--orange);background:rgba(245,166,35,0.15);width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center}
-.tu-item-badge{font-size:9px;font-weight:700;background:rgba(245,166,35,0.12);color:var(--orange);border:1px solid rgba(245,166,35,0.25);border-radius:4px;padding:1px 6px;margin-bottom:5px;display:inline-block;letter-spacing:.3px}
-.tu-item-badge.hot{background:rgba(239,68,68,0.1);color:#f87171;border-color:rgba(239,68,68,0.25)}
-.tu-item-badge.new{background:rgba(34,199,122,0.1);color:var(--green);border-color:rgba(34,199,122,0.25)}
+
+
+
 .tu-item-name{font-size:12px;font-weight:700;color:var(--text);margin-bottom:2px;line-height:1.3}
 .tu-item-amount{font-size:10px;color:var(--muted);margin-bottom:6px}
 .tu-item-price{font-size:14px;font-weight:800;color:var(--text)}
@@ -626,28 +626,28 @@
 
  <div class="cat-panel" id="cat-sosmed">
  <div class="items-grid" id="grid-sosmed">
- <div class="item-card"><div class="item-top"><div class="item-emoji">📸</div><div class="item-name">Instagram — Followers</div></div><div class="item-desc">Bot Random & Indo Aktif. Non Drop, Refill 1 bulan, tanpa password. Paket 100–1.000 followers.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp4.000/100 followers</span></div></div><button class="item-view-btn" onclick="openSosmed('ig-followers')">Order Sekarang ⚡</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">❤️</div><div class="item-name">Instagram — Likes</div></div><div class="item-desc">Proses instan, Non Drop, 365 Days Refill, tanpa password. Paket 100–1.000 likes.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp2.000/100 likes</span></div></div><button class="item-view-btn" onclick="openSosmed('ig-likes')">Order Sekarang ⚡</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">👁️</div><div class="item-name">Instagram — Video Views</div></div><div class="item-desc">All link work, super fast, Non Drop, tanpa password. Paket 5.000–100.000 views.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp500/5.000 views</span></div></div><button class="item-view-btn" onclick="openSosmed('ig-views')">Order Sekarang ⚡</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">🎵</div><div class="item-name">TikTok — Followers</div></div><div class="item-desc">Maks 1 Juta, 1K-2K/hari, Non Drop, refill 30 hari, tanpa password. Paket 100–1.000.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp5.000/100 followers</span></div></div><button class="item-view-btn" onclick="openSosmed('tiktok-followers')">Order Sekarang ⚡</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">❤️‍🔥</div><div class="item-name">TikTok — Likes</div></div><div class="item-desc">Instan, Non Drop, refill 30 hari, 100K/hari, tanpa password. Paket 100–1.000 likes.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp1.000/100 likes</span></div></div><button class="item-view-btn" onclick="openSosmed('tiktok-likes')">Order Sekarang ⚡</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">👀</div><div class="item-name">TikTok — Views</div></div><div class="item-desc">Instan, Non Drop, 10-50 juta/hari, tanpa password. Paket 5.000–100.000 views.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp1.000/5.000 views</span></div></div><button class="item-view-btn" onclick="openSosmed('tiktok-views')">Order Sekarang ⚡</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">🎮</div><div class="item-name">TikTok Live — Views</div></div><div class="item-desc">Penonton Live real-time, stabil, tanpa password. Durasi 30 menit, 1 jam, 2 jam, & 3 jam.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp10.000/jam</span></div></div><button class="item-view-btn" onclick="openSosmed('tiktok-live')">Order Sekarang ⚡</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">▶️</div><div class="item-name">YouTube — Subscribers</div></div><div class="item-desc">Bertahap, Non Drop, bantu monetisasi, tanpa password. Paket 100–100.000 subscribers.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp15.000/100 subscribers</span></div></div><button class="item-view-btn" onclick="openSosmed('yt-subscribers')">Order Sekarang ⚡</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">👍</div><div class="item-name">YouTube — Views & Likes</div></div><div class="item-desc">Bertahap, bantu algoritma channel, tanpa password. 1.000–1.000.000 views & 500–10.000 likes.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp3.000/1.000 views</span></div></div><button class="item-view-btn" onclick="openSosmed('yt-views')">Order Sekarang ⚡</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">💬</div><div class="item-name">WhatsApp Saluran — Member</div></div><div class="item-desc">Member global, high quality, proses instan, tanpa password. Paket 100–1.000 member.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp10.000/100 member</span></div></div><button class="item-view-btn" onclick="openSosmed('wa-channel-member')">Order Sekarang ⚡</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">💼</div><div class="item-name">LinkedIn — Followers</div></div><div class="item-desc">Real people, high quality, proses instan, tanpa password. Paket 100–1.000 followers.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp17.000/100 followers</span></div></div><button class="item-view-btn" onclick="openSosmed('linkedin-followers')">Order Sekarang ⚡</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">👥</div><div class="item-name">Facebook — Followers</div></div><div class="item-desc">High quality, Non Drop, 90 Days Refill, instant start. Paket 100–1.000 followers.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp3.000/100 followers</span></div></div><button class="item-view-btn" onclick="openSosmed('fb-followers')">Order Sekarang ⚡</button></div>
+ <div class="item-card"><div class="item-top"><div class="item-emoji">📸</div><div class="item-name">Instagram — Followers</div></div><div class="item-desc">Tambah followers Instagram. Tersedia paket Bot Random & Followers Indo Aktif. Low proses, Maximal 3x24 jam, Refill 1 bulan. Tanpa password. Paket 100 - 1.000 followers tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp4.000/100 followers</span></div></div><button class="item-view-btn" onclick="openSosmed('ig-followers')">Order Sekarang</button></div>
+ <div class="item-card"><div class="item-top"><div class="item-emoji">❤️</div><div class="item-name">Instagram — Likes</div></div><div class="item-desc">Tambah likes foto & video Instagram. Proses instan, Non Drop, 365 Days Refill, tanpa password. Paket 100 - 1.000 likes tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp2.000/100 likes</span></div></div><button class="item-view-btn" onclick="openSosmed('ig-likes')">Order Sekarang</button></div>
+ <div class="item-card"><div class="item-top"><div class="item-emoji">👁️</div><div class="item-name">Instagram — Video Views</div></div><div class="item-desc">Tambah views video Instagram. All link work, super fast, Non Drop, tanpa password. Paket 5.000 - 100.000 views tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp500/5.000 views</span></div></div><button class="item-view-btn" onclick="openSosmed('ig-views')">Order Sekarang</button></div>
+ <div class="item-card"><div class="item-top"><div class="item-emoji">🎵</div><div class="item-name">TikTok — Followers</div></div><div class="item-desc">Tambah followers TikTok. Maks 1 Juta, kecepatan 1K-2K/hari, server Non Drop, isi ulang 30 hari, tanpa password. Paket 100 - 1.000 followers tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp5.000/100 followers</span></div></div><button class="item-view-btn" onclick="openSosmed('tiktok-followers')">Order Sekarang</button></div>
+ <div class="item-card"><div class="item-top"><div class="item-emoji">❤️‍🔥</div><div class="item-name">TikTok — Likes</div></div><div class="item-desc">Tambah likes video TikTok. Mulai instan, Non Drop, isi ulang 30 hari, kecepatan 100K/hari, tanpa password. Paket 100 - 1.000 likes tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp1.000/100 likes</span></div></div><button class="item-view-btn" onclick="openSosmed('tiktok-likes')">Order Sekarang</button></div>
+ <div class="item-card"><div class="item-top"><div class="item-emoji">👀</div><div class="item-name">TikTok — Views</div></div><div class="item-desc">Tambah views video TikTok. Mulai instan, Non Drop, kecepatan 10-50 juta/hari, tanpa password. Paket 5.000 - 100.000 views tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp1.000/5.000 views</span></div></div><button class="item-view-btn" onclick="openSosmed('tiktok-views')">Order Sekarang</button></div>
+ <div class="item-card"><div class="item-top"><div class="item-emoji">🎮</div><div class="item-name">TikTok Live — Views</div></div><div class="item-desc">Tambah penonton TikTok Live secara real-time. Stabil, tanpa password. Tersedia durasi 30 menit, 1 jam, 2 jam, & 3 jam.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp10.000/jam</span></div></div><button class="item-view-btn" onclick="openSosmed('tiktok-live')">Order Sekarang</button></div>
+ <div class="item-card"><div class="item-top"><div class="item-emoji">▶️</div><div class="item-name">YouTube — Subscribers</div></div><div class="item-desc">Tambah subscriber YouTube saluran kamu. Proses bertahap, Non Drop, bantu monetisasi, tanpa password. Paket 100 - 100.000 subscribers tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp15.000/100 subscribers</span></div></div><button class="item-view-btn" onclick="openSosmed('yt-subscribers')">Order Sekarang</button></div>
+ <div class="item-card"><div class="item-top"><div class="item-emoji">👍</div><div class="item-name">YouTube — Views & Likes</div></div><div class="item-desc">Tambah views & likes video YouTube. Proses bertahap, bantu algoritma channel, tanpa password. Paket 1.000 - 1.000.000 views & 500 - 10.000 likes tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp3.000/1.000 views</span></div></div><button class="item-view-btn" onclick="openSosmed('yt-views')">Order Sekarang</button></div>
+ <div class="item-card"><div class="item-top"><div class="item-emoji">💬</div><div class="item-name">WhatsApp Saluran — Member</div></div><div class="item-desc">Tambah member WhatsApp Saluran kamu. Member global, high quality, proses instan, tanpa password. Paket 100 - 1.000 member tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp10.000/100 member</span></div></div><button class="item-view-btn" onclick="openSosmed('wa-channel-member')">Order Sekarang</button></div>
+ <div class="item-card"><div class="item-top"><div class="item-emoji">💼</div><div class="item-name">LinkedIn — Followers</div></div><div class="item-desc">Tambah followers LinkedIn profil atau page kamu. Real people, high quality, proses instan, tanpa password. Paket 100 - 1.000 followers tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp17.000/100 followers</span></div></div><button class="item-view-btn" onclick="openSosmed('linkedin-followers')">Order Sekarang</button></div>
+ <div class="item-card"><div class="item-top"><div class="item-emoji">👥</div><div class="item-name">Facebook — Followers</div></div><div class="item-desc">Tambah followers Facebook page atau profil. High quality, Non Drop, 90 Days Refill, instant start. Paket 100 - 1.000 followers tersedia.</div><div class="item-price-wrap"><div class="item-price">Mulai <span>Rp3.000/100 followers</span></div></div><button class="item-view-btn" onclick="openSosmed('fb-followers')">Order Sekarang</button></div>
  </div>
  </div>
 
  <div class="cat-panel" id="cat-topup">
  <div class="items-grid" id="grid-topup">
- <div class="item-card"><div class="item-top"><div class="item-emoji">⚔️</div><div class="item-name">Mobile Legends — Diamonds</div></div><div class="item-desc">Top up diamond ML via ID+Server. Diamond, Special Items & Bundle tersedia. Proses instan!</div><button class="item-view-btn" onclick="openTopUp('ml')">Top Up Sekarang ⚡</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">🔫</div><div class="item-name">Free Fire — Diamonds</div></div><div class="item-desc">Top up diamond FF ke ID game kamu. Proses otomatis, aman 100%. Semua paket 70–5600 diamond tersedia.</div><button class="item-view-btn" onclick="openTopUp('ff')">Top Up Sekarang ⚡</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">🏆</div><div class="item-name">PUBG Mobile — UC</div></div><div class="item-desc">Top up Unknown Cash (UC) PUBG Mobile. Beli skin, royale pass, dan item eksklusif. Semua paket UC tersedia.</div><button class="item-view-btn" onclick="openTopUp('pubg')">Top Up Sekarang ⚡</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">🟣</div><div class="item-name">Roblox — Robux</div></div><div class="item-desc">Top up Robux untuk beli avatar item, game pass, & fitur premium di Roblox.</div><button class="item-view-btn" onclick="openTopUp('roblox')">Top Up Sekarang ⚡</button></div>
- <div class="item-card"><div class="item-top"><div class="item-emoji">🎁</div><div class="item-name">Roblox — Gift (Game Pass)</div></div><div class="item-desc">Gift game pass langsung ke akun Roblox. Tersedia untuk Brookhaven, Dress To Impress & lebih banyak game!</div><button class="item-view-btn" onclick="openTopUp('roblox-gift')">Top Up Sekarang ⚡</button></div>
+ <div class="item-card"><div class="item-top"><div class="item-emoji">⚔️</div><div class="item-name">Mobile Legends — Diamonds</div></div><div class="item-desc">Top up diamond ML via ID+Server. Diamond, Special Items & Bundle tersedia. Proses instan!</div><button class="item-view-btn" onclick="openTopUp('ml')">Top Up Sekarang</button></div>
+ <div class="item-card"><div class="item-top"><div class="item-emoji">🔫</div><div class="item-name">Free Fire — Diamonds</div></div><div class="item-desc">Top up diamond FF ke ID game kamu. Proses otomatis, aman 100%. Semua paket 70–5600 diamond tersedia.</div><button class="item-view-btn" onclick="openTopUp('ff')">Top Up Sekarang</button></div>
+ <div class="item-card"><div class="item-top"><div class="item-emoji">🏆</div><div class="item-name">PUBG Mobile — UC</div></div><div class="item-desc">Top up Unknown Cash (UC) PUBG Mobile. Beli skin, royale pass, dan item eksklusif. Semua paket UC tersedia.</div><button class="item-view-btn" onclick="openTopUp('pubg')">Top Up Sekarang</button></div>
+ <div class="item-card"><div class="item-top"><div class="item-emoji">🟣</div><div class="item-name">Roblox — Robux</div></div><div class="item-desc">Top up Robux untuk beli avatar item, game pass, & fitur premium di Roblox.</div><button class="item-view-btn" onclick="openTopUp('roblox')">Top Up Sekarang</button></div>
+ <div class="item-card"><div class="item-top"><div class="item-emoji">🎁</div><div class="item-name">Roblox — Gift (Game Pass)</div></div><div class="item-desc">Gift game pass langsung ke akun Roblox. Tersedia untuk Brookhaven, Dress To Impress & lebih banyak game!</div><button class="item-view-btn" onclick="openTopUp('roblox-gift')">Top Up Sekarang</button></div>
  </div>
  </div>
 
@@ -855,7 +855,7 @@
  <div style="font-size:13px;color:var(--muted);line-height:1.6">Setiap layanan bergaransi. Ada masalah? Kami ganti atau refund — tidak ada pertanyaan.</div>
  </div>
  <div style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px">
- <div style="font-size:32px;margin-bottom:12px">⚡</div>
+ 
  <div style="font-weight:700;font-size:15px;margin-bottom:8px">Proses Cepat</div>
  <div style="font-size:13px;color:var(--muted);line-height:1.6">Rata-rata order selesai dalam 15–60 menit. Tidak perlu nunggu lama, langsung bisa dipakai.</div>
  </div>
@@ -876,10 +876,10 @@
  </div>
  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;max-width:760px;margin:0 auto" class="pay-grid">
  <div class="pay-method-card" style="--pc:#003d82">🏦 <span>Bank</span><small>BCA, BRI, BNI, Mandiri</small></div>
- <div class="pay-method-card" style="--pc:#00aef0">📱 <span>GoPay</span><small>Instan & otomatis</small></div>
- <div class="pay-method-card" style="--pc:#4c3494">💜 <span>OVO</span><small>Instan & otomatis</small></div>
- <div class="pay-method-card" style="--pc:#108ee9">💙 <span>DANA</span><small>Instan & otomatis</small></div>
- <div class="pay-method-card" style="--pc:#ee4d2d">🛒 <span>ShopeePay</span><small>Instan & otomatis</small></div>
+ <div class="pay-method-card" style="--pc:#00aef0">📱 <span>GoPay</span></div>
+ <div class="pay-method-card" style="--pc:#4c3494">💜 <span>OVO</span></div>
+ <div class="pay-method-card" style="--pc:#108ee9">💙 <span>DANA</span></div>
+ <div class="pay-method-card" style="--pc:#ee4d2d">🛒 <span>ShopeePay</span></div>
  <div class="pay-method-card" style="--pc:#22c77a">📷 <span>QRIS</span><small>Semua e-wallet</small></div>
  </div>
  <div style="text-align:center;margin-top:28px">
@@ -1368,7 +1368,7 @@ variants: [
 {name:'Standard — 7 Hari',badge:'',bdgClass:'',price:'Rp10.000',per:'/7 hari',desc:'Udio Standard private 7 hari. Menggunakan email pembeli, akun private bukan sharing. Fitur: 2-Minute Song Generation, generate beberapa lagu sekaligus, Voice Control & Edit Lyrics, generate dari upload audio sendiri, gunakan lagu sebagai style reference, upload custom cover art. Proses cepat & stabil. Garansi 5 hari.'},
 ]},
 'gamma': { emoji:'⚡', name:'Gamma AI Pro', sub:'Akun Aktif & Siap Pakai · 4.000 Credits/Bulan · 60 Slide/Prompt · 30 Hari', variants:[
-{name:'Pro — 30 Hari',badge:'🔥',bdgClass:'badge-bestseller',price:'Rp15.000',per:'/bulan',desc:'Gamma AI Pro 30 hari, akun aktif & siap pakai. Fitur: buat hingga 60 slide/cards per prompt, 4.000 credits/bulan, akses premium AI image models, generate & edit desain dengan AI (Imagine), custom branding & font sendiri, analytics detail & sharing lanjutan, publish hingga 10 custom domain, support API access, workspace templates siap pakai.'},
+{name:'Pro — 30 Hari',badge:'', bdgClass:'', price:'Rp15.000',per:'/bulan',desc:'Gamma AI Pro 30 hari, akun aktif & siap pakai. Fitur: buat hingga 60 slide/cards per prompt, 4.000 credits/bulan, akses premium AI image models, generate & edit desain dengan AI (Imagine), custom branding & font sendiri, analytics detail & sharing lanjutan, publish hingga 10 custom domain, support API access, workspace templates siap pakai.'},
 ]},
 'copilot': { emoji:'🤖', name:'Microsoft Copilot AI', sub:'AI terintegrasi Office · Word · Excel', variants:[{name:'1 Bulan Private',badge:'',bdgClass:'',price:'Rp50.000',per:'/bulan',desc:'Microsoft Copilot AI private 1 bulan. AI terintegrasi di Word, Excel, PowerPoint & Teams.'}]},
 'microsoft365': { emoji:'💼', name:'Microsoft 365', sub:'Semua aplikasi Office · 1TB OneDrive · Fitur AI · Bergaransi', variants:[
@@ -1696,10 +1696,10 @@ variants:[
 {name:'💎 2975 Diamond',badge:'',bdgClass:'',price:'Rp610.000',per:'/paket',desc:'2975 Diamond ML. Paket jumbo untuk pemain aktif yang sering top up.'},
 {name:'💎 6000 Diamond',badge:'',bdgClass:'',price:'Rp1.220.000',per:'/paket',desc:'6000 Diamond ML. Paket terbesar! Untuk collector & pemain hardcore Mobile Legends.'},
 {name:'— SPESIAL BUNDLE —',badge:'',bdgClass:'',price:'',per:'',desc:''},
-{name:'🎁 Elite Bundle',badge:'bundle',bdgClass:'',price:'Rp14.000',per:'/paket',desc:'Elite Bundle ML. Kami login ke akun kamu & langsung proses. Skin Elite eksklusif.'},
-{name:'🎁 Epic Bundle',badge:'bundle',bdgClass:'',price:'Rp70.000',per:'/paket',desc:'Epic Bundle ML. Skin Epic keren dengan harga spesial. Login ke akun kamu langsung proses.'},
-{name:'🌙 Twilight Pass',badge:'spesial',bdgClass:'',price:'Rp135.000',per:'/paket',desc:'Twilight Pass ML. Akses skin & reward eksklusif Twilight Pass. Harga terbaik!'},
-{name:'🎴 Weekly Diamond Pass',badge:'min 3',bdgClass:'',price:'Rp27.000',per:'/paket',desc:'Weekly Diamond Pass (WDP) ML. Minimum order 3 pcs. Cocok untuk pemain rutin.'},
+{name:'🎁 Elite Bundle',badge:'', bdgClass:'',price:'Rp14.000',per:'/paket',desc:'Elite Bundle ML. Kami login ke akun kamu & langsung proses. Skin Elite eksklusif.'},
+{name:'🎁 Epic Bundle',badge:'', bdgClass:'',price:'Rp70.000',per:'/paket',desc:'Epic Bundle ML. Skin Epic keren dengan harga spesial. Login ke akun kamu langsung proses.'},
+{name:'🌙 Twilight Pass',badge:'', bdgClass:'',price:'Rp135.000',per:'/paket',desc:'Twilight Pass ML. Akses skin & reward eksklusif Twilight Pass. Harga terbaik!'},
+{name:'🎴 Weekly Diamond Pass',badge:'', bdgClass:'',price:'Rp27.000',per:'/paket',desc:'Weekly Diamond Pass (WDP) ML. Minimum order 3 pcs. Cocok untuk pemain rutin.'},
 ]},
 { id:'idserver', label:'🎮 Via ID+Server', variants:[
 {name:'🔜 Harga Segera Hadir',badge:'',bdgClass:'',price:'—',per:'',desc:'Cukup kirim ID game + server kamu ke CS kami via WhatsApp, langsung diproses tanpa perlu login akun. Harga segera tersedia!'},
@@ -1834,7 +1834,7 @@ tabs: [
 { name:'200 Followers', badge:'', bdgClass:'', price:'Rp6.000', per:'/paket', desc:'200 followers IG Bot Random. Non Drop, 30 Days Refill. Instant Start, Speed 100K/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
 { name:'300 Followers', badge:'', bdgClass:'', price:'Rp8.000', per:'/paket', desc:'300 followers IG Bot Random. Non Drop, 30 Days Refill. Instant Start, Speed 100K/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
 { name:'400 Followers', badge:'', bdgClass:'', price:'Rp10.000', per:'/paket', desc:'400 followers IG Bot Random. Non Drop, 30 Days Refill. Instant Start, Speed 100K/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
-{ name:'500 Followers', badge:'🔥', bdgClass:'badge-bestseller', price:'Rp12.000', per:'/paket', desc:'500 followers IG Bot Random. Non Drop, 30 Days Refill. Paling banyak dipesan! | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
+{ name:'500 Followers', badge:'', bdgClass:'', price:'Rp12.000', per:'/paket', desc:'500 followers IG Bot Random. Non Drop, 30 Days Refill. Paling banyak dipesan! | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
 { name:'600 Followers', badge:'', bdgClass:'', price:'Rp14.000', per:'/paket', desc:'600 followers IG Bot Random. Non Drop, 30 Days Refill. Instant Start, Speed 100K/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
 { name:'700 Followers', badge:'', bdgClass:'', price:'Rp16.000', per:'/paket', desc:'700 followers IG Bot Random. Non Drop, 30 Days Refill. Instant Start, Speed 100K/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
 { name:'800 Followers', badge:'', bdgClass:'', price:'Rp18.000', per:'/paket', desc:'800 followers IG Bot Random. Non Drop, 30 Days Refill. Instant Start, Speed 100K/Day. | Layanan permanen ada kemungkinan turun karena update aplikasi. Jika turun, isi ulang sesuai masa garansi di ID ORDER. Dilarang private atau ganti username selama proses. Estimasi pengerjaan 1 menit - 1 jam, paling lama 3-7 hari. Hanya butuh username/link.' },
@@ -1846,12 +1846,12 @@ tabs: [
 { name:'200 Followers', badge:'', bdgClass:'', price:'Rp11.000', per:'/paket', desc:'200 Followers Indo Aktif. Low proses, Maximal 3x24 jam. Refill 1 bulan. Followers Random Aktif dan Pasif. | Dilarang private atau ganti username selama proses. Hanya butuh username/link.' },
 { name:'300 Followers', badge:'', bdgClass:'', price:'Rp17.000', per:'/paket', desc:'300 Followers Indo Aktif. Low proses, Maximal 3x24 jam. Refill 1 bulan. Followers Random Aktif dan Pasif. | Dilarang private atau ganti username selama proses. Hanya butuh username/link.' },
 { name:'400 Followers', badge:'', bdgClass:'', price:'Rp22.000', per:'/paket', desc:'400 Followers Indo Aktif. Low proses, Maximal 3x24 jam. Refill 1 bulan. Followers Random Aktif dan Pasif. | Dilarang private atau ganti username selama proses. Hanya butuh username/link.' },
-{ name:'500 Followers', badge:'🔥', bdgClass:'badge-bestseller', price:'Rp28.000', per:'/paket', desc:'500 Followers Indo Aktif. Low proses, Maximal 3x24 jam. Refill 1 bulan. Followers Random Aktif dan Pasif. Paling banyak dipesan! | Dilarang private atau ganti username selama proses. Hanya butuh username/link.' },
+{ name:'500 Followers', badge:'', bdgClass:'', price:'Rp28.000', per:'/paket', desc:'500 Followers Indo Aktif. Low proses, Maximal 3x24 jam. Refill 1 bulan. Followers Random Aktif dan Pasif. Paling banyak dipesan! | Dilarang private atau ganti username selama proses. Hanya butuh username/link.' },
 { name:'600 Followers', badge:'', bdgClass:'', price:'Rp33.000', per:'/paket', desc:'600 Followers Indo Aktif. Low proses, Maximal 3x24 jam. Refill 1 bulan. Followers Random Aktif dan Pasif. | Dilarang private atau ganti username selama proses. Hanya butuh username/link.' },
 { name:'700 Followers', badge:'', bdgClass:'', price:'Rp39.000', per:'/paket', desc:'700 Followers Indo Aktif. Low proses, Maximal 3x24 jam. Refill 1 bulan. Followers Random Aktif dan Pasif. | Dilarang private atau ganti username selama proses. Hanya butuh username/link.' },
 { name:'800 Followers', badge:'', bdgClass:'', price:'Rp44.000', per:'/paket', desc:'800 Followers Indo Aktif. Low proses, Maximal 3x24 jam. Refill 1 bulan. Followers Random Aktif dan Pasif. | Dilarang private atau ganti username selama proses. Hanya butuh username/link.' },
 { name:'900 Followers', badge:'', bdgClass:'', price:'Rp50.000', per:'/paket', desc:'900 Followers Indo Aktif. Low proses, Maximal 3x24 jam. Refill 1 bulan. Followers Random Aktif dan Pasif. | Dilarang private atau ganti username selama proses. Hanya butuh username/link.' },
-{ name:'1.000 Followers', badge:'⭐', bdgClass:'badge-new', price:'Rp55.000', per:'/paket', desc:'1.000 Followers Indo Aktif. Low proses, Maximal 3x24 jam. Refill 1 bulan. Followers Random Aktif dan Pasif. Nilai hemat terbaik! | Dilarang private atau ganti username selama proses. Hanya butuh username/link.' },
+{ name:'1.000 Followers', badge:'', bdgClass:'', price:'Rp55.000', per:'/paket', desc:'1.000 Followers Indo Aktif. Low proses, Maximal 3x24 jam. Refill 1 bulan. Followers Random Aktif dan Pasif. Nilai hemat terbaik! | Dilarang private atau ganti username selama proses. Hanya butuh username/link.' },
 ]},
 ]
 },
@@ -2182,41 +2182,41 @@ const PULSA_PACKAGES = {
  { gb:'Rp15.000', period:'Langsung masuk', detail:'Pulsa reguler Telkomsel', price:'Rp16.000', badge:'' },
  { gb:'Rp20.000', period:'Langsung masuk', detail:'Pulsa reguler Telkomsel', price:'Rp21.000', badge:'' },
  { gb:'Rp25.000', period:'Langsung masuk', detail:'Pulsa reguler Telkomsel', price:'Rp26.000', badge:'' },
- { gb:'Rp50.000', period:'Langsung masuk', detail:'Pulsa reguler Telkomsel', price:'Rp51.500', badge:'TERBAIK' },
+ { gb:'Rp50.000', period:'Langsung masuk', detail:'Pulsa reguler Telkomsel', price:'Rp51.500', badge:'', },
  { gb:'Rp100.000', period:'Langsung masuk', detail:'Pulsa reguler Telkomsel', price:'Rp101.500', badge:'' },
  ],
  indosat: [
  { gb:'Rp5.000', period:'Langsung masuk', detail:'Pulsa reguler Indosat IM3', price:'Rp6.000', badge:'' },
  { gb:'Rp10.000', period:'Langsung masuk', detail:'Pulsa reguler Indosat IM3', price:'Rp11.000', badge:'' },
  { gb:'Rp20.000', period:'Langsung masuk', detail:'Pulsa reguler Indosat IM3', price:'Rp21.000', badge:'' },
- { gb:'Rp50.000', period:'Langsung masuk', detail:'Pulsa reguler Indosat IM3', price:'Rp51.500', badge:'TERBAIK' },
+ { gb:'Rp50.000', period:'Langsung masuk', detail:'Pulsa reguler Indosat IM3', price:'Rp51.500', badge:'', },
  { gb:'Rp100.000', period:'Langsung masuk', detail:'Pulsa reguler Indosat IM3', price:'Rp101.500', badge:'' },
  ],
  xl: [
  { gb:'Rp5.000', period:'Langsung masuk', detail:'Pulsa reguler XL', price:'Rp6.000', badge:'' },
  { gb:'Rp10.000', period:'Langsung masuk', detail:'Pulsa reguler XL', price:'Rp11.000', badge:'' },
  { gb:'Rp20.000', period:'Langsung masuk', detail:'Pulsa reguler XL', price:'Rp21.000', badge:'' },
- { gb:'Rp50.000', period:'Langsung masuk', detail:'Pulsa reguler XL', price:'Rp51.500', badge:'TERBAIK' },
+ { gb:'Rp50.000', period:'Langsung masuk', detail:'Pulsa reguler XL', price:'Rp51.500', badge:'', },
  { gb:'Rp100.000', period:'Langsung masuk', detail:'Pulsa reguler XL', price:'Rp101.500', badge:'' },
  ],
  tri: [
  { gb:'Rp5.000', period:'Langsung masuk', detail:'Pulsa reguler Tri (3)', price:'Rp6.000', badge:'' },
  { gb:'Rp10.000', period:'Langsung masuk', detail:'Pulsa reguler Tri (3)', price:'Rp11.000', badge:'' },
  { gb:'Rp20.000', period:'Langsung masuk', detail:'Pulsa reguler Tri (3)', price:'Rp21.000', badge:'' },
- { gb:'Rp50.000', period:'Langsung masuk', detail:'Pulsa reguler Tri (3)', price:'Rp51.500', badge:'TERBAIK' },
+ { gb:'Rp50.000', period:'Langsung masuk', detail:'Pulsa reguler Tri (3)', price:'Rp51.500', badge:'', },
  { gb:'Rp100.000', period:'Langsung masuk', detail:'Pulsa reguler Tri (3)', price:'Rp101.500', badge:'' },
  ],
  smartfren: [
  { gb:'Rp5.000', period:'Langsung masuk', detail:'Pulsa reguler Smartfren', price:'Rp6.000', badge:'' },
  { gb:'Rp10.000', period:'Langsung masuk', detail:'Pulsa reguler Smartfren', price:'Rp11.000', badge:'' },
  { gb:'Rp20.000', period:'Langsung masuk', detail:'Pulsa reguler Smartfren', price:'Rp21.000', badge:'' },
- { gb:'Rp50.000', period:'Langsung masuk', detail:'Pulsa reguler Smartfren', price:'Rp51.500', badge:'TERBAIK' },
+ { gb:'Rp50.000', period:'Langsung masuk', detail:'Pulsa reguler Smartfren', price:'Rp51.500', badge:'', },
  ],
  byu: [
  { gb:'Rp5.000', period:'Langsung masuk', detail:'Pulsa reguler ByU', price:'Rp6.000', badge:'' },
  { gb:'Rp10.000', period:'Langsung masuk', detail:'Pulsa reguler ByU', price:'Rp11.000', badge:'' },
  { gb:'Rp20.000', period:'Langsung masuk', detail:'Pulsa reguler ByU', price:'Rp21.000', badge:'' },
- { gb:'Rp50.000', period:'Langsung masuk', detail:'Pulsa reguler ByU', price:'Rp51.500', badge:'TERBAIK' },
+ { gb:'Rp50.000', period:'Langsung masuk', detail:'Pulsa reguler ByU', price:'Rp51.500', badge:'', },
  ],
 };
 const DATA_PACKAGES = {
@@ -2231,7 +2231,7 @@ const DATA_PACKAGES = {
  ],
  bulanan: [
  { gb: '5GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp20.000', badge: '' },
- { gb: '10GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp35.000', badge: 'TERBAIK' },
+ { gb: '10GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp35.000', badge: '', },
  { gb: '20GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp55.000', badge: '' },
  { gb: '50GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp100.000', badge: '' },
  ]
@@ -2244,7 +2244,7 @@ const DATA_PACKAGES = {
  ],
  bulanan: [
  { gb: '10GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram, Twitter, dll', price: 'Rp25.000', badge: '' },
- { gb: '20GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram, Twitter, dll', price: 'Rp40.000', badge: 'TERBAIK' },
+ { gb: '20GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram, Twitter, dll', price: 'Rp40.000', badge: '', },
  { gb: '30GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram, Twitter, dll', price: 'Rp55.000', badge: '' },
  ]
  }
@@ -2253,7 +2253,7 @@ const DATA_PACKAGES = {
  periods: {
  bulanan: [
  { gb: '5GB', period: '30 hari', detail: '5GB data + 100 menit telepon + 100 SMS', price: 'Rp25.000', badge: '' },
- { gb: '10GB', period: '30 hari', detail: '10GB data + 150 menit telepon + 100 SMS', price: 'Rp40.000', badge: 'TERBAIK' },
+ { gb: '10GB', period: '30 hari', detail: '10GB data + 150 menit telepon + 100 SMS', price: 'Rp40.000', badge: '', },
  { gb: '20GB', period: '30 hari', detail: '20GB data + 200 menit telepon + 200 SMS', price: 'Rp65.000', badge: '' },
  ]
  }
@@ -2261,7 +2261,7 @@ const DATA_PACKAGES = {
  { id: 'flash', icon: '⚡', name: 'Flash Sale', sub: 'Harga spesial terbatas',
  periods: {
  bulanan: [
- { gb: '8GB', period: '30 hari', detail: 'All network, harga promo terbatas', price: 'Rp20.000', badge: 'TERBAIK' },
+ { gb: '8GB', period: '30 hari', detail: 'All network, harga promo terbatas', price: 'Rp20.000', badge: '', },
  { gb: '15GB', period: '30 hari', detail: 'All network, harga promo terbatas', price: 'Rp35.000', badge: '' },
  ]
  }
@@ -2279,7 +2279,7 @@ const DATA_PACKAGES = {
  ],
  bulanan: [
  { gb: '8GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp20.000', badge: '' },
- { gb: '15GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp35.000', badge: 'TERBAIK' },
+ { gb: '15GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp35.000', badge: '', },
  { gb: '30GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp60.000', badge: '' },
  { gb: '50GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp90.000', badge: '' },
  ]
@@ -2289,7 +2289,7 @@ const DATA_PACKAGES = {
  periods: {
  bulanan: [
  { gb: 'Unlimited', period: '30 hari', detail: 'Unlimited sosmed + 10GB all network', price: 'Rp25.000', badge: '' },
- { gb: 'Unlimited+', period: '30 hari', detail: 'Unlimited sosmed + 20GB all network', price: 'Rp40.000', badge: 'TERBAIK' },
+ { gb: 'Unlimited+', period: '30 hari', detail: 'Unlimited sosmed + 20GB all network', price: 'Rp40.000', badge: '', },
  ]
  }
  },
@@ -2297,7 +2297,7 @@ const DATA_PACKAGES = {
  periods: {
  bulanan: [
  { gb: '7GB', period: '30 hari', detail: '7GB data + 1000 menit telepon + 1000 SMS', price: 'Rp30.000', badge: '' },
- { gb: '14GB', period: '30 hari', detail: '14GB data + 1000 menit telepon + 1000 SMS', price: 'Rp50.000', badge: 'TERBAIK' },
+ { gb: '14GB', period: '30 hari', detail: '14GB data + 1000 menit telepon + 1000 SMS', price: 'Rp50.000', badge: '', },
  { gb: '25GB', period: '30 hari', detail: '25GB data + 1000 menit telepon + 1000 SMS', price: 'Rp75.000', badge: '' },
  ]
  }
@@ -2308,7 +2308,7 @@ const DATA_PACKAGES = {
  { gb: '2GB', period: '1 hari', detail: 'TikTok, YouTube, Instagram, WhatsApp', price: 'Rp4.000', badge: '' },
  ],
  bulanan: [
- { gb: '20GB', period: '30 hari', detail: 'TikTok, YouTube, Instagram, WhatsApp', price: 'Rp35.000', badge: 'TERBAIK' },
+ { gb: '20GB', period: '30 hari', detail: 'TikTok, YouTube, Instagram, WhatsApp', price: 'Rp35.000', badge: '', },
  { gb: '40GB', period: '30 hari', detail: 'TikTok, YouTube, Instagram, WhatsApp', price: 'Rp60.000', badge: '' },
  ]
  }
@@ -2322,7 +2322,7 @@ const DATA_PACKAGES = {
  periods: {
  bulanan: [
  { gb: '7GB', period: '30 hari', detail: 'All network + bonus telepon & SMS', price: 'Rp20.000', badge: '' },
- { gb: '12GB', period: '30 hari', detail: 'All network + bonus telepon & SMS', price: 'Rp35.000', badge: 'TERBAIK' },
+ { gb: '12GB', period: '30 hari', detail: 'All network + bonus telepon & SMS', price: 'Rp35.000', badge: '', },
  { gb: '25GB', period: '30 hari', detail: 'All network + bonus telepon & SMS', price: 'Rp55.000', badge: '' },
  ]
  }
@@ -2335,7 +2335,7 @@ const DATA_PACKAGES = {
  ],
  bulanan: [
  { gb: '10GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp30.000', badge: '' },
- { gb: '20GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp50.000', badge: 'TERBAIK' },
+ { gb: '20GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp50.000', badge: '', },
  { gb: '40GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp80.000', badge: '' },
  ]
  }
@@ -2349,7 +2349,7 @@ const DATA_PACKAGES = {
  { gb: '5GB', period: '7 hari', detail: 'YouTube, TikTok, Instagram + all network 1GB', price: 'Rp10.000', badge: '' },
  ],
  bulanan: [
- { gb: '15GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram + all network 5GB', price: 'Rp25.000', badge: 'TERBAIK' },
+ { gb: '15GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram + all network 5GB', price: 'Rp25.000', badge: '', },
  { gb: '25GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram + all network 10GB', price: 'Rp40.000', badge: '' },
  ]
  }
@@ -2358,7 +2358,7 @@ const DATA_PACKAGES = {
  periods: {
  bulanan: [
  { gb: 'Unlimited', period: '30 hari', detail: 'Unlimited dengan FUP 20GB speed penuh', price: 'Rp50.000', badge: '' },
- { gb: 'Unlimited+', period: '30 hari', detail: 'Unlimited dengan FUP 40GB speed penuh', price: 'Rp80.000', badge: 'TERBAIK' },
+ { gb: 'Unlimited+', period: '30 hari', detail: 'Unlimited dengan FUP 40GB speed penuh', price: 'Rp80.000', badge: '', },
  ]
  }
  },
@@ -2374,7 +2374,7 @@ const DATA_PACKAGES = {
  ],
  bulanan: [
  { gb: '6GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp15.000', badge: '' },
- { gb: '12GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp28.000', badge: 'TERBAIK' },
+ { gb: '12GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp28.000', badge: '', },
  { gb: '25GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp50.000', badge: '' },
  { gb: '50GB', period: '30 hari', detail: 'All network, semua aplikasi', price: 'Rp90.000', badge: '' },
  ]
@@ -2386,7 +2386,7 @@ const DATA_PACKAGES = {
  { gb: '2GB', period: '1 hari', detail: 'YouTube, TikTok, Instagram, WhatsApp, dll', price: 'Rp3.000', badge: '' },
  ],
  bulanan: [
- { gb: '10GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram, WhatsApp, dll', price: 'Rp20.000', badge: 'TERBAIK' },
+ { gb: '10GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram, WhatsApp, dll', price: 'Rp20.000', badge: '', },
  { gb: '25GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram, WhatsApp, dll', price: 'Rp40.000', badge: '' },
  ]
  }
@@ -2395,7 +2395,7 @@ const DATA_PACKAGES = {
  periods: {
  bulanan: [
  { gb: '8GB', period: '30 hari', detail: '8GB data + 300 menit telepon sesama Tri', price: 'Rp25.000', badge: '' },
- { gb: '16GB', period: '30 hari', detail: '16GB data + 600 menit telepon sesama Tri', price: 'Rp45.000', badge: 'TERBAIK' },
+ { gb: '16GB', period: '30 hari', detail: '16GB data + 600 menit telepon sesama Tri', price: 'Rp45.000', badge: '', },
  ]
  }
  },
@@ -2403,7 +2403,7 @@ const DATA_PACKAGES = {
  periods: {
  bulanan: [
  { gb: 'Unlimited', period: '30 hari', detail: 'Unlimited dengan FUP 15GB speed penuh', price: 'Rp35.000', badge: '' },
- { gb: 'Unlimited+', period: '30 hari', detail: 'Unlimited dengan FUP 30GB speed penuh', price: 'Rp60.000', badge: 'TERBAIK' },
+ { gb: 'Unlimited+', period: '30 hari', detail: 'Unlimited dengan FUP 30GB speed penuh', price: 'Rp60.000', badge: '', },
  ]
  }
  },
@@ -2419,7 +2419,7 @@ const DATA_PACKAGES = {
  ],
  bulanan: [
  { gb: '10GB', period: '30 hari', detail: '4G LTE, semua aplikasi', price: 'Rp18.000', badge: '' },
- { gb: '20GB', period: '30 hari', detail: '4G LTE, semua aplikasi', price: 'Rp32.000', badge: 'TERBAIK' },
+ { gb: '20GB', period: '30 hari', detail: '4G LTE, semua aplikasi', price: 'Rp32.000', badge: '', },
  { gb: '40GB', period: '30 hari', detail: '4G LTE, semua aplikasi', price: 'Rp55.000', badge: '' },
  ]
  }
@@ -2428,7 +2428,7 @@ const DATA_PACKAGES = {
  periods: {
  bulanan: [
  { gb: 'Unlimited', period: '30 hari', detail: 'Unlimited 4G LTE FUP 20GB full speed', price: 'Rp40.000', badge: '' },
- { gb: 'Unlimited+', period: '30 hari', detail: 'Unlimited 4G LTE FUP 40GB full speed', price: 'Rp65.000', badge: 'TERBAIK' },
+ { gb: 'Unlimited+', period: '30 hari', detail: 'Unlimited 4G LTE FUP 40GB full speed', price: 'Rp65.000', badge: '', },
  ]
  }
  },
@@ -2438,14 +2438,14 @@ const DATA_PACKAGES = {
  { gb: '2GB', period: '1 hari', detail: 'YouTube, TikTok, Instagram, WhatsApp', price: 'Rp4.000', badge: '' },
  ],
  bulanan: [
- { gb: '25GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram, WhatsApp', price: 'Rp30.000', badge: 'TERBAIK' },
+ { gb: '25GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram, WhatsApp', price: 'Rp30.000', badge: '', },
  ]
  }
  },
  { id: 'sf-starter', icon: '🆕', name: 'Starter Pack', sub: 'Paket perdana hemat',
  periods: {
  bulanan: [
- { gb: '5GB', period: '30 hari', detail: '4G LTE + bonus 5GB nonstop sosmed', price: 'Rp10.000', badge: 'TERBAIK' },
+ { gb: '5GB', period: '30 hari', detail: '4G LTE + bonus 5GB nonstop sosmed', price: 'Rp10.000', badge: '', },
  ]
  }
  },
@@ -2461,7 +2461,7 @@ const DATA_PACKAGES = {
  ],
  bulanan: [
  { gb: '5GB', period: '30 hari', detail: 'Jaringan Telkomsel, semua aplikasi', price: 'Rp18.000', badge: '' },
- { gb: '10GB', period: '30 hari', detail: 'Jaringan Telkomsel, semua aplikasi', price: 'Rp30.000', badge: 'TERBAIK' },
+ { gb: '10GB', period: '30 hari', detail: 'Jaringan Telkomsel, semua aplikasi', price: 'Rp30.000', badge: '', },
  { gb: '20GB', period: '30 hari', detail: 'Jaringan Telkomsel, semua aplikasi', price: 'Rp50.000', badge: '' },
  { gb: '40GB', period: '30 hari', detail: 'Jaringan Telkomsel, semua aplikasi', price: 'Rp90.000', badge: '' },
  ]
@@ -2471,14 +2471,14 @@ const DATA_PACKAGES = {
  periods: {
  bulanan: [
  { gb: 'Unlimited', period: '30 hari', detail: 'Unlimited jaringan Telkomsel FUP 15GB', price: 'Rp35.000', badge: '' },
- { gb: 'Unlimited+', period: '30 hari', detail: 'Unlimited jaringan Telkomsel FUP 30GB', price: 'Rp60.000', badge: 'TERBAIK' },
+ { gb: 'Unlimited+', period: '30 hari', detail: 'Unlimited jaringan Telkomsel FUP 30GB', price: 'Rp60.000', badge: '', },
  ]
  }
  },
  { id: 'byu-nonstop', icon: '🎮', name: 'Nonstop ByU', sub: 'Sosmed & streaming bebas',
  periods: {
  bulanan: [
- { gb: '15GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram + 5GB all network', price: 'Rp25.000', badge: 'TERBAIK' },
+ { gb: '15GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram + 5GB all network', price: 'Rp25.000', badge: '', },
  { gb: '30GB', period: '30 hari', detail: 'YouTube, TikTok, Instagram + 10GB all network', price: 'Rp45.000', badge: '' },
  ]
  }
@@ -3047,7 +3047,6 @@ function closePaymentOutside(e) {
     <div>
      <div class="topup-game-name" id="smName">Instagram — Followers</div>
      <div class="topup-game-sub">
-      <span class="topup-instan-badge" id="smBadge">⚡ FAST</span>
       <span id="smSub">Non Drop · Refill 30 Hari</span>
      </div>
     </div>
@@ -3191,164 +3190,152 @@ function closePaymentOutside(e) {
 var SM_DATA = {
  'ig-followers': {
   icon:'📸', name:'Instagram — Followers', sub:'Bot Random & Indo Aktif · Refill 30 Hari',
-  badge:'⚡ NON DROP',
   targetLabel:'Username Instagram', targetPlaceholder:'@username atau username',
   hint:'Contoh: joker_store atau @joker_store. Pastikan akun tidak di-private.',
   fieldType:'username',
   sections:[{ title:'📦 Pilih Paket', items:[
    {name:'100 Followers', amount:'Bot Random', price:'Rp 4.000'},
    {name:'250 Followers', amount:'Bot Random', price:'Rp 9.500'},
-   {badge:'🔥 POPULAR', badgeClass:'hot', name:'500 Followers', amount:'Indo Aktif', price:'Rp 18.000'},
+   {name:'500 Followers', amount:'Indo Aktif', price:'Rp 18.000'},
    {name:'1.000 Followers', amount:'Indo Aktif', price:'Rp 35.000'},
   ]}]
  },
  'ig-likes': {
   icon:'❤️', name:'Instagram — Likes', sub:'Non Drop · 365 Days Refill · Instan',
-  badge:'⚡ INSTAN',
   targetLabel:'Link Post / Reel Instagram', targetPlaceholder:'https://www.instagram.com/p/...',
   hint:'Copy link postingan/reel yang ingin ditambah likes-nya.',
   fieldType:'link',
   sections:[{ title:'📦 Pilih Paket', items:[
    {name:'100 Likes', amount:'Non Drop', price:'Rp 2.000'},
    {name:'250 Likes', amount:'Non Drop', price:'Rp 4.500'},
-   {badge:'🔥 POPULAR', badgeClass:'hot', name:'500 Likes', amount:'Non Drop', price:'Rp 8.500'},
+   {name:'500 Likes', amount:'Non Drop', price:'Rp 8.500'},
    {name:'1.000 Likes', amount:'Non Drop', price:'Rp 16.000'},
   ]}]
  },
  'ig-views': {
   icon:'👁️', name:'Instagram — Video Views', sub:'All Link · Super Fast · Non Drop',
-  badge:'⚡ SUPER FAST',
   targetLabel:'Link Video / Reel Instagram', targetPlaceholder:'https://www.instagram.com/reel/...',
   hint:'Copy link video atau reel Instagram yang ingin ditambah views-nya.',
   fieldType:'link',
   sections:[{ title:'📦 Pilih Paket', items:[
    {name:'5.000 Views', amount:'Super Fast', price:'Rp 500'},
-   {badge:'🔥 POPULAR', badgeClass:'hot', name:'10.000 Views', amount:'Super Fast', price:'Rp 900'},
+   {name:'10.000 Views', amount:'Super Fast', price:'Rp 900'},
    {name:'50.000 Views', amount:'Super Fast', price:'Rp 4.000'},
    {name:'100.000 Views', amount:'Super Fast', price:'Rp 7.500'},
   ]}]
  },
  'tiktok-followers': {
   icon:'🎵', name:'TikTok — Followers', sub:'Non Drop · Refill 30 Hari · 1K-2K/Hari',
-  badge:'⚡ NON DROP',
   targetLabel:'Username TikTok', targetPlaceholder:'@username atau username',
   hint:'Contoh: @joker_store. Pastikan akun tidak di-private.',
   fieldType:'username',
   sections:[{ title:'📦 Pilih Paket', items:[
    {name:'100 Followers', amount:'1K-2K/hari', price:'Rp 5.000'},
    {name:'250 Followers', amount:'1K-2K/hari', price:'Rp 11.000'},
-   {badge:'🔥 POPULAR', badgeClass:'hot', name:'500 Followers', amount:'1K-2K/hari', price:'Rp 20.000'},
+   {name:'500 Followers', amount:'1K-2K/hari', price:'Rp 20.000'},
    {name:'1.000 Followers', amount:'1K-2K/hari', price:'Rp 38.000'},
   ]}]
  },
  'tiktok-likes': {
   icon:'❤️‍🔥', name:'TikTok — Likes', sub:'Non Drop · Refill 30 Hari · Instan',
-  badge:'⚡ INSTAN',
   targetLabel:'Link Video TikTok', targetPlaceholder:'https://www.tiktok.com/@user/video/...',
   hint:'Copy link video TikTok yang ingin ditambah likes-nya.',
   fieldType:'link',
   sections:[{ title:'📦 Pilih Paket', items:[
    {name:'100 Likes', amount:'Non Drop', price:'Rp 1.000'},
    {name:'500 Likes', amount:'Non Drop', price:'Rp 4.500'},
-   {badge:'🔥 POPULAR', badgeClass:'hot', name:'1.000 Likes', amount:'Non Drop', price:'Rp 8.500'},
+   {name:'1.000 Likes', amount:'Non Drop', price:'Rp 8.500'},
    {name:'5.000 Likes', amount:'Non Drop', price:'Rp 40.000'},
   ]}]
  },
  'tiktok-views': {
   icon:'👀', name:'TikTok — Views', sub:'Non Drop · Instan · 10-50 Juta/Hari',
-  badge:'⚡ INSTAN',
   targetLabel:'Link Video TikTok', targetPlaceholder:'https://www.tiktok.com/@user/video/...',
   hint:'Copy link video TikTok yang ingin ditambah views-nya.',
   fieldType:'link',
   sections:[{ title:'📦 Pilih Paket', items:[
    {name:'5.000 Views', amount:'Non Drop', price:'Rp 1.000'},
    {name:'10.000 Views', amount:'Non Drop', price:'Rp 1.800'},
-   {badge:'🔥 POPULAR', badgeClass:'hot', name:'50.000 Views', amount:'Non Drop', price:'Rp 8.000'},
+   {name:'50.000 Views', amount:'Non Drop', price:'Rp 8.000'},
    {name:'100.000 Views', amount:'Non Drop', price:'Rp 15.000'},
   ]}]
  },
  'tiktok-live': {
   icon:'🎮', name:'TikTok Live — Views', sub:'Real-Time · Stabil · Tanpa Password',
-  badge:'🔴 LIVE',
   targetLabel:'Username TikTok (yang sedang Live)', targetPlaceholder:'@username',
   hint:'Masukkan username akun TikTok yang SEDANG Live. Pastikan Live sudah aktif sebelum order.',
   fieldType:'username',
   sections:[{ title:'⏱️ Pilih Durasi', items:[
    {name:'30 Menit Live Views', amount:'Penonton real-time', price:'Rp 10.000'},
-   {badge:'🔥 POPULAR', badgeClass:'hot', name:'1 Jam Live Views', amount:'Penonton real-time', price:'Rp 18.000'},
+   {name:'1 Jam Live Views', amount:'Penonton real-time', price:'Rp 18.000'},
    {name:'2 Jam Live Views', amount:'Penonton real-time', price:'Rp 33.000'},
    {name:'3 Jam Live Views', amount:'Penonton real-time', price:'Rp 47.000'},
   ]}]
  },
  'yt-subscribers': {
   icon:'▶️', name:'YouTube — Subscribers', sub:'Non Drop · Bantu Monetisasi · Bertahap',
-  badge:'⚡ NON DROP',
   targetLabel:'Link Channel YouTube', targetPlaceholder:'https://www.youtube.com/@channel',
   hint:'Copy link channel YouTube kamu. Proses bertahap 1K-5K/hari.',
   fieldType:'link',
   sections:[{ title:'📦 Pilih Paket', items:[
    {name:'100 Subscribers', amount:'Non Drop', price:'Rp 15.000'},
    {name:'500 Subscribers', amount:'Non Drop', price:'Rp 65.000'},
-   {badge:'🔥 POPULAR', badgeClass:'hot', name:'1.000 Subscribers', amount:'Non Drop', price:'Rp 120.000'},
+   {name:'1.000 Subscribers', amount:'Non Drop', price:'Rp 120.000'},
    {name:'5.000 Subscribers', amount:'Non Drop', price:'Rp 550.000'},
   ]}]
  },
  'yt-views': {
   icon:'👍', name:'YouTube — Views & Likes', sub:'Bantu Algoritma Channel · Bertahap',
-  badge:'⚡ BERTAHAP',
   targetLabel:'Link Video YouTube', targetPlaceholder:'https://www.youtube.com/watch?v=...',
   hint:'Copy link video YouTube yang ingin ditambah views/likes-nya.',
   fieldType:'link',
   sections:[
    { title:'👁️ Views', items:[
     {name:'1.000 Views', amount:'Bertahap', price:'Rp 3.000'},
-    {badge:'🔥 POPULAR', badgeClass:'hot', name:'10.000 Views', amount:'Bertahap', price:'Rp 25.000'},
+    {name:'10.000 Views', amount:'Bertahap', price:'Rp 25.000'},
     {name:'50.000 Views', amount:'Bertahap', price:'Rp 110.000'},
     {name:'100.000 Views', amount:'Bertahap', price:'Rp 200.000'},
    ]},
    { title:'👍 Likes', items:[
     {name:'500 Likes', amount:'Non Drop', price:'Rp 12.000'},
     {name:'1.000 Likes', amount:'Non Drop', price:'Rp 22.000'},
-    {badge:'💎 VALUE', name:'5.000 Likes', amount:'Non Drop', price:'Rp 100.000'},
+    {name:'5.000 Likes', amount:'Non Drop', price:'Rp 100.000'},
    ]}
   ]
  },
  'wa-channel-member': {
   icon:'💬', name:'WhatsApp Saluran — Member', sub:'Global · High Quality · Instan',
-  badge:'⚡ INSTAN',
   targetLabel:'Link Saluran WhatsApp', targetPlaceholder:'https://whatsapp.com/channel/...',
   hint:'Copy link invite saluran WhatsApp kamu. Buka WA → Saluran → klik ikon share.',
   fieldType:'link',
   sections:[{ title:'📦 Pilih Paket', items:[
    {name:'100 Member', amount:'Global', price:'Rp 10.000'},
    {name:'250 Member', amount:'Global', price:'Rp 23.000'},
-   {badge:'🔥 POPULAR', badgeClass:'hot', name:'500 Member', amount:'Global', price:'Rp 44.000'},
+   {name:'500 Member', amount:'Global', price:'Rp 44.000'},
    {name:'1.000 Member', amount:'Global', price:'Rp 85.000'},
   ]}]
  },
  'linkedin-followers': {
   icon:'💼', name:'LinkedIn — Followers', sub:'Real People · High Quality · Instan',
-  badge:'⚡ INSTAN',
   targetLabel:'Link Profil / Page LinkedIn', targetPlaceholder:'https://www.linkedin.com/in/...',
   hint:'Copy link profil atau page LinkedIn kamu.',
   fieldType:'link',
   sections:[{ title:'📦 Pilih Paket', items:[
    {name:'100 Followers', amount:'Real People', price:'Rp 17.000'},
    {name:'250 Followers', amount:'Real People', price:'Rp 40.000'},
-   {badge:'🔥 POPULAR', badgeClass:'hot', name:'500 Followers', amount:'Real People', price:'Rp 75.000'},
+   {name:'500 Followers', amount:'Real People', price:'Rp 75.000'},
    {name:'1.000 Followers', amount:'Real People', price:'Rp 140.000'},
   ]}]
  },
  'fb-followers': {
   icon:'👥', name:'Facebook — Followers', sub:'Non Drop · 90 Days Refill · Instant',
-  badge:'⚡ NON DROP',
   targetLabel:'Link Profil / Page Facebook', targetPlaceholder:'https://www.facebook.com/...',
   hint:'Copy link profil atau page Facebook kamu. Pastikan tidak di-private.',
   fieldType:'link',
   sections:[{ title:'📦 Pilih Paket', items:[
    {name:'100 Followers', amount:'Non Drop', price:'Rp 3.000'},
    {name:'500 Followers', amount:'Non Drop', price:'Rp 13.000'},
-   {badge:'🔥 POPULAR', badgeClass:'hot', name:'1.000 Followers', amount:'Non Drop', price:'Rp 24.000'},
+   {name:'1.000 Followers', amount:'Non Drop', price:'Rp 24.000'},
    {name:'5.000 Followers', amount:'Non Drop', price:'Rp 110.000'},
   ]}]
  }
@@ -3365,7 +3352,6 @@ function openSosmed(key) {
  document.getElementById('smIcon').textContent = d.icon;
  document.getElementById('smName').textContent = d.name;
  document.getElementById('smSub').textContent = d.sub;
- document.getElementById('smBadge').textContent = d.badge;
 
  // Step 1 target field
  document.getElementById('smStep1Title').textContent = d.fieldType === 'username' ? 'Masukkan Username Target' : 'Masukkan Link Target';
@@ -3399,13 +3385,10 @@ function openSosmed(key) {
  d.sections.forEach(function(sec){
   html += '<div class="tu-nominal-section">'+sec.title+'</div><div class="tu-nominal-grid">';
   sec.items.forEach(function(item){
-   var badgeHtml = item.badge ? '<div class="tu-item-badge'+(item.badgeClass?' '+item.badgeClass:'')+'">'+ item.badge+'</div>' : '';
    html += '<div class="tu-item sm-item" onclick="smSelectNominal(this,\''+item.name+'\',\''+item.price+'\')">'
-    + badgeHtml
     + '<div class="tu-item-name">'+item.name+'</div>'
     + '<div class="tu-item-amount">'+item.amount+'</div>'
     + '<div class="tu-item-price">'+item.price+'</div>'
-    + '<div class="tu-item-instan">⚡ Proses Cepat</div>'
     + '</div>';
   });
   html += '</div>';
@@ -3525,7 +3508,6 @@ function smDoOrder() {
     <div>
      <div class="topup-game-name" id="tuGameName">Mobile Legends</div>
      <div class="topup-game-sub">
-      <span class="topup-instan-badge">⚡ INSTAN</span>
       <span id="tuGameSub">Top Up Diamond</span>
      </div>
     </div>
@@ -3671,20 +3653,20 @@ var TU_GAMES = {
   ],
   sections:[
    { title:'⭐ Special Items', items:[
-    {badge:'🔥 BEST', badgeClass:'hot', name:'Weekly Diamond Pass', amount:'+100 Dm/minggu×4', price:'Rp 28.756'},
+    {name:'Weekly Diamond Pass', amount:'+100 Dm/minggu×4', price:'Rp 28.756'},
     {name:'2× Weekly Diamond Pass', amount:'+200 Dm/minggu×4', price:'Rp 57.512'},
     {name:'3× Weekly Diamond Pass', amount:'+300 Dm/minggu×4', price:'Rp 86.268'},
     {name:'4× Weekly Diamond Pass', amount:'+400 Dm/minggu×4', price:'Rp 115.023'},
     {name:'5× Weekly Diamond Pass', amount:'+500 Dm/minggu×4', price:'Rp 143.779'},
-    {badge:'✨ NEW', badgeClass:'new', name:'Twilight Pass', amount:'Skin + Diamond spesial', price:'Rp 148.794'},
+    {name:'Twilight Pass', amount:'Skin + Diamond spesial', price:'Rp 148.794'},
    ]},
    { title:'💎 Diamond', items:[
     {name:'86 Diamond', amount:'💎 86', price:'Rp 19.200'},
     {name:'172 Diamond', amount:'💎 172', price:'Rp 38.400'},
-    {badge:'🔥 POPULAR', badgeClass:'hot', name:'257 Diamond', amount:'💎 257', price:'Rp 57.600'},
+    {name:'257 Diamond', amount:'💎 257', price:'Rp 57.600'},
     {name:'514 Diamond', amount:'💎 514', price:'Rp 115.000'},
     {name:'1.028 Diamond', amount:'💎 1028', price:'Rp 229.000'},
-    {badge:'💎 VALUE', name:'2.195 Diamond', amount:'💎 2195', price:'Rp 479.000'},
+    {name:'2.195 Diamond', amount:'💎 2195', price:'Rp 479.000'},
    ]}
   ]
  },
@@ -3697,10 +3679,10 @@ var TU_GAMES = {
    { title:'💎 Diamond FF', items:[
     {name:'70 Diamond', amount:'💎 70', price:'Rp 14.400'},
     {name:'140 Diamond', amount:'💎 140', price:'Rp 28.800'},
-    {badge:'🔥 POPULAR', badgeClass:'hot', name:'355 Diamond', amount:'💎 355', price:'Rp 68.000'},
+    {name:'355 Diamond', amount:'💎 355', price:'Rp 68.000'},
     {name:'720 Diamond', amount:'💎 720', price:'Rp 136.000'},
     {name:'1.450 Diamond', amount:'💎 1450', price:'Rp 262.000'},
-    {badge:'💎 VALUE', name:'2.900 Diamond', amount:'💎 2900', price:'Rp 510.000'},
+    {name:'2.900 Diamond', amount:'💎 2900', price:'Rp 510.000'},
     {name:'5.600 Diamond', amount:'💎 5600', price:'Rp 980.000'},
    ]}
   ]
@@ -3714,10 +3696,10 @@ var TU_GAMES = {
    { title:'🪙 Unknown Cash (UC)', items:[
     {name:'60 UC', amount:'🪙 60', price:'Rp 14.000'},
     {name:'170 UC', amount:'🪙 170', price:'Rp 36.000'},
-    {badge:'🔥 POPULAR', badgeClass:'hot', name:'325 UC', amount:'🪙 325', price:'Rp 68.000'},
+    {name:'325 UC', amount:'🪙 325', price:'Rp 68.000'},
     {name:'660 UC', amount:'🪙 660', price:'Rp 135.000'},
     {name:'1.800 UC', amount:'🪙 1800', price:'Rp 360.000'},
-    {badge:'💎 VALUE', name:'3.850 UC', amount:'🪙 3850', price:'Rp 720.000'},
+    {name:'3.850 UC', amount:'🪙 3850', price:'Rp 720.000'},
     {name:'8.100 UC', amount:'🪙 8100', price:'Rp 1.440.000'},
    ]}
   ]
@@ -3731,9 +3713,9 @@ var TU_GAMES = {
    { title:'🟣 Robux', items:[
     {name:'80 Robux', amount:'🟣 80', price:'Rp 14.000'},
     {name:'160 Robux', amount:'🟣 160', price:'Rp 28.000'},
-    {badge:'🔥 POPULAR', badgeClass:'hot', name:'400 Robux', amount:'🟣 400', price:'Rp 65.000'},
+    {name:'400 Robux', amount:'🟣 400', price:'Rp 65.000'},
     {name:'800 Robux', amount:'🟣 800', price:'Rp 125.000'},
-    {badge:'💎 VALUE', name:'1.700 Robux', amount:'🟣 1700', price:'Rp 250.000'},
+    {name:'1.700 Robux', amount:'🟣 1700', price:'Rp 250.000'},
     {name:'4.500 Robux', amount:'🟣 4500', price:'Rp 640.000'},
    ]}
   ]
@@ -3747,7 +3729,7 @@ var TU_GAMES = {
    { title:'🎁 Game Pass', items:[
     {name:'Brookhaven Pass', amount:'Premium pass Brookhaven', price:'Rp 25.000'},
     {name:'Dress To Impress Pass', amount:'VIP Dress To Impress', price:'Rp 30.000'},
-    {badge:'🔥 POPULAR', badgeClass:'hot', name:'CDID Game Pass', amount:'Premium CDID', price:'Rp 35.000'},
+    {name:'CDID Game Pass', amount:'Premium CDID', price:'Rp 35.000'},
     {name:'Salon de Fiestas Pass', amount:'Full access Salon', price:'Rp 20.000'},
    ]}
   ]
@@ -3802,13 +3784,10 @@ function openTopUp(gameKey) {
  game.sections.forEach(function(sec){
   html += '<div class="tu-nominal-section">'+sec.title+'</div><div class="tu-nominal-grid">';
   sec.items.forEach(function(item, idx){
-   var badgeHtml = item.badge ? '<div class="tu-item-badge'+(item.badgeClass?' '+item.badgeClass:'')+'">'+ item.badge+'</div>' : '';
    html += '<div class="tu-item" onclick="tuSelectNominal(this,\''+item.name+'\',\''+item.price+'\',\''+gameKey+'\')">'
-    + badgeHtml
     + '<div class="tu-item-name">'+item.name+'</div>'
     + '<div class="tu-item-amount">'+item.amount+'</div>'
     + '<div class="tu-item-price">'+item.price+'</div>'
-    + '<div class="tu-item-instan">⚡ Instan</div>'
     + '</div>';
   });
   html += '</div>';
